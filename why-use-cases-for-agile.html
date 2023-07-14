@@ -262,7 +262,11 @@ pre[data-line] .line-highlight[data-end]:after {
     <body for="html-export">
       <div class="mume markdown-preview  ">
       <div class="md-toc">
-<details style="padding:0;;padding-left:0px;" open>
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#summary" class="md-toc-link">
+            <p>Summary</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open>
         <summary class="md-toc-link-wrapper">
           <a href="#real-agile-with-comprehensive-requirements-documents" class="md-toc-link"><p>Real-Agile with Comprehensive Requirements Documents</p>
 </a>
@@ -285,26 +289,30 @@ pre[data-line] .line-highlight[data-end]:after {
             <p>Approaches Between the Extremes</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#how-and-why-use-cases" class="md-toc-link">
-            <p>How and Why Use Cases</p>
+          <a href="#use-cases" class="md-toc-link">
+            <p>Use Cases</p>
 
           </a></div><details style="padding:0;;padding-left:24px;" open>
         <summary class="md-toc-link-wrapper">
-          <a href="#other-critical-parts-of-the-framework" class="md-toc-link"><p>Other Critical Parts of the Framework</p>
+          <a href="#benefits-of-the-framework" class="md-toc-link"><p>Benefits of The Framework</p>
 </a>
           </summary>
         <div>
           <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#work-in-all-directions" class="md-toc-link">
-            <p>Work in all directions</p>
+          <a href="#use-cases-as-a-better-backlog" class="md-toc-link">
+            <p>Use Cases as a Better Backlog</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#make-stories-from-the-use-case-flows" class="md-toc-link">
-            <p>Make Stories from the Use Case Flows</p>
+          <a href="#work-in-all-directions" class="md-toc-link">
+            <p>Work In All Directions</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#store-everything-in-git" class="md-toc-link">
             <p>Store Everything in Git</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#work-management" class="md-toc-link">
+            <p>Work Management</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#automate-all-artifact-creation" class="md-toc-link">
@@ -321,109 +329,305 @@ pre[data-line] .line-highlight[data-end]:after {
           <a href="#why-is-this-a-great-requirements-framework" class="md-toc-link">
             <p>Why is this a Great Requirements Framework</p>
 
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#summary-and-overview" class="md-toc-link">
-            <p>Summary and Overview</p>
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#appendix" class="md-toc-link"><p>Appendix</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#an-agile-way-of-working-with-use-cases" class="md-toc-link">
+            <p>An Agile Way-of-Working with Use Cases</p>
 
           </a></div>
         </div>
       </details>
     
 </div>
+<h1 class="mume-header" id="summary">Summary</h1>
+
+<p>Products<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> need a comprehensive requirements specification. Not an up-front waterfall spec. Rather it needs to serve as the continuously evolving requirements framework to organize and understand the path to building the product. User stories listed in a backlog as used on by the current agile processes cannot accomplish this. In fact, user stories are at all the kind of requirements needed in a comprehensive requirements specification. In this article I describe a way-of-working to build such comprehensive requirements that is compatible with an agile way-of-working.</p>
 <h1 class="mume-header" id="real-agile-with-comprehensive-requirements-documents">Real-Agile with Comprehensive Requirements Documents</h1>
 
-<p>First let me define what I mean by the words in the title. My definition of <em>Real-Agile</em> is based on the ideas from those I consider the master craftsmen of agile ways-of-working, primarily Ron Jeffries and GeePaw Hill:</p>
+<p>First let me define what I mean by the words in the title. My definition of <em>Real-Agile</em> is based on the ideas from those I consider the master craftsmen of agile ways-of-working:</p>
 <ul>
-<li>Incrementally learn what the user needs via small stories defined via <a href="https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/">Behavior Driven Development (BDD)</a> scenarios.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></li>
+<li>Incrementally learn what the user needs via small user stories defined via <a href="https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/">Behavior Driven Development (BDD)</a> scenarios.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
 <li>Delivery running, tested, useful software very frequently, ideally daily</li>
-<li>Assume requirements, design, and code evolve constantly.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
+<li>Assume requirements, design, and code evolve constantly.<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></li>
 </ul>
-<p>My definition of <em>Comprehensive Requirements</em> is a document(s) that cover the full scope of the product/project<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> as a connected journey<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>, spanning all the releases.</p>
+<p>My definition of <em>Comprehensive Requirements</em> is a document(s) that cover the full scope of the product as a connected journey<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>, spanning all the releases.</p>
+<blockquote>
+<p>Note: This article does not get into details on roles and team structures. The assumption is that there are Subject Matter Experts (SMEs) for the domain as a permanent part of the team and that someone is acting in a Business Analyst role to write the requirements. No approach to product building is going to work if you don&#x2019;t have this in place.</p>
+</blockquote>
 <h2 class="mume-header" id="why-do-we-need-comprehensive-requirements">Why Do We Need Comprehensive Requirements</h2>
 
-<p>Minimally, we need requirements because humans forget things and these forgetful humans routinely leave and join our product. Without something like a requirements document to provide the overarching goals and enough of the details we lose track of why and what we&#x2019;ve done.<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup> Formally, many domains mandate a requirements documents, e.g., I primarily work in the regulated / validated Life Science domain where, among other mandates, there must be a requirements document. In this article I&#x2019;ll go beyond just meeting the mandates and make the case that a comprehensive requirements document makes every step of an agile way-of-working better.</p>
-<p>I see little discussion or innovative on the need for comprehensive requirements when working agile. What I see way too often are two extremes:</p>
+<p>Minimally, we need requirements because humans forget things and these forgetful humans routinely leave and join our product. Without something like a requirements document to provide the overarching goals and enough of the details, we lose track of what we&#x2019;ve done and why.<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup> Formally, many domains mandate a requirements documents, e.g., I primarily work in the regulated / validated Life Science domain where, among other mandates, there must be a requirements document. In this article I&#x2019;ll go beyond just meeting the mandates and make the case that a comprehensive requirements document makes every step of an agile way-of-working better.</p>
+<p>I see little discussion or innovation on the need for comprehensive requirements when working agile. What I see way too often are two extremes:</p>
 <ul>
-<li>User Stories in a tracking tool like Jira, as the requirements</li>
+<li>User Stories in a tracking tool as the requirements, e.g., Jira,</li>
 <li>Waterfall style requirements documents, usually captured in an application life cycle management (ALM) tool, e.g., <a href="https://www.atlassian.com/software/confluence">Confluence</a></li>
 </ul>
 <p>Let&#x2019;s examine the issues with each of these requirements approaches.</p>
 <h2 class="mume-header" id="user-stories-as-requirements">User Stories as Requirements</h2>
 
-<p>What I see at many companies, is a document that mashes together the stories from the tracking tool into a &#x2018;requirements document&#x2019;. I&#x2019;d go so far as to say that this is the current standard practice for most companies that need requirements documents and are trying to have an agile way-of-working. While it&#x2019;s the easy approach, it doesn&#x2019;t work because <em>stories are NOT requirements</em>! Stories don&#x2019;t work as the requirements because:</p>
+<p>What I see at many companies is a process that mashes together the user stories from the tracking tool into a &#x2018;requirements document&#x2019;. I&#x2019;d go so far as to say that this is the current standard practice for most companies that need requirements documents and are trying to maintain an agile way-of-working. While it&#x2019;s the easy approach, it doesn&#x2019;t work because <em>user stories are NOT requirements</em>! Stories don&#x2019;t work as the requirements because:</p>
 <ul>
-<li>They are the understanding at a point in time. They are expected to be incomplete and to evolve so the real needs can be discovered. With stories we are supposed to step away from requirements&#xA0;and enter the world of&#xA0;experiments that aim to prove a hypothesis.</li>
+<li>They are the understanding at a point in time. They are expected to be incomplete and to evolve so the real needs can be discovered. With user stories, we are supposed to step away from requirements&#xA0;and enter the world of&#xA0;experiments that aim to prove a hypothesis.</li>
 <li>They are supposed to be small and separately deliverable. They represent small increments of valued functionality that can be developed in a period of a day to a week based value, risk, unknowns, etc. Their delivery order doesn&#x2019;t need to reflect the user requirements. As such they are more planning instruments then requirements.</li>
 <li>They should not be maintained. They should be thrown away after implementation. (Anyone remember tearing up the story cards-on-the-wall at the end of a sprint.) As such they can&#x2019;t be the basis of comprehensive requirements without a lot of re-work.</li>
-<li>Epics (groups of related stories) don&#x2019;t pull stories into a connected flow that serves as good requirements.</li>
+<li>Epics (groups of related user stories) don&#x2019;t pull user stories into a connected flow that serves as good requirements.</li>
 </ul>
+<p>#TODO: Write and add a link to a separate article on why stories aren&#x2019;t requirements.</p>
 <h2 class="mume-header" id="waterfall-style-requirements-documents">Waterfall style Requirements Documents</h2>
 
 <p>At the other end of the spectrum is creation of traditional up-front requirements documents, a.k.a. waterfall. These take the form of <a href="https://babeginners.com/difference-between-brd-frd-and-srs/">Business Requirements Documents (BRD), Functional Requirements Documents (FRD), Software Requirements Specification (SRS)</a>. This kind of document doesn&#x2019;t fit an agile way-of-working. They are used because of a combination of:</p>
 <ul>
 <li>Fixed-price, fixed deliverable, fixed duration contracts,</li>
 <li>Fear of compliance with regulations,</li>
-<li>Standard operating procedures combined reflecting management preferences that mandate requirements up-front.</li>
+<li>Standard operating procedures combined with management preferences that mandate requirements up-front.</li>
 </ul>
-<p>Agile came into existence because we learned that requirements cannot be specified up front. I see little hope for combining these types of requirements documents with an agile way-of-working.</p>
+<p>Agile came into existence because we learned that requirements cannot accurately be specified up front. I see little hope for combining these types of requirements documents with an agile way-of-working.</p>
 <h2 class="mume-header" id="approaches-between-the-extremes">Approaches Between the Extremes</h2>
 
-<p>If we&#x2019;re not going to take the easy but wrong approach of use stories as the requirements or cripple the agile way-of-working with a waterfall style, we need to find something between these extremes. We need to capture the requirements in a way that fits with an agile way-of-working but doesn&#x2019;t create massive overhead.</p>
+<p>If we&#x2019;re not going to take the easy but wrong approach of user stories as the requirements or cripple the agile way-of-working with a waterfall style, we need to find something between these extremes. We need to capture the requirements in a way that fits with an agile way-of-working but doesn&#x2019;t create massive overhead.</p>
 <p>What are the &#x2018;ilities&#x2019; needed for a great requirements framework:</p>
 <ul>
 <li>
-<p>Readability &amp; Understandability: They read like a structured story that connects all the requirements together. Details are captured in a way that they don&#x2019;t need to be explored until you care about them. It&#x2019;s easy for non-technical users to review.</p>
+<p><em>Evolvability</em>: You can start with just parts of the overall requirements and easily split, combine, and otherwise refactor them. I sometimes refer to this as &#x2018;Survivability&#x2019;. The requirements framework needs to make it easy to evolve almost everything because the agile approach means constant learning and hence requirements changes. If it doesn&#x2019;t you won&#x2019;t survive the project.</p>
 </li>
 <li>
-<p>Evolvability: You can start with just parts of the overall requirements and easily split, combine, and otherwise refactor them. I sometimes refer to this as &#x2018;Survivability&#x2019;. The requirements framework needs to make it easy to evolve almost everything because the agile approach means constant learning and hence requirements changes. If it doesn&#x2019;t you won&#x2019;t survive the project.</p>
+<p><em>Longevity</em>: The requirements grow naturally over many releases.</p>
 </li>
 <li>
-<p>Longevity: The framework grows naturally over many releases.</p>
+<p><em>Automateability</em>: You can use tools to reformat, add to, subset and otherwise transform the requirements.</p>
 </li>
 <li>
-<p>Automateability: You can use tools to reformat, add to, subset and otherwise transform the requirements.</p>
+<p><em>Work Manageability</em>[^manageability] : The user stories are the right way to track and manage work. They can be easily derived from the requirements.</p>
 </li>
 <li>
-<p>Work Manageability <sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup> : The user stories can be easily derived from the requirements.</p>
+<p><em>Flexibility</em>: The requirements can be easily created during or after other forms of requirements definition, e.g., you can start with some high-value user stories and work back into the full requirements framework as you learn by implementing.</p>
 </li>
 <li>
-<p>Flexibility: The requirements can be easily created during or after other forms of requirements definition, e.g., you can start with some user stories and work back into the full requirements framework.</p>
-</li>
-<li>
-<p>Traceability: BDD Acceptance Tests and design documents align directly to provide simple traceability from the requirements.</p>
+<p><em>Traceability</em>: Acceptance tests and design documents align directly to provide simple traceability from the requirements.</p>
+<pre class="language-text">[^manageability]: &apos;Work Manageability&apos; isn&apos;t an ideal name. Forgive me for trying to force everything into &apos;ilities&apos;.
+</pre>
 </li>
 </ul>
-<p>To meet all the above needs a framework rather than just a requirements document. I&#x2019;ll refer to it as the &#x2018;requirements framework&#x2019; when talking about more than just the statement of the requirements.</p>
-<p>Some things I&#x2019;ve tried to get to such a framework:</p>
+<p>To meet all the above we need a framework rather than just a requirements document. The following are practices I&#x2019;ve tried and that I consider essential to get to such a framework:</p>
 <ul>
-<li><a href="https://jpattonassociates.com/story-mapping/">Story Mapping</a> - This is very attractive because it organizes the stories into end-to-end journeys. It suffers from the fundamental problem that it is based on stories so the journeys are a chopped up into a work management view of the requirements.</li>
-<li>Stories linked to web pages / documents that contain the details about the requirements, e.g., a story in Jira linked to a page in Confluence. Carefully written pages could yield a good view of the requirements. This is attractive because a story should be a placeholder for a conversation so it&#x2019;s good to minimize the details in a story by moving them to another document. This approach doesn&#x2019;t yield good requirements if the documents are largely organized by the stories. Such an organization is just a more documented version of the problem that stories are not requirements.</li>
-<li><a href="https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC">Domain Analysis Documents</a> - As taught in <a href="(https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC)">this book</a>, you follow a careful set of practices to enable you to write everything you know about the requirements as you learn them. You still need to find a way to connect everything together to make it comprehensive.</li>
+<li><a href="https://jpattonassociates.com/story-mapping/">Story Mapping</a> - This is very attractive because it organizes the user stories into end-to-end journeys. It suffers from the fundamental problem that it is based on user stories so the journeys are a chopped up into a work management view of the requirements.</li>
+<li>User stories linked to web pages / documents that contain the details about the requirements, e.g., a story in Jira linked to a page in Confluence. Carefully written pages could yield a good view of the requirements. This is attractive because a story should be a placeholder for a conversation so it&#x2019;s good to minimize the details in a story by moving them to another document. This approach doesn&#x2019;t yield good requirements if the documents are largely organized by the user stories. Such an organization is just a more documented version of the problem that user stories are not requirements.</li>
+<li><a href="https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC">Domain Analysis Documents</a> - Domain analysis is the process of understanding a body of knowledge, the subject matter of a domain. Minimally you want to document everything you are agreeing to implement in whatever format works for that domain. Ideally, you want to capture the concepts, vocabulary, rules and constraints clearly enough so you can define a set of abstractions and their relationships. The goal is to document the <em>language</em> that can be used to completely and unambiguously describe, and ultimately execute, the subject matter in the domain. As taught in <a href="(https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC)">this book</a>, you follow a set of practices to enable you to write everything you know about the requirements as you learn them. You still need to find a way to connect all the requirements for all the areas of requirements together.</li>
 <li><a href="https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/">Behavior Driven Development (BDD)</a> - BDD is the best approach for capturing detailed requirements. I believe that using each BDD scenario as a story is an excellent approach. Having multiple BDD scenarios as the Acceptance Criteria for a story is my second choice. It&#x2019;s hard to see how all the individual scenarios fit into the overall requirements so something more is needed.</li>
 </ul>
-<p>My requirements framework meets all the &#x2018;ilities&#x2019; by combining the best of Story Mapping, Domain Analysis Documents, and BDD with an updated approach to use-cases.</p>
-<h2 class="mume-header" id="how-and-why-use-cases">How and Why Use Cases</h2>
+<p>As noted above, these practices have limits that keep us from getting to the desired framework. My requirements framework meets all the &#x2018;ilities&#x2019; by combining the best of Story Mapping, Domain Analysis Documents, and BDD centered around an updated approach to use-cases.</p>
+<p>The following picture provides an overview of the framework. Each part of it is discussed in the rest of the article.</p>
+<p><img src="./images/overview.png" alt="Overview"></p>
+<h2 class="mume-header" id="use-cases">Use Cases</h2>
 
-<p>Use cases may seem like an outdated, big-requirements-up-front approach that can&#x2019;t align with real-agile. Let&#x2019;s explore why this isn&#x2019;t so in general and especially wrong when you&#x2019;re working agile in a validated / regulated situation. To begin, the following are essential and controversial details on how I recommend writing use cases.<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup></p>
+<p>Since deep integration of use cases are the novel part of the framework we&#x2019;ll explore them first. The following picture highlights the use cases in the framework. Use cases may seem like an outdated, big-requirements-up-front approach that can&#x2019;t align with real-agile. This isn&#x2019;t so in general and is especially wrong when you&#x2019;re working agile in a validated or regulated situation.</p>
+<p><img src="./images/overview-with-use-cases-highlighted-small.png" alt="use cases"></p>
+<p>There is a lot of information on use cases available in books<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup> and via google so I&#x2019;ll focus on the aspects related to how they fit into the framework. The essential idea is to build a structure like:</p>
+<blockquote>
+<p>Use Case Name (a user goal)</p>
 <ul>
-<li>
-<p>Write them in a markdown file in the products git repo. Avoid ALM and other tools so the requirements live with the implementation.</p>
-</li>
-<li>
-<p>Write the absolute minimum that provides a framework of the requirements as a way to minimize the work of the constant moving and rewriting. The details go in the BDD scenarios that we&#x2019;ll link to the use cases.</p>
-</li>
-<li>
-<p>When possible, start by breaking the previous rule and write everything you know about the requirements as you learn them. For guidance see <a href="https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC">How to Understand Almost Anything: A Practitioner&#x2019;s Guide to Domain Analysis</a> by Markus Voelter. Then refactor into the minimum organized as use cases.</p>
-</li>
+<li>Basic Flow (ideally the simplest or most common case)
+<ul>
+<li>Step 1 (steps that an actor or the system does)</li>
+<li>&#x2026;</li>
+<li>Step N</li>
 </ul>
+</li>
+<li>Alternative Flow (the flow starts off of some step in the Base Flow)
+<ul>
+<li>Step 1&#x2026;</li>
+</ul>
+</li>
+<li>Other Alternative Flows (each with their own steps)</li>
+</ul>
+</blockquote>
+<p>See <a href="#an-agile-way-of-working-with-use-cases">Working With Use Cases</a> for details.</p>
 <p>The main structure of a use-case-based requirements document are:</p>
 <ul>
-<li>A use case name a user goal. We decompose these goals into sub-use-cases. <em>Decomposition is essential to make things into manageable chunks for both easier reading and implementing.</em></li>
+<li>A use case names a user goal. We decompose these goals into sub-use-cases. <em>Decomposition is essential to make things into manageable chunks for both easier reading and implementing.</em></li>
 <li>Use cases are a linear sequence of steps (no branches). Decisions corresponding to branches are broken out as alternative flows. <em>Simple flows make everything simpler.</em></li>
 <li>Use cases &#x2018;call&#x2019; other use cases. The called use case is formatted as its name as a hyperlink. <em>This is a big part of telling the connected story.</em></li>
 <li>Use cases that have complex data or rules are followed by a &#x2018;Data&#x2019; sub-section. This data is referred to in use case steps as the name as a hyperlink. <em>This simplifies the steps and centralizes the definitions so that it can be reused in multiple places.</em></li>
 <li>A use case is followed by a &#x2018;Detailed Requirement Statements&#x2019; sub-section that lists the requirements statement for each BDD scenario associated with the use case. <em>This is how we capture all the details but keep the requirements framework minimal.</em></li>
 </ul>
+<p>The following is a simplified example of some use cases for a product to design configuration files. The idea is that a configuration is made up of many parts, each with a unique structure that the user needs to populate. I present the example first and then review how its structure provides the ideal requirements framework.</p>
+<hr>
+<blockquote>
+<h4>Access Configuration Designer</h4>
+<p>An example of a &#x2018;top-level&#x2019; use case that calls other use cases.</p>
+<h5>Base Flow - Access Designer</h5>
+<ol>
+<li>User accesses Configuration Designer by browsing to [<a href="http://designer.com">designer.com</a>]&gt;(<a href="http://designer.com">http://designer.com</a>) and enters valid credentials.</li>
+<li>User <a href="#view-and-edit-configuration">Views or Edits Configuration</a>.</li>
+<li>User closes the Configuration.</li>
+<li>User logs-out of the Designer</li>
+</ol>
+<h5>Alternatives</h5>
+<h6>1a - Setup Credentials</h6>
+<ol>
+<li>&#x2026;</li>
+</ol>
+<h5>Detailed Requirement Statements</h5>
+<p>This section will list the requirements statement / business rule for each BDD scenario associated with the use case. It is automatically generated from the text at the beginning of each BDD scenarios.</p>
+<ul>
+<li>Configurations can be opened and closed from the Designer (Example of a Detailed Requirement Statement that would describe a BDD scenario)</li>
+<li>Accessing the Designer requires valid credentials.</li>
+<li>&#x2026;</li>
+<li>&#x2026;</li>
+</ul>
+</blockquote>
+<blockquote>
+<h4>View and Edit Configuration</h4>
+<p>An example of a sub-use case. It is called by the <em>Access Configuration Details</em> use case.</p>
+<h5>Base Flow - View and Edit Configuration</h5>
+<ol>
+<li>User does any of the following by navigating to the appropriate part of &gt;the configuration.
+<ul>
+<li><a href="#view-or-edit-part-x">Views or Edits Part-A</a></li>
+<li><a href="#view-or-edit-part-x">Views or Edits Part-B</a> (there would be more similar steps for other parts of the config&#x2026;)</li>
+<li><a href="#reuse-a-form-r12">Imports a Configuration Part</a></li>
+<li><a href="#view-audit-trail">Views the Audit Trail</a></li>
+<li>Other sub-use-cases that could be done&#x2026;</li>
+</ul>
+</li>
+<li>Other steps&#x2026;</li>
+</ol>
+<h5>Data</h5>
+<h6>Configuration (the name of a thing in the business domain)</h6>
+<p>This is an example of what goes in a &#x2018;Data&#x2019; sub-section. Splitting out the data from the steps isn&#x2019;t a standard practice when writing use cases. Such a section would contain things like the definition of the parts of a &#x2018;Configuration&#x2019;, navigation to and operations on those parts, e.g.,</p>
+<ul>
+<li>Config &#x2018;Name&#x2019; - with sub-folder for each of the following that when clicked navigate to and expand to show details of that part of the Config:
+<ul>
+<li>Part-A
+<ul>
+<li>Sub-parts would be listed here but are omitted to keep the example simple. Rules about the contents of each part could also go in this section.</li>
+<li>List the operations available on this part and its subparts. Details omitted to keep the example simple&#x2026;</li>
+</ul>
+</li>
+<li>Part-B
+<ul>
+<li>&#x2026;</li>
+</ul>
+</li>
+<li>Audit Trail of changes to Config (an example of other kinds of data that need to be defined)</li>
+<li>&#x2026;</li>
+</ul>
+</li>
+</ul>
+<h5>Detailed Requirement Statements</h5>
+<p>BDD scenario associated with the use case&#x2026;</p>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="benefits-of-the-framework">Benefits of The Framework</h2>
+
+<h3 class="mume-header" id="use-cases-as-a-better-backlog">Use Cases as a Better Backlog</h3>
+
+<p>The <em>flat</em> product backlog does not capture the customer&#x2019;s journey. This problem and using story mapping as the solution has been written about extensively<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup>.</p>
+<p><img src="./images/flat-backlog-vs-story-map.jpg" alt="Flat Backlog vs. Story Map"></p>
+<p>The flat backlog provides no context or big-picture for a product. Arranging user stories in the order they&#x2019;ll be delivered doesn&#x2019;t help a product manager explain to others what the product does or determine if they&#x2019;ve identified the relevant user stories.</p>
+<p>The work on the use cases should start as a top-level list of user goals<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup> similar to a regular flat backlog of epics and user stories. The result can be a backlog of use cases. They are incrementally expanded to be a connected set of more detailed use cases. This provides an even better organization of the product backlog that a story map, while setting us up to have comprehensive requirements.</p>
+<p>Ordering the stories based on things like priority happens after the initial set of use cases is identified. That ordering is the beginning of work-management, e.g., put the user stories in priority order into a <a href="#work-management">work-management</a> tool like Jira or use a story mapping tool instead.</p>
+<p>When you have the some or all of the use cases before starting implementation of a feature it&#x2019;s easy to create user stories from them.  The first cut at user stories can be as simple as one story for the base flow and one for each alternative. The following picture shows the idea of such paths through the flows. My experience is that typically a flow get broken into smaller user stories. There are not hard-and-fast rules. A story can be a path through a flow or multiple flows. How you create user stories largely depends on the effort to implement and how splitting or grouping helps with work management.</p>
+<p><img src="./images/use-case-schematic-small.png" alt="Use Case Schematic"></p>
+<p>Factoring out the data and rules from the use case steps pays dividends here. Varying the data is an ideal way to find BDD scenarios that then become the automated tests. If, as I recommend, you are considering every BDD scenario a &#x2018;story&#x2019; then walking paths through the use case flows with different data is a great way to find user stories and generate BDD scenarios. A powerful benefit is that you&#x2019;ll be walking through use case flows and this is likely to be a longer path than a single story thus yielding better, or at least more comprehensive, tests.</p>
+<p>Also important is that we aren&#x2019;t working on all the use cases at the same time. We&#x2019;re working on one goal at a time with minimal requirements on things to be built in the future. So the many parts of the requirements documentation could be just names of use cases that may get expanded in the future. This also makes review of the use cases easier. At any point in time we&#x2019;re only working on a small subset. The full set is there as the context but not changing much in a sprint(s).</p>
+<p>Finally, we want to write the absolute minimum that provides a framework of the requirements as a way to control the overhead from constant refactoring of the use cases. The details should instead migrated into the BDD scenarios that we link to the use cases. We might start with a lot of detail in the use case doc but look to move that detail out into BDD scenarios as much as possible as the implementation proceeds.</p>
+<h3 class="mume-header" id="work-in-all-directions">Work In All Directions</h3>
+
+<p>While your goal should be to have decent use cases before starting implementation, this will frequently not be appropriate or possible. We may start by just writing a list of use cases and then evolve from all directions to update and refactor the use cases as we learn. Working-in-all-directions happens because every part of the framework is iterative and incremental. Up to a point, the more we have the opportunity to discuss and think deeply about what to build the better the foundation of understanding we start with. There is no magic answer to finding the balance between the waterfall big-requirements-up-front trap and the code-and-fail-fast that can lead to lots of wasted implementation work. This framework strives to help find that balance while setting up for rapid cycles of implementation and learning. It&#x2019;s also typical that features have wildly difference cycles depending on the amount of unknowns. Where the unknowns are limited, more upfront thinking can speed delivery. The following picture highlights all the other parts of the framework feeding into the use cases.</p>
+<p><img src="./images/overview-with-all-directions-highlighted-small.png" alt="All Directions Highlighted"></p>
+<p>Working in all directions means:</p>
+<ul>
+<li>Write analysis documents about the domain in whatever way works and transform them into the use case structure over time, e.g., capture notes about a feature across a series of discussions before trying to organize them into use cases. For guidance see <a href="https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC">How to Understand Almost Anything: A Practitioner&#x2019;s Guide to Domain Analysis</a> by Markus Voelter.</li>
+<li>Since we don&#x2019;t know the requirements we build some working, tested features from whatever early user stories we have. As we learn what the real requirements are we reverse engineer the use cases from the implementation or user stories.</li>
+<li>Constantly refactor the use cases as your understanding of the requirements evolves or as needed to make reading the requirements easier.</li>
+<li>Review the use cases and the user stories in the work management system together and make appropriate corrections in both. Do this frequently even if you thought you had the use cases at the start of work on a feature.</li>
+</ul>
+<h3 class="mume-header" id="store-everything-in-git">Store Everything in Git</h3>
+
+<p>Having the analysts and users working collaboratively in the same place as the devs and testers with a rapid feedback cycle is a <em>massive benefit</em>. Using different tools that aren&#x2019;t directly linked to the product substantially slow such a cycle. The simplest and I believe only way this is possible is to have everyone storing everything in the git repository.</p>
+<p><img src="./images/overview-with-all-in-git-highlighted-small.png" alt="All In Git"></p>
+<p>The changes needed to have everyone working in git is worth it. The devs and testers are already putting everything in git. The devs are putting their code there<sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup>, the detailed requirements, as BDD scenarios, are also either be BBD scenario text files or actual code<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup>. Everyone collaborating in git becomes immediately possible when the requirements documents are text files written in markdown<sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup> and managed in git.</p>
+<p>I can hear the response. Git is scary. Markdown is only for techies. My experience is that I can teach anyone how to use git and edit markdown quickly. The users don&#x2019;t need to be git or markdown experts, just doing the basics gets us all actively collaborating in a much better way than separate tools. Anyone you trust to be writing requirements needs to have the skills to work in markdown. In the Life Science domain I primarily work in most of the users are really smart, e.g., scientists. If they see how working closely in tight feedback cycles gets them rapid results, they will learn something new. It&#x2019;s a big but important change. I expect the situation is similar in most other domains.</p>
+<p>As a concrete example of what a tight feedback cycle looks like, consider the following:</p>
+<ul>
+<li>A change is needed to a BDD test scenario which is edited in a text file in git as the result of discussion with a dev and user</li>
+<li>The code is updated in git</li>
+<li>The system is rebuilt in response to those changes in git</li>
+<li>The automated test based on the BDD scenario is run as part of that redeployment</li>
+<li>If it passes the product is deployed and the change is ready for ad-hoc evaluation</li>
+</ul>
+<p>If the change is just a scenario addition or detail change, the use cases need not be updated. The change will be reflected by the scenarios presence under the appropriate use case. If the change impacts the use case, then they are easy enough to edit directly as part of the discussion about the change.</p>
+<p>There is a multitude of separate specialized tools to capture the requirements and the supporting details as BDD test scenarios. They don&#x2019;t store their artifacts in a text or code format in git. This results in disconnects between the product and its supporting artifacts. I expect every reader has seen requirements that are out of sync with the current implementation, especially for mature products. Having the detailed requirements be living, constantly executed, BDD scenarios is a major way this disconnect is avoided. Having these living BDD artifacts organized in a light-weight use case framework enables keeping the rest of the specifications in sync with the product. Another factor is the cost of separate tools, teams to support them, and user training. Working all in git using markdown eliminates all these costs.</p>
+<h3 class="mume-header" id="work-management">Work Management</h3>
+
+<p>A tool(s) is needed to manage the work on user stories, e.g., a work management system like Jira<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup>. As mentioned above, the user stories in the work management system should not be kept after the user stories are done, hence the garbage can in the overview picture.</p>
+<p><img src="./images/overview-with-work-mgmt-highlighted-small.png" alt="Work Management"></p>
+<p>It is important to note that the work management system is not storing its artifacts in git. The work management is thrown away after a sprint it doesn&#x2019;t matter where it is stored. While it might be nice to have this stored in git, it is not important to the requirements framework that this is done. Some might argue for keeping the estimates, burn-downs, etc. This kind of estimation and tracking is not part of the agile way-of-working advocated for in this article. The assumptions are:</p>
+<ul>
+<li>
+<p>We are moving toward each BDD scenario is a story,</p>
+</li>
+<li>
+<p>Each BDD scenario is so small that we&#x2019;d estimate it as a 1,</p>
+</li>
+<li>
+<p>Requirements are constantly changing, even inside a sprint, so significant and on-going work on estimation is waste<sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup></p>
+</li>
+<li>
+<p>Deliver small units of running, tested code incrementally.</p>
+</li>
+</ul>
+<h3 class="mume-header" id="automate-all-artifact-creation">Automate All Artifact Creation</h3>
+
+<p>Since everything is in well structured files, ideally markdown, simple programs can produce all the artifacts, e.g.,</p>
+<ul>
+<li>A version of the requirements document with or without the detailed requirements statements</li>
+<li>A requirements to test traceability document where the detailed requirements are under the use cases and they link directly to the test reports. Traceability spreadsheets are frequently requested and can be similarly produced.</li>
+<li>A requirements to design traceability document where each use case flow is mapped to a design document section. (This is simple if the design doc is organized by use cases so the table of contents of both documents match.)</li>
+</ul>
+<p>These are &#x2018;simple programs&#x2019; because all the need to do is scan the markdown files for simple patterns and assemble the pieces into new documents. Frequently no program even needs to be written because there are numerous open source tools that produce other document formats or organizations from markdown documents, e.g., Pandoc to produce PDF, HTML, Word, and many other formats.</p>
+<h3 class="mume-header" id="shift-requirement-details-to-the-automated-tests">Shift Requirement Details to the Automated Tests</h3>
+
+<p>The idea of making the detailed requirements be the BDD Scenarios has been discussed throughout this article. This gets you to having executable requirements. Keep the use cases to a minimum and let them be the framework to organize the BDD tests. What hasn&#x2019;t been called out is that to accomplish this the team must make on-going investments in the BDD scenarios including the documentation that is part of them so they become good detailed requirements statements. This means the whole team needs to be refactoring and updating scenarios as the requirements evolve and adding good descriptions that become the requirements statements under the use cases to them.</p>
+<h2 class="mume-header" id="why-is-this-a-great-requirements-framework">Why is this a Great Requirements Framework</h2>
+
+<ul>
+<li>
+<p><em>Readability &amp; Understandability</em>: It reads like a structured story that connects all the requirements together. While reading you can skip details, like the data section, until you care about them. It&#x2019;s an organized way to show all the things in the user journeys from Story Mapping.</p>
+</li>
+<li>
+<p><em>Evolvability</em>: You can start with just parts of the overall requirements and easily split, combine, and otherwise refactor flows or separate files. This is made especially easy because it&#x2019;s just a text file where cut-and-paste, search-and-replace, and other transformations are trivial.</p>
+</li>
+<li>
+<p><em>Longevity</em>: Each release adds or changes use cases just like the evolution process that happens during the release. At the end of every release you have the full connected story of the product.</p>
+</li>
+<li>
+<p><em>Automateability</em>: A text file with a simple and well defined structure is trivial to automatically transform. The primary example is automated inclusion of the requirements statements from the BDD scenario files. See, [Acceptance Test Traceability](TODO: put link to wherever this is written about). It&#x2019;s trivial to generate HTML or PDF versions from the markdown for non-technical readers.</p>
+</li>
+<li>
+<p><em>Work Manageability</em>: The user stories can be as simple as one for the base flow and one for each alternative.  The key point is that you can see the entire scope of work from the use cases that have been implemented rather than tracking disconnected user stories.</p>
+</li>
+<li>
+<p><em>Flexibility</em>: The requirements can be easily created during or after other forms of requirements definition, e.g., you can start with some user stories and work back into the full requirements framework.</p>
+</li>
+<li>
+<p><em>Traceability</em>: BDD Acceptance Tests are organized by use case so traceability is automatic. Design documents can be naturally organized by how each use case is supported so traceability is automatic. The traceability documents can be easily generated, see Automation.</p>
+</li>
+</ul>
+<h1 class="mume-header" id="appendix">Appendix</h1>
+
+<p>#TODO: The sub-sections following should be made into separate articles. They are included inline here for easy reference from the above article.</p>
+<h2 class="mume-header" id="an-agile-way-of-working-with-use-cases">An Agile Way-of-Working with Use Cases</h2>
+
 <p>The following is a simplified example of some use cases for a product to design configuration files. The idea is that a configuration is made up of many parts, each with a unique structure that the user needs to populate. I present the example first and then review how its structure provides the ideal requirements framework.</p>
 <hr>
 <blockquote>
@@ -522,88 +726,34 @@ pre[data-line] .line-highlight[data-end]:after {
 <p>BDD scenario associated with the use case&#x2026;</p>
 </blockquote>
 <hr>
-<h2 class="mume-header" id="other-critical-parts-of-the-framework">Other Critical Parts of the Framework</h2>
-
-<h3 class="mume-header" id="work-in-all-directions">Work in all directions</h3>
-
-<p>You don&#x2019;t just write the use cases up-front. They evolve from all directions. You:</p>
-<ul>
-<li>Write domain analysis documents and transform them into the use case structure over time</li>
-<li>Frequently, you don&#x2019;t know the requirements so you need to build working tested features from whatever early stories you have. As you learn what the real requirements are you reverse engineer the use cases from the implementation or stories.</li>
-<li>Constantly refactor the use cases as your understanding of the requirements evolves or as needed to make reading the requirements easier. This is a great example of why basing the requirements on stories doesn&#x2019;t work. The stories you did a while ago frequently no longer reflect the real requirements or don&#x2019;t fit well with the subsequently implemented requirements.</li>
-</ul>
-<h3 class="mume-header" id="make-stories-from-the-use-case-flows">Make Stories from the Use Case Flows</h3>
-
-<p>When you have the some or all of the use cases before starting implementation of a feature it&#x2019;s easy to create stories from them.  The first cut at stories can be as simple as one story for the base flow and one for each alternative. My experience is that typically a flow get broken into smaller stories. There are not hard-and-fast rules. A story can be a path through a flow or multiple flows. How you create stories largely depends on the effort to implement and how splitting or grouping helps with work management.</p>
-<p>While your goal should be to have decent use cases before starting implementation, this will frequently not appropriate or possible. If you don&#x2019;t have all the use cases, work in all directions as described above, and then update and refactor them as you learn. It almost always helps both the requirements document and the work management to review them together and make appropriate corrections in both, so do this frequently even if you thought you had the use cases at the start of work on a feature.</p>
-<p>Factoring out the data and rules from the use case steps pays dividends here. Varying the data is an ideal way to find BDD scenarios (a.k.a. tests). If, as I recommend, you are considering every BDD scenario a &#x2018;story&#x2019; then walking paths through the use case flows with different data is a great way to find stories and generate BDD scenarios. A powerful benefit is that you&#x2019;ll be walking through use case flows and this is likely to be a longer path than a single story thus yielding better, or at least more comprehensive, tests.</p>
-<h3 class="mume-header" id="store-everything-in-git">Store Everything in Git</h3>
-
-<p>A tool(s) is needed to manage the work on stories, e.g., a work management system like Jira. As mentioned above, the stories in the work management system should not be kept after the stories are done. I do not use separate ALM style tools for the overall requirements framework. Instead the complete and integrated state of the product should be in the requirements framework. To accomplish this, the requirements should be written in simple text files, ideally markdown. The file(s) are kept in the same git repo with the code and tests.<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup> The detailed requirements, as BDD scenarios, should also either be BBD scenario text files or actual code <sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup>.</p>
-<p>Having everything about the project in one git repo, all in text files or code, is both simpler and more powerful than use of elaborate ALM tools, e.g., all the change tracking features of git are available so everything from the requirements through the code and tests should never get lost or out of sync.</p>
-<p>You don&#x2019;t need to be a tech person to write in markdown. Anyone you trust to be writing requirements needs to have the skills to work in markdown. <sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup></p>
-<h3 class="mume-header" id="automate-all-artifact-creation">Automate All Artifact Creation</h3>
-
-<p>Since everything is in well structured files, ideally markdown, simple programs can produce all the artifacts, e.g.,</p>
-<ul>
-<li>A version of the requirements document with or without the detailed requirements statements</li>
-<li>A requirements to test traceability document where the detailed requirements are under the use cases and they link directly to the test reports. Traceability spreadsheets are frequently requested and can be similarly produced.</li>
-<li>A requirements to design traceability document where each use case flow is mapped to a design document section. (This is simple if the design doc is organized by use cases so the table of contents of both documents match.)</li>
-</ul>
-<p>These are &#x2018;simple programs&#x2019; because all the need to do is scan the markdown files for simple patterns and assemble the pieces into new documents. Frequently no program even needs to be written because there are numerous open source tools that produce other document formats or organizations from markdown documents, e.g., Pandoc to produce PDF, HTML, Word, and many other formats.</p>
-<h3 class="mume-header" id="shift-requirement-details-to-the-automated-tests">Shift Requirement Details to the Automated Tests</h3>
-
-<p>Invest in documentation of the BDD scenarios so the become the detailed requirements statements. This gets you to having executable requirements. Keep the use cases to a minimum and let them be the framework to organize the BDD tests. This means you need to be refactoring and updating scenarios as the requirements evolve and adding good descriptions to them.</p>
-<h2 class="mume-header" id="why-is-this-a-great-requirements-framework">Why is this a Great Requirements Framework</h2>
-
-<ul>
-<li>
-<p><em>Readability &amp; Understandability</em>: It reads like a structured story that connects all the requirements together. While reading you can skip details, like the data section, until you care about them. It&#x2019;s an organized way to show all the things in the user journeys from Story Mapping.</p>
-</li>
-<li>
-<p><em>Evolvability</em>: You can start with just parts of the overall requirements and easily split, combine, and otherwise refactor flows or separate files. This is made especially easy because it&#x2019;s just a text file where cut-and-paste, search-and-replace, and other transformations are trivial.</p>
-</li>
-<li>
-<p><em>Longevity</em>: Each release adds or changes use cases just like the evolution process that happens during the release. At the end of every release you have the full connected story of the product.</p>
-</li>
-<li>
-<p><em>Automateability</em>: A text file with a simple and well defined structure is trivial to automatically transform. The primary example is automated inclusion of the requirements statements from the BDD scenario files. See, [Acceptance Test Traceability](TODO: put link to wherever this is written about). It&#x2019;s trivial to generate HTML or PDF versions from the markdown for non-technical readers.</p>
-</li>
-<li>
-<p><em>Work Manageability</em>: The user stories can be as simple as one for the base flow and one for each alternative.  The key point is that you can see the entire scope of work from the use cases that have been implemented rather than tracking disconnected stories.</p>
-</li>
-<li>
-<p><em>Flexibility</em>: The requirements can be easily created during or after other forms of requirements definition, e.g., you can start with some user stories and work back into the full requirements framework.</p>
-</li>
-<li>
-<p><em>Traceability</em>: BDD Acceptance Tests are organized by use case so traceability is automatic. Design documents can be naturally organized by how each use case is supported so traceability is automatic. The traceability documents can be easily generated, see Automation.</p>
-</li>
-</ul>
-<h2 class="mume-header" id="summary-and-overview">Summary and Overview</h2>
-
-<p>TODO: create a picture of how everything links together; maybe overlay the process of creating things</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>It&#x2019;s summed up by Ron&#x2019;s article: <a href="https://ronjeffries.com/articles/018-01ff/abandon-1/">Developers Should Abandon Agile</a>.) <a href="#fnref1" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+<li id="fn1" class="footnote-item"><p>Rather than repeat &#x2018;product / project&#x2019;, I&#x2019;m going to say &#x2018;product&#x2019;. For discussion of why &#x2018;projects&#x2019; are a bad idea, see sources like: <a href="https://www.svpg.com/product-vs-project-teams/">Product rather than Project Teams</a>, <a href="https://www.accenture.com/us-en/blogs/software-engineering-blog/whats-the-difference-between-a-project-and-a-product">Product Mindset</a> <a href="#fnref1" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
 </li>
-<li id="fn2" class="footnote-item"><p>Don&#x2019;t fall into the RAT trap, see GeePaws article: <a href="https://www.geepawhill.org/2020/07/17/the-rat-rework-avoidance-theory/">Rework Avoidance Theory</a> <a href="#fnref2" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+<li id="fn2" class="footnote-item"><p>It&#x2019;s summed up by Ron&#x2019;s article: <a href="https://ronjeffries.com/articles/018-01ff/abandon-1/">Developers Should Abandon Agile</a>.) <a href="#fnref2" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
 </li>
-<li id="fn3" class="footnote-item"><p>Rather than repeat &#x2018;product / project&#x2019;, I&#x2019;m going to say &#x2018;product&#x2019;. For discussion of why &#x2018;projects&#x2019; are a bad idea, see sources like: <a href="https://www.svpg.com/product-vs-project-teams/">Product rather than Project Teams</a>, <a href="https://www.accenture.com/us-en/blogs/software-engineering-blog/whats-the-difference-between-a-project-and-a-product">Product Mindset</a> <a href="#fnref3" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+<li id="fn3" class="footnote-item"><p>Don&#x2019;t fall into the RAT trap, see GeePaws article: <a href="https://www.geepawhill.org/2020/07/17/the-rat-rework-avoidance-theory/">Rework Avoidance Theory</a> <a href="#fnref3" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
 </li>
 <li id="fn4" class="footnote-item"><p>It cannot be a long list of &#x2018;the system must&#x2026;&#x2019; statements. <a href="#fnref4" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
 </li>
-<li id="fn5" class="footnote-item"><p>It&#x2019;s possible for the user guide to provide the info on what a product does, I&#x2019;ve never seen one written as the system was built. Further the organization provided for things like traceability doesn&#x2019;t map to a user guide organization. I&#x2019;m interested to hear about the user guide as the substitute for requirements. <a href="#fnref5" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+<li id="fn5" class="footnote-item"><p>It&#x2019;s possible for the user guide to provide the info on what a product does, I&#x2019;ve never seen one written as the system was built. Further, the organization provided for things like traceability don&#x2019;t map well to a user guide. I&#x2019;m interested to hear about the user guide as the substitute for requirements. <a href="#fnref5" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
 </li>
-<li id="fn6" class="footnote-item"><p>&#x2018;Work Manageability&#x2019; isn&#x2019;t an ideal name. Forgive me for trying to force everything into &#x2018;ilities&#x2019;. <a href="#fnref6" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+<li id="fn6" class="footnote-item"><p>See the definitive book for <a href="https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258">Writing Effective Use Cases</a> by Alistair Cockburn and my <a href="http://todo-add-this-article...">Use Case Based Requirements on an Agile Project</a> article for detailed guidance of how I write them. <a href="#fnref6" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
 </li>
-<li id="fn7" class="footnote-item"><p>See the definitive book for <a href="https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258">Writing Effective Use Cases</a> by Alistair Cockburn and my <a href="http://todo-add-this-article...">Use Case Based Requirements on an Agile Project</a> article for detailed guidance of how I write them. <a href="#fnref7" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+<li id="fn7" class="footnote-item"><p>see information from any of the story mapping products, e.g., <a href="https://www.easyagile.com/">Easy Agile</a>, or the work by the creator of <a href="https://jpattonassociates.com/story-mapping/">Story Mapping</a> <a href="#fnref7" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
 </li>
-<li id="fn8" class="footnote-item"><p>The design documents are also be markdown documents stored in git. <a href="#fnref8" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+<li id="fn8" class="footnote-item"><p>While there are techniques for capturing higher level business capabilities for an organization, that isn&#x2019;t necessary to deliver a product. It&#x2019;s a good higher level context but is outside the scope of this framework. <a href="#fnref8" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
 </li>
-<li id="fn9" class="footnote-item"><p>The typical BDD tools, e.g., Cucumber or Behave, have you write the scenarios in text based feature files. On a recent project all the BDD scenarios were written in a DSL running in the same language engineering tool as the product code. In this case the BDD scenarios generated HTML reports that were included in the &#x2018;Detailed Requirement Statements&#x2019; section. See <a href="https://www.youtube.com/watch?v=x1qm879ZosI">Nodeworld: Adventures from a world with turtles all the way down</a> for an details of the approach. This is also an example of the power of a custom DSL for testing vs. limiting yourself to BDDs Given-When-Then. <a href="#fnref9" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+<li id="fn9" class="footnote-item"><p>The design documents are also be markdown documents stored in git. <a href="#fnref9" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
 </li>
-<li id="fn10" class="footnote-item"><p><a href="https://www.linkedin.com/advice/0/what-benefits-challenges-using-markdown-software">benefits-challenges-using-markdown-software</a>, <a href="https://stymied.medium.com/why-you-should-and-should-not-use-markdown-1b9d70987792">why-you-should-and-should-not-use-markdown</a> <a href="#fnref10" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+<li id="fn10" class="footnote-item"><p>The typical BDD tools, e.g., Cucumber or Behave, have you write the scenarios in text based feature files. On a recent project all the BDD scenarios were written in a DSL running in the same language engineering tool as the product code. In this case the BDD scenarios generated HTML reports that were included in the &#x2018;Detailed Requirement Statements&#x2019; section. See <a href="https://www.youtube.com/watch?v=x1qm879ZosI">Nodeworld: Adventures from a world with turtles all the way down</a> for an details of the approach. This is also an example of the power of a custom DSL for testing vs. limiting yourself to BDDs Given-When-Then. <a href="#fnref10" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn11" class="footnote-item"><p>See the many resources on the web on markdown, e.g., <a href="https://www.linkedin.com/advice/0/what-benefits-challenges-using-markdown-software">The benefits and challenges of using markdown software</a>, <a href="https://stymied.medium.com/why-you-should-and-should-not-use-markdown-1b9d70987792">Why you should and should not use markdown</a> <a href="#fnref11" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn12" class="footnote-item"><p>Depending on the work management tool selected, it maybe necessary to supplement it by using a separate issue tracking system like the one available in github or gitlab. This is a team specific decision. It doesn&#x2019;t change the fact that whatever is put in the work management system isn&#x2019;t going to be good as the comprehensive requirements. <a href="#fnref12" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn13" class="footnote-item"><p>There is a lot available from google about #NoEstimates, e.g., <a href="https://builtin.com/software-engineering-perspectives/noestimates-software-effort-estimations">A nice overview of the #NoEstimates ideas</a>,<a href="https://noestimatesbook.com/wp-content/uploads/2014/11/NoEstimates-book-Chapter-1-We-suck-at-estimation.pdf">The first chapter of the book by one of the creators of the #NoEstimates movement</a>, <a href="https://ronjeffries.com/xprog/articles/the-noestimates-movement/">Ron Jeffries on open questions about #NoEstimates</a> <a href="#fnref13" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
 </li>
 </ol>
 </section>
