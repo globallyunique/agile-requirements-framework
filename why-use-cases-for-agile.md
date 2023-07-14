@@ -1,17 +1,17 @@
 [TOC]
 
-# Summary
-
-Products[^product-project] need a comprehensive requirements specification. Not an up-front waterfall spec. Rather it needs to serve as the continuously evolving requirements framework to organize and understand the path to building the product. User stories listed in a backlog as used on by the current agile processes cannot accomplish this. In fact, user stories are at all the kind of requirements needed in a comprehensive requirements specification. In this article I describe a way-of-working to build such comprehensive requirements that is compatible with an agile way-of-working.
-
 # Real-Agile with Comprehensive Requirements Documents
 
-First let me define what I mean by the words in the title. My definition of *Real-Agile* is based on the ideas from those I consider the master craftsmen of agile ways-of-working:
+Products[^product-project] need a comprehensive requirements specification. Not an up-front waterfall spec. Rather it needs to serve as the continuously evolving requirements framework to organize and understand the path to building the product. User stories listed in a backlog as used on by the current agile processes cannot accomplish this. In fact, user stories are not at all the kind of requirements needed in a comprehensive requirements specification. In this article I describe a way-of-working to build such comprehensive requirements that is compatible with an agile way-of-working.
+
+First let me define what I mean by the words in the title. My definition of *Real-Agile* is based on the ideas from those I consider the master craftspeople of agile ways-of-working[^masters-of-agile] :
 - Incrementally learn what the user needs via small user stories defined via [Behavior Driven Development (BDD)](https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/) scenarios.[^abandon-agile] 
-- Delivery running, tested, useful software very frequently, ideally daily
+- Deliver running, tested, useful software very frequently, ideally at least daily
 - Assume requirements, design, and code evolve constantly.[^rat-trap]
 
 My definition of *Comprehensive Requirements* is a document(s) that cover the full scope of the product as a connected journey[^system-must], spanning all the releases. 
+
+  [^masters-of-agile]: I primarily consider the signers of the agile manifesto to be the master craftsmen of agile. Few of them are Scrum advocates and even fewer like SAFe. I share those views. The people I have taken most of my ideas from are: [Ron Jeffries](https://ronjeffries.com/) and [GeePaw Hill](https://www.geepawhill.org/).
 
   [^abandon-agile]: It's summed up by Ron's article: [Developers Should Abandon Agile](https://ronjeffries.com/articles/018-01ff/abandon-1/).)
 
@@ -25,14 +25,14 @@ My definition of *Comprehensive Requirements* is a document(s) that cover the fu
 
 ## Why Do We Need Comprehensive Requirements
 
-Minimally, we need requirements because humans forget things and these forgetful humans routinely leave and join our product. Without something like a requirements document to provide the overarching goals and enough of the details, we lose track of what we've done and why.[^help-doc] Formally, many domains mandate a requirements documents, e.g., I primarily work in the regulated / validated Life Science domain where, among other mandates, there must be a requirements document. In this article I'll go beyond just meeting the mandates and make the case that a comprehensive requirements document makes every step of an agile way-of-working better. 
+Formally, many domains mandate a requirements documents, e.g., I primarily work in the regulated / validated Life Science domain where, among other mandates, there must be a requirements document. Informally, we need requirements because humans forget things and these forgetful humans routinely leave and join our product team. Without something like a requirements document to provide the overarching goals and enough of the details, we lose track of what we've done and why.[^help-doc]  In this article I'll go beyond just meeting the mandates and make the case that a comprehensive requirements document makes every step of an agile way-of-working better. 
 
 
   [^help-doc]: It's possible for the user guide to provide the info on what a product does, I've never seen one written as the system was built. Further, the organization provided for things like traceability don't map well to a user guide. I'm interested to hear about the user guide as the substitute for requirements.
 
 I see little discussion or innovation on the need for comprehensive requirements when working agile. What I see way too often are two extremes:
 - User Stories in a tracking tool as the requirements, e.g., Jira,
-- Waterfall style requirements documents, usually captured in an application life cycle management (ALM) tool, e.g., [Confluence](https://www.atlassian.com/software/confluence)
+- Waterfall style requirements documents, usually captured in a Word document or an application life cycle management (ALM) tool, e.g., [Confluence](https://www.atlassian.com/software/confluence)
 
 Let's examine the issues with each of these requirements approaches.  
 
@@ -44,7 +44,7 @@ What I see at many companies is a process that mashes together the user stories 
 - They should not be maintained. They should be thrown away after implementation. (Anyone remember tearing up the story cards-on-the-wall at the end of a sprint.) As such they can't be the basis of comprehensive requirements without a lot of re-work. 
 - Epics (groups of related user stories) don't pull user stories into a connected flow that serves as good requirements. 
 
- #TODO: Write and add a link to a separate article on why stories aren't requirements.
+ #TODO: Write and add a link to a separate article on why user stories aren't requirements.
 
 ## Waterfall style Requirements Documents
 
@@ -72,16 +72,19 @@ What are the 'ilities' needed for a great requirements framework:
 - *Flexibility*: The requirements can be easily created during or after other forms of requirements definition, e.g., you can start with some high-value user stories and work back into the full requirements framework as you learn by implementing. 
  
 - *Traceability*: Acceptance tests and design documents align directly to provide simple traceability from the requirements.
+ 
+- *Price*: While not an 'ility', the framework should require spending the least amount on special tools. Less use of special tools also tends to result in portability.
+  
 
-      [^manageability]: 'Work Manageability' isn't an ideal name. Forgive me for trying to force everything into 'ilities'.
+    [^manageability]: 'Work Manageability' isn't an ideal name. Forgive me for trying to force everything into 'ilities'.
 
 To meet all the above we need a framework rather than just a requirements document. The following are practices I've tried and that I consider essential to get to such a framework:
-- [Story Mapping](https://jpattonassociates.com/story-mapping/) - This is very attractive because it organizes the user stories into end-to-end journeys. It suffers from the fundamental problem that it is based on user stories so the journeys are a chopped up into a work management view of the requirements.
-- User stories linked to web pages / documents that contain the details about the requirements, e.g., a story in Jira linked to a page in Confluence. Carefully written pages could yield a good view of the requirements. This is attractive because a story should be a placeholder for a conversation so it's good to minimize the details in a story by moving them to another document. This approach doesn't yield good requirements if the documents are largely organized by the user stories. Such an organization is just a more documented version of the problem that user stories are not requirements.
-- [Domain Analysis Documents](https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC) - Domain analysis is the process of understanding a body of knowledge, the subject matter of a domain. Minimally you want to document everything you are agreeing to implement in whatever format works for that domain. Ideally, you want to capture the concepts, vocabulary, rules and constraints clearly enough so you can define a set of abstractions and their relationships. The goal is to document the *language* that can be used to completely and unambiguously describe, and ultimately execute, the subject matter in the domain. As taught in [this book]((https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC)), you follow a set of practices to enable you to write everything you know about the requirements as you learn them. You still need to find a way to connect all the requirements for all the areas of requirements together.
-- [Behavior Driven Development (BDD)](https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/) - BDD is the best approach for capturing detailed requirements. I believe that using each BDD scenario as a story is an excellent approach. Having multiple BDD scenarios as the Acceptance Criteria for a story is my second choice. It's hard to see how all the individual scenarios fit into the overall requirements so something more is needed. 
+- User stories linked to web pages / documents that contain the details about the requirements, e.g., a story in Jira linked to a page in Confluence. Carefully written pages could yield a good view of the requirements. This is attractive because a story should be a placeholder for a conversation so it's good to minimize the details in a story by moving them to another document. This approach doesn't yield good requirements if the documents are largely organized by the user stories. Such an organization is just a more documented version of the problem that user stories are not requirements. I've routinely seen such requirements documentation be difficult to follow and poorly synchronized with the state of the product.
+- [Story Mapping](https://jpattonassociates.com/story-mapping/) - This is very attractive because it organizes the user stories into end-to-end journeys. I highly recommend learning about story mapping and applying those ideas in combination with the requirements framework proposed in this article. You can start by following this bullets link to Story Mapping. I've seen only limited use of story mapping. It requires a specialized tool to support it. The biggest issue I have with it is that it suffers from the fundamental problem that it is based on user stories so the journeys are a chopped up into a work management view of the requirements.
+- [Domain Analysis Documents](https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC) - This is essentially the fundamental work of doing business analysis.  The link for this bullet points to a new and excellent book on the topic. It extends traditional analysis with powerful ideas and techniques focused on the language of the business. The description of the book says: Domain analysis is the process of understanding a body of knowledge, the subject matter of a domain. Minimally you want to document everything you are agreeing to implement in whatever format works for that domain. Ideally, you want to capture the concepts, vocabulary, rules and constraints clearly enough so you can define a set of abstractions and their relationships. The goal is to document the *language* that can be used to completely and unambiguously describe, and ultimately execute, the subject matter in the domain. You follow a set of practices to enable you to write everything you know about the requirements as you learn them. Analysis of the domain is fundamental but for the requirements framework you still need to find a way to connect all the requirements for all the areas of the product together.
+- [Behavior Driven Development (BDD)](https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/) - BDD is the best approach for capturing detailed requirements. I believe that using each BDD scenario as a user story is an excellent approach. Having multiple BDD scenarios as the Acceptance Criteria for a story is my second choice. BDD is essential but it's hard to see how all the individual scenarios fit into the overall requirements so something more is needed. 
 
-As noted above, these practices have limits that keep us from getting to the desired framework. My requirements framework meets all the 'ilities' by combining the best of Story Mapping, Domain Analysis Documents, and BDD centered around an updated approach to use-cases. 
+As noted above, these practices have limits that keep us from getting to the desired framework. My requirements framework meets all the 'ilities' by combining the Story Mapping, Domain Analysis Documents, and BDD centered around an updated approach to use-cases. 
 
 The following picture provides an overview of the framework. Each part of it is discussed in the rest of the article. 
 
@@ -294,6 +297,8 @@ The idea of making the detailed requirements be the BDD Scenarios has been discu
 - *Flexibility*: The requirements can be easily created during or after other forms of requirements definition, e.g., you can start with some user stories and work back into the full requirements framework. 
  
 - *Traceability*: BDD Acceptance Tests are organized by use case so traceability is automatic. Design documents can be naturally organized by how each use case is supported so traceability is automatic. The traceability documents can be easily generated, see Automation. 
+
+- *Price*: No tools beyond what the team is already using or is available as open source is needed. Everything stored as text makes for great portability to different approaches or tools if and as needed in the future.
 
 # Appendix
 
