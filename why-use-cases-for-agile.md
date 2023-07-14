@@ -306,7 +306,9 @@ The idea of making the detailed requirements be the BDD Scenarios has been discu
 
 ## An Agile Way-of-Working with Use Cases
 
-The following is a simplified example of some use cases for a product to design configuration files. The idea is that a configuration is made up of many parts, each with a unique structure that the user needs to populate. I present the example first and then review how its structure provides the ideal requirements framework. 
+The following is a larger but still simplified example of some use cases for a product to design configuration files. The idea is that a configuration is made up of many parts, each with a unique structure that the user needs to populate. I present the example first and then review how its structure provides the ideal requirements framework. 
+
+  #TODO: add details on how to write and evolve use cases...
 
 ---
 
