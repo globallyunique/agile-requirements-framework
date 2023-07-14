@@ -1,0 +1,623 @@
+<!DOCTYPE html><html><head>
+      <title>why-use-cases-for-agile</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/mike.vogel/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.6.8/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#real-agile-with-comprehensive-requirements-documents" class="md-toc-link"><p>Real-Agile with Comprehensive Requirements Documents</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#why-do-we-need-comprehensive-requirements" class="md-toc-link">
+            <p>Why Do We Need Comprehensive Requirements</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#user-stories-as-requirements" class="md-toc-link">
+            <p>User Stories as Requirements</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#waterfall-style-requirements-documents" class="md-toc-link">
+            <p>Waterfall style Requirements Documents</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#approaches-between-the-extremes" class="md-toc-link">
+            <p>Approaches Between the Extremes</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#how-and-why-use-cases" class="md-toc-link">
+            <p>How and Why Use Cases</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#other-critical-parts-of-the-framework" class="md-toc-link"><p>Other Critical Parts of the Framework</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#work-in-all-directions" class="md-toc-link">
+            <p>Work in all directions</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#make-stories-from-the-use-case-flows" class="md-toc-link">
+            <p>Make Stories from the Use Case Flows</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#store-everything-in-git" class="md-toc-link">
+            <p>Store Everything in Git</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#automate-all-artifact-creation" class="md-toc-link">
+            <p>Automate All Artifact Creation</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#shift-requirement-details-to-the-automated-tests" class="md-toc-link">
+            <p>Shift Requirement Details to the Automated Tests</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#why-is-this-a-great-requirements-framework" class="md-toc-link">
+            <p>Why is this a Great Requirements Framework</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#summary-and-overview" class="md-toc-link">
+            <p>Summary and Overview</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+<h1 class="mume-header" id="real-agile-with-comprehensive-requirements-documents">Real-Agile with Comprehensive Requirements Documents</h1>
+
+<p>First let me define what I mean by the words in the title. My definition of <em>Real-Agile</em> is based on the ideas from those I consider the master craftsmen of agile ways-of-working, primarily Ron Jeffries and GeePaw Hill:</p>
+<ul>
+<li>Incrementally learn what the user needs via small stories defined via <a href="https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/">Behavior Driven Development (BDD)</a> scenarios.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></li>
+<li>Delivery running, tested, useful software very frequently, ideally daily</li>
+<li>Assume requirements, design, and code evolve constantly.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
+</ul>
+<p>My definition of <em>Comprehensive Requirements</em> is a document(s) that cover the full scope of the product/project<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> as a connected journey<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>, spanning all the releases.</p>
+<h2 class="mume-header" id="why-do-we-need-comprehensive-requirements">Why Do We Need Comprehensive Requirements</h2>
+
+<p>Minimally, we need requirements because humans forget things and these forgetful humans routinely leave and join our product. Without something like a requirements document to provide the overarching goals and enough of the details we lose track of why and what we&#x2019;ve done.<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup> Formally, many domains mandate a requirements documents, e.g., I primarily work in the regulated / validated Life Science domain where, among other mandates, there must be a requirements document. In this article I&#x2019;ll go beyond just meeting the mandates and make the case that a comprehensive requirements document makes every step of an agile way-of-working better.</p>
+<p>I see little discussion or innovative on the need for comprehensive requirements when working agile. What I see way too often are two extremes:</p>
+<ul>
+<li>User Stories in a tracking tool like Jira, as the requirements</li>
+<li>Waterfall style requirements documents, usually captured in an application life cycle management (ALM) tool, e.g., <a href="https://www.atlassian.com/software/confluence">Confluence</a></li>
+</ul>
+<p>Let&#x2019;s examine the issues with each of these requirements approaches.</p>
+<h2 class="mume-header" id="user-stories-as-requirements">User Stories as Requirements</h2>
+
+<p>What I see at many companies, is a document that mashes together the stories from the tracking tool into a &#x2018;requirements document&#x2019;. I&#x2019;d go so far as to say that this is the current standard practice for most companies that need requirements documents and are trying to have an agile way-of-working. While it&#x2019;s the easy approach, it doesn&#x2019;t work because <em>stories are NOT requirements</em>! Stories don&#x2019;t work as the requirements because:</p>
+<ul>
+<li>They are the understanding at a point in time. They are expected to be incomplete and to evolve so the real needs can be discovered. With stories we are supposed to step away from requirements&#xA0;and enter the world of&#xA0;experiments that aim to prove a hypothesis.</li>
+<li>They are supposed to be small and separately deliverable. They represent small increments of valued functionality that can be developed in a period of a day to a week based value, risk, unknowns, etc. Their delivery order doesn&#x2019;t need to reflect the user requirements. As such they are more planning instruments then requirements.</li>
+<li>They should not be maintained. They should be thrown away after implementation. (Anyone remember tearing up the story cards-on-the-wall at the end of a sprint.) As such they can&#x2019;t be the basis of comprehensive requirements without a lot of re-work.</li>
+<li>Epics (groups of related stories) don&#x2019;t pull stories into a connected flow that serves as good requirements.</li>
+</ul>
+<h2 class="mume-header" id="waterfall-style-requirements-documents">Waterfall style Requirements Documents</h2>
+
+<p>At the other end of the spectrum is creation of traditional up-front requirements documents, a.k.a. waterfall. These take the form of <a href="https://babeginners.com/difference-between-brd-frd-and-srs/">Business Requirements Documents (BRD), Functional Requirements Documents (FRD), Software Requirements Specification (SRS)</a>. This kind of document doesn&#x2019;t fit an agile way-of-working. They are used because of a combination of:</p>
+<ul>
+<li>Fixed-price, fixed deliverable, fixed duration contracts,</li>
+<li>Fear of compliance with regulations,</li>
+<li>Standard operating procedures combined reflecting management preferences that mandate requirements up-front.</li>
+</ul>
+<p>Agile came into existence because we learned that requirements cannot be specified up front. I see little hope for combining these types of requirements documents with an agile way-of-working.</p>
+<h2 class="mume-header" id="approaches-between-the-extremes">Approaches Between the Extremes</h2>
+
+<p>If we&#x2019;re not going to take the easy but wrong approach of use stories as the requirements or cripple the agile way-of-working with a waterfall style, we need to find something between these extremes. We need to capture the requirements in a way that fits with an agile way-of-working but doesn&#x2019;t create massive overhead.</p>
+<p>What are the &#x2018;ilities&#x2019; needed for a great requirements framework:</p>
+<ul>
+<li>
+<p>Readability &amp; Understandability: They read like a structured story that connects all the requirements together. Details are captured in a way that they don&#x2019;t need to be explored until you care about them. It&#x2019;s easy for non-technical users to review.</p>
+</li>
+<li>
+<p>Evolvability: You can start with just parts of the overall requirements and easily split, combine, and otherwise refactor them. I sometimes refer to this as &#x2018;Survivability&#x2019;. The requirements framework needs to make it easy to evolve almost everything because the agile approach means constant learning and hence requirements changes. If it doesn&#x2019;t you won&#x2019;t survive the project.</p>
+</li>
+<li>
+<p>Longevity: The framework grows naturally over many releases.</p>
+</li>
+<li>
+<p>Automateability: You can use tools to reformat, add to, subset and otherwise transform the requirements.</p>
+</li>
+<li>
+<p>Work Manageability <sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup> : The user stories can be easily derived from the requirements.</p>
+</li>
+<li>
+<p>Flexibility: The requirements can be easily created during or after other forms of requirements definition, e.g., you can start with some user stories and work back into the full requirements framework.</p>
+</li>
+<li>
+<p>Traceability: BDD Acceptance Tests and design documents align directly to provide simple traceability from the requirements.</p>
+</li>
+</ul>
+<p>To meet all the above needs a framework rather than just a requirements document. I&#x2019;ll refer to it as the &#x2018;requirements framework&#x2019; when talking about more than just the statement of the requirements.</p>
+<p>Some things I&#x2019;ve tried to get to such a framework:</p>
+<ul>
+<li><a href="https://jpattonassociates.com/story-mapping/">Story Mapping</a> - This is very attractive because it organizes the stories into end-to-end journeys. It suffers from the fundamental problem that it is based on stories so the journeys are a chopped up into a work management view of the requirements.</li>
+<li>Stories linked to web pages / documents that contain the details about the requirements, e.g., a story in Jira linked to a page in Confluence. Carefully written pages could yield a good view of the requirements. This is attractive because a story should be a placeholder for a conversation so it&#x2019;s good to minimize the details in a story by moving them to another document. This approach doesn&#x2019;t yield good requirements if the documents are largely organized by the stories. Such an organization is just a more documented version of the problem that stories are not requirements.</li>
+<li><a href="https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC">Domain Analysis Documents</a> - As taught in <a href="(https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC)">this book</a>, you follow a careful set of practices to enable you to write everything you know about the requirements as you learn them. You still need to find a way to connect everything together to make it comprehensive.</li>
+<li><a href="https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/">Behavior Driven Development (BDD)</a> - BDD is the best approach for capturing detailed requirements. I believe that using each BDD scenario as a story is an excellent approach. Having multiple BDD scenarios as the Acceptance Criteria for a story is my second choice. It&#x2019;s hard to see how all the individual scenarios fit into the overall requirements so something more is needed.</li>
+</ul>
+<p>My requirements framework meets all the &#x2018;ilities&#x2019; by combining the best of Story Mapping, Domain Analysis Documents, and BDD with an updated approach to use-cases.</p>
+<h2 class="mume-header" id="how-and-why-use-cases">How and Why Use Cases</h2>
+
+<p>Use cases may seem like an outdated, big-requirements-up-front approach that can&#x2019;t align with real-agile. Let&#x2019;s explore why this isn&#x2019;t so in general and especially wrong when you&#x2019;re working agile in a validated / regulated situation. To begin, the following are essential and controversial details on how I recommend writing use cases.<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup></p>
+<ul>
+<li>
+<p>Write them in a markdown file in the products git repo. Avoid ALM and other tools so the requirements live with the implementation.</p>
+</li>
+<li>
+<p>Write the absolute minimum that provides a framework of the requirements as a way to minimize the work of the constant moving and rewriting. The details go in the BDD scenarios that we&#x2019;ll link to the use cases.</p>
+</li>
+<li>
+<p>When possible, start by breaking the previous rule and write everything you know about the requirements as you learn them. For guidance see <a href="https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC">How to Understand Almost Anything: A Practitioner&#x2019;s Guide to Domain Analysis</a> by Markus Voelter. Then refactor into the minimum organized as use cases.</p>
+</li>
+</ul>
+<p>The main structure of a use-case-based requirements document are:</p>
+<ul>
+<li>A use case name a user goal. We decompose these goals into sub-use-cases. <em>Decomposition is essential to make things into manageable chunks for both easier reading and implementing.</em></li>
+<li>Use cases are a linear sequence of steps (no branches). Decisions corresponding to branches are broken out as alternative flows. <em>Simple flows make everything simpler.</em></li>
+<li>Use cases &#x2018;call&#x2019; other use cases. The called use case is formatted as its name as a hyperlink. <em>This is a big part of telling the connected story.</em></li>
+<li>Use cases that have complex data or rules are followed by a &#x2018;Data&#x2019; sub-section. This data is referred to in use case steps as the name as a hyperlink. <em>This simplifies the steps and centralizes the definitions so that it can be reused in multiple places.</em></li>
+<li>A use case is followed by a &#x2018;Detailed Requirement Statements&#x2019; sub-section that lists the requirements statement for each BDD scenario associated with the use case. <em>This is how we capture all the details but keep the requirements framework minimal.</em></li>
+</ul>
+<p>The following is a simplified example of some use cases for a product to design configuration files. The idea is that a configuration is made up of many parts, each with a unique structure that the user needs to populate. I present the example first and then review how its structure provides the ideal requirements framework.</p>
+<hr>
+<blockquote>
+<h4>Access Configuration Designer</h4>
+<h5>Base Flow - Access Designer</h5>
+<ol>
+<li>User accesses Configuration Designer by browsing to [<a href="http://designer.com">designer.com</a>]&gt;(<a href="http://designer.com">http://designer.com</a>) and enters valid credentials.</li>
+<li>User <a href="#open-or-create-configuration">Opens or Creates a Configuration</a>.</li>
+<li>User <a href="#view-and-edit-configuration">Views or Edits Configuration</a>.</li>
+<li>User closes the Configuration.</li>
+<li>User logs-out of the Designer</li>
+</ol>
+<h5>Alternatives</h5>
+<h6>1a - Setup Credentials</h6>
+<ol>
+<li>User starts the Designer for the first time and is prompted to setup &gt;their credentials.</li>
+<li>Continue at step 2</li>
+</ol>
+<h6>1b - Invalid Credentials</h6>
+<ol>
+<li>User enters invalid credentials</li>
+<li>System notifies them of the error and re-prompts up to the allowed &gt;number of times before lock-out.</li>
+<li>Continue at step 1</li>
+</ol>
+<h5>Detailed Requirement Statements</h5>
+<p>This section lists the requirements statement / rule for each BDD scenario associated with the use case&#x2026;</p>
+<h4>View and Edit Configuration</h4>
+<h6>Base Flow - View and Edit Configuration</h6>
+<ol>
+<li>User does any of the following by navigating to the appropriate part of &gt;the configuration.</li>
+</ol>
+<ul>
+<li><a href="#view-or-edit-part-x">Views or Edits Part-A</a></li>
+<li><a href="#view-or-edit-part-x">Views or Edits Part-B</a></li>
+<li><a href="#view-or-edit-part-x">Views or Edits Part-C</a></li>
+<li><a href="#reuse-a-form-r12">Imports a Configuration Part</a></li>
+<li><a href="#view-or-edit-pds">Views PDF view of Configuration</a></li>
+<li><a href="#view-audit-trail">Views the Audit Trail</a></li>
+<li><a href="#view-online-help">Views Online Help</a></li>
+</ul>
+<h5>Data</h5>
+<h6>Configuration Tree</h6>
+<p>The Tree provides a view of the parts of the Configuration, navigation to &gt;those parts, and operations to create or delete parts where appropriate. &gt;The following is the structure of and the operations available on the &gt;items in the Protocol Tree:</p>
+<ul>
+<li>
+<p>Config &#x2018;Name&#x2019; - with sub-folder for each of the following that when &gt;clicked navigate to and expand to show details of that part of the Config:</p>
+</li>
+<li>
+<p>Part-A</p>
+<ul>
+<li>Subparts would be listed here but are omitted to keep the example &gt;simple&#x2026;</li>
+</ul>
+</li>
+<li>
+<p>Part-B</p>
+<ul>
+<li>Subparts&#x2026;</li>
+</ul>
+</li>
+<li>
+<p>Part-C</p>
+<ul>
+<li>Subparts&#x2026;</li>
+</ul>
+</li>
+<li>
+<p>PDF</p>
+</li>
+<li>
+<p>Audit Trail</p>
+</li>
+<li>
+<p>Operations:</p>
+</li>
+<li>
+<p>Part-A</p>
+<ul>
+<li>List the operations available on this tree node and its subparts. &gt;Details omitted to keep the example simple&#x2026;</li>
+</ul>
+</li>
+<li>
+<p>Part-B</p>
+<ul>
+<li>&#x2026;</li>
+</ul>
+</li>
+</ul>
+<h5>Detailed Requirement Statements</h5>
+<p>BDD scenario associated with the use case&#x2026;</p>
+<h4>View and Edit Part-A</h4>
+<h6>Base Flow - View and Edit Part-A</h6>
+<ol>
+<li>User views or edits the Part-A fields</li>
+</ol>
+<h5>Detailed Requirement Statements</h5>
+<p>BDD scenario associated with the use case&#x2026;</p>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="other-critical-parts-of-the-framework">Other Critical Parts of the Framework</h2>
+
+<h3 class="mume-header" id="work-in-all-directions">Work in all directions</h3>
+
+<p>You don&#x2019;t just write the use cases up-front. They evolve from all directions. You:</p>
+<ul>
+<li>Write domain analysis documents and transform them into the use case structure over time</li>
+<li>Frequently, you don&#x2019;t know the requirements so you need to build working tested features from whatever early stories you have. As you learn what the real requirements are you reverse engineer the use cases from the implementation or stories.</li>
+<li>Constantly refactor the use cases as your understanding of the requirements evolves or as needed to make reading the requirements easier. This is a great example of why basing the requirements on stories doesn&#x2019;t work. The stories you did a while ago frequently no longer reflect the real requirements or don&#x2019;t fit well with the subsequently implemented requirements.</li>
+</ul>
+<h3 class="mume-header" id="make-stories-from-the-use-case-flows">Make Stories from the Use Case Flows</h3>
+
+<p>When you have the some or all of the use cases before starting implementation of a feature it&#x2019;s easy to create stories from them.  The first cut at stories can be as simple as one story for the base flow and one for each alternative. My experience is that typically a flow get broken into smaller stories. There are not hard-and-fast rules. A story can be a path through a flow or multiple flows. How you create stories largely depends on the effort to implement and how splitting or grouping helps with work management.</p>
+<p>While your goal should be to have decent use cases before starting implementation, this will frequently not appropriate or possible. If you don&#x2019;t have all the use cases, work in all directions as described above, and then update and refactor them as you learn. It almost always helps both the requirements document and the work management to review them together and make appropriate corrections in both, so do this frequently even if you thought you had the use cases at the start of work on a feature.</p>
+<p>Factoring out the data and rules from the use case steps pays dividends here. Varying the data is an ideal way to find BDD scenarios (a.k.a. tests). If, as I recommend, you are considering every BDD scenario a &#x2018;story&#x2019; then walking paths through the use case flows with different data is a great way to find stories and generate BDD scenarios. A powerful benefit is that you&#x2019;ll be walking through use case flows and this is likely to be a longer path than a single story thus yielding better, or at least more comprehensive, tests.</p>
+<h3 class="mume-header" id="store-everything-in-git">Store Everything in Git</h3>
+
+<p>A tool(s) is needed to manage the work on stories, e.g., a work management system like Jira. As mentioned above, the stories in the work management system should not be kept after the stories are done. I do not use separate ALM style tools for the overall requirements framework. Instead the complete and integrated state of the product should be in the requirements framework. To accomplish this, the requirements should be written in simple text files, ideally markdown. The file(s) are kept in the same git repo with the code and tests.<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup> The detailed requirements, as BDD scenarios, should also either be BBD scenario text files or actual code <sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup>.</p>
+<p>Having everything about the project in one git repo, all in text files or code, is both simpler and more powerful than use of elaborate ALM tools, e.g., all the change tracking features of git are available so everything from the requirements through the code and tests should never get lost or out of sync.</p>
+<p>You don&#x2019;t need to be a tech person to write in markdown. Anyone you trust to be writing requirements needs to have the skills to work in markdown. <sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup></p>
+<h3 class="mume-header" id="automate-all-artifact-creation">Automate All Artifact Creation</h3>
+
+<p>Since everything is in well structured files, ideally markdown, simple programs can produce all the artifacts, e.g.,</p>
+<ul>
+<li>A version of the requirements document with or without the detailed requirements statements</li>
+<li>A requirements to test traceability document where the detailed requirements are under the use cases and they link directly to the test reports. Traceability spreadsheets are frequently requested and can be similarly produced.</li>
+<li>A requirements to design traceability document where each use case flow is mapped to a design document section. (This is simple if the design doc is organized by use cases so the table of contents of both documents match.)</li>
+</ul>
+<p>These are &#x2018;simple programs&#x2019; because all the need to do is scan the markdown files for simple patterns and assemble the pieces into new documents. Frequently no program even needs to be written because there are numerous open source tools that produce other document formats or organizations from markdown documents, e.g., Pandoc to produce PDF, HTML, Word, and many other formats.</p>
+<h3 class="mume-header" id="shift-requirement-details-to-the-automated-tests">Shift Requirement Details to the Automated Tests</h3>
+
+<p>Invest in documentation of the BDD scenarios so the become the detailed requirements statements. This gets you to having executable requirements. Keep the use cases to a minimum and let them be the framework to organize the BDD tests. This means you need to be refactoring and updating scenarios as the requirements evolve and adding good descriptions to them.</p>
+<h2 class="mume-header" id="why-is-this-a-great-requirements-framework">Why is this a Great Requirements Framework</h2>
+
+<ul>
+<li>
+<p><em>Readability &amp; Understandability</em>: It reads like a structured story that connects all the requirements together. While reading you can skip details, like the data section, until you care about them. It&#x2019;s an organized way to show all the things in the user journeys from Story Mapping.</p>
+</li>
+<li>
+<p><em>Evolvability</em>: You can start with just parts of the overall requirements and easily split, combine, and otherwise refactor flows or separate files. This is made especially easy because it&#x2019;s just a text file where cut-and-paste, search-and-replace, and other transformations are trivial.</p>
+</li>
+<li>
+<p><em>Longevity</em>: Each release adds or changes use cases just like the evolution process that happens during the release. At the end of every release you have the full connected story of the product.</p>
+</li>
+<li>
+<p><em>Automateability</em>: A text file with a simple and well defined structure is trivial to automatically transform. The primary example is automated inclusion of the requirements statements from the BDD scenario files. See, [Acceptance Test Traceability](TODO: put link to wherever this is written about). It&#x2019;s trivial to generate HTML or PDF versions from the markdown for non-technical readers.</p>
+</li>
+<li>
+<p><em>Work Manageability</em>: The user stories can be as simple as one for the base flow and one for each alternative.  The key point is that you can see the entire scope of work from the use cases that have been implemented rather than tracking disconnected stories.</p>
+</li>
+<li>
+<p><em>Flexibility</em>: The requirements can be easily created during or after other forms of requirements definition, e.g., you can start with some user stories and work back into the full requirements framework.</p>
+</li>
+<li>
+<p><em>Traceability</em>: BDD Acceptance Tests are organized by use case so traceability is automatic. Design documents can be naturally organized by how each use case is supported so traceability is automatic. The traceability documents can be easily generated, see Automation.</p>
+</li>
+</ul>
+<h2 class="mume-header" id="summary-and-overview">Summary and Overview</h2>
+
+<p>TODO: create a picture of how everything links together; maybe overlay the process of creating things</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>It&#x2019;s summed up by Ron&#x2019;s article: <a href="https://ronjeffries.com/articles/018-01ff/abandon-1/">Developers Should Abandon Agile</a>.) <a href="#fnref1" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>Don&#x2019;t fall into the RAT trap, see GeePaws article: <a href="https://www.geepawhill.org/2020/07/17/the-rat-rework-avoidance-theory/">Rework Avoidance Theory</a> <a href="#fnref2" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>Rather than repeat &#x2018;product / project&#x2019;, I&#x2019;m going to say &#x2018;product&#x2019;. For discussion of why &#x2018;projects&#x2019; are a bad idea, see sources like: <a href="https://www.svpg.com/product-vs-project-teams/">Product rather than Project Teams</a>, <a href="https://www.accenture.com/us-en/blogs/software-engineering-blog/whats-the-difference-between-a-project-and-a-product">Product Mindset</a> <a href="#fnref3" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>It cannot be a long list of &#x2018;the system must&#x2026;&#x2019; statements. <a href="#fnref4" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn5" class="footnote-item"><p>It&#x2019;s possible for the user guide to provide the info on what a product does, I&#x2019;ve never seen one written as the system was built. Further the organization provided for things like traceability doesn&#x2019;t map to a user guide organization. I&#x2019;m interested to hear about the user guide as the substitute for requirements. <a href="#fnref5" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn6" class="footnote-item"><p>&#x2018;Work Manageability&#x2019; isn&#x2019;t an ideal name. Forgive me for trying to force everything into &#x2018;ilities&#x2019;. <a href="#fnref6" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn7" class="footnote-item"><p>See the definitive book for <a href="https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258">Writing Effective Use Cases</a> by Alistair Cockburn and my <a href="http://todo-add-this-article...">Use Case Based Requirements on an Agile Project</a> article for detailed guidance of how I write them. <a href="#fnref7" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn8" class="footnote-item"><p>The design documents are also be markdown documents stored in git. <a href="#fnref8" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn9" class="footnote-item"><p>The typical BDD tools, e.g., Cucumber or Behave, have you write the scenarios in text based feature files. On a recent project all the BDD scenarios were written in a DSL running in the same language engineering tool as the product code. In this case the BDD scenarios generated HTML reports that were included in the &#x2018;Detailed Requirement Statements&#x2019; section. See <a href="https://www.youtube.com/watch?v=x1qm879ZosI">Nodeworld: Adventures from a world with turtles all the way down</a> for an details of the approach. This is also an example of the power of a custom DSL for testing vs. limiting yourself to BDDs Given-When-Then. <a href="#fnref9" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn10" class="footnote-item"><p><a href="https://www.linkedin.com/advice/0/what-benefits-challenges-using-markdown-software">benefits-challenges-using-markdown-software</a>, <a href="https://stymied.medium.com/why-you-should-and-should-not-use-markdown-1b9d70987792">why-you-should-and-should-not-use-markdown</a> <a href="#fnref10" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
