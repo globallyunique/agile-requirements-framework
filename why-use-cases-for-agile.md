@@ -1,9 +1,8 @@
 [TOC]
 
-# Real-Agile with Comprehensive Requirements Documents
+# Real-Agile with Comprehensive Requirements Framework
 
-Products[^product-project] need a comprehensive requirements specification. Not an up-front waterfall spec. Rather it needs to serve as the continuously evolving requirements framework to organize and understand the path to building the product. User stories listed in a backlog as used on by the current agile processes cannot accomplish this. In fact, user stories are not at all the kind of requirements needed in a comprehensive requirements specification. In this article I describe a way-of-working to build such comprehensive requirements that is compatible with an agile way-of-working.
-
+Products[^product-project] need comprehensive requirements specifications. Not an up-front waterfall spec. Rather a *continuously evolving* framework of requirements specifications that organize the path to building the product. User stories as used in current agile processes cannot accomplish this. In this article I describe a way-of-working to build such comprehensive requirements that is compatible with an agile way-of-working. (Tony: starting with specification and then shifting to framework and then back to specification is confusing. Are you saying that you should use a framework throughout the agile project so that a comprehensive specification can be generated when needed? If yes, maybe start with something about how creating a comprehensive specification prematurely is problematic because requirements are in flux until very late in project and then talk about issues when user stories are used as comprehensive/detailed requirements) (Mike: Reworded)
 First let me define what I mean by the words in the title. My definition of *Real-Agile* is based on the ideas from those I consider the master craftspeople of agile ways-of-working[^masters-of-agile] :
 - Incrementally learn what the user needs via small user stories defined via [Behavior Driven Development (BDD)](https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/) scenarios.[^abandon-agile] 
 - Deliver running, tested, useful software very frequently, ideally at least daily
@@ -42,8 +41,7 @@ What I see at many companies is a process that mashes together the user stories 
 - They are the understanding at a point in time. They are expected to be incomplete and to evolve so the real needs can be discovered. With user stories, we are supposed to step away from requirements and enter the world of experiments that aim to prove a hypothesis. 
 - They are supposed to be small and separately deliverable. They represent small increments of valued functionality that can be developed in a period of a day to a week based value, risk, unknowns, etc. Their delivery order doesn't need to reflect the user requirements. As such they are more planning instruments then requirements.  
 - They should not be maintained. They should be thrown away after implementation. (Anyone remember tearing up the story cards-on-the-wall at the end of a sprint.) As such they can't be the basis of comprehensive requirements without a lot of re-work. 
-- Epics (groups of related user stories) don't pull user stories into a connected flow that serves as good requirements. 
-
+- Epics (groups of related user stories) don't show how user stories are sequenced and interconnected in a connected flow that serves as good requirements. (Tony: what do you mean by connected flow? why is connected flow needed? wouldn't an epic provide some kind of end-to-end slice of functionality?) (Mike: reworded)
  #TODO: Write and add a link to a separate article on why user stories aren't requirements.
 
 ## Waterfall style Requirements Documents
@@ -61,9 +59,9 @@ If we're not going to take the easy but wrong approach of user stories as the re
 
 What are the 'ilities' needed for a great requirements framework:
 
-- *Evolvability*: You can start with just parts of the overall requirements and easily split, combine, and otherwise refactor them. I sometimes refer to this as 'Survivability'. The requirements framework needs to make it easy to evolve almost everything because the agile approach means constant learning and hence requirements changes. If it doesn't you won't survive the project.
+- *Evolvability*: You can start with just parts of the overall requirements and easily split, combine, and otherwise refactor them. I sometimes refer to this as 'Survivability'. The requirements framework needs to make it easy to evolve almost everything because the agile approach means constant learning and hence requirements changes. If it doesn't, you won't survive the project.
 
-- *Longevity*: The requirements grow naturally over many releases.
+- *Longevity*: The requirements grow and evolve naturally over many releases.
 
 - *Automateability*: You can use tools to reformat, add to, subset and otherwise transform the requirements.
 
@@ -78,10 +76,10 @@ What are the 'ilities' needed for a great requirements framework:
 
     [^manageability]: 'Work Manageability' isn't an ideal name. Forgive me for trying to force everything into 'ilities'.
 
-To meet all the above we need a framework rather than just a requirements document. The following are practices I've tried and that I consider essential to get to such a framework:
+To meet all the above we need a framework rather than just a requirements document (Tony: a similar statement should be made at the beginning. it is not clear to me in opening paragraph that you are advocating for the use a framework to manage the capture and refinement of the requirements). (Mike: hopefully done, see intro) The following are practices I've tried and that I consider essential to get to such a framework:
 - User stories linked to web pages / documents that contain the details about the requirements, e.g., a story in Jira linked to a page in Confluence. Carefully written pages could yield a good view of the requirements. This is attractive because a story should be a placeholder for a conversation so it's good to minimize the details in a story by moving them to another document. This approach doesn't yield good requirements if the documents are largely organized by the user stories. Such an organization is just a more documented version of the problem that user stories are not requirements. I've routinely seen such requirements documentation be difficult to follow and poorly synchronized with the state of the product.
 - [Story Mapping](https://jpattonassociates.com/story-mapping/) - This is very attractive because it organizes the user stories into end-to-end journeys. I highly recommend learning about story mapping and applying those ideas in combination with the requirements framework proposed in this article. The creator of story mapping describes it as: "A story map helps teams decompose feature ideas into smaller buildable parts, and best choose the subset of parts that will result in a successful product release." You learn about it by following this bullet's link to Story Mapping. I've seen only limited use of story mapping in the wild. It requires a specialized tool to support it. While all the core ideas work for me, I have one big issue with it. It suffers from the fundamental problem of being based on user stories, so the journeys are a chopped up into a work management view of the requirements.
-- [Domain Analysis Documents](https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC) - This is essentially the fundamental work of doing business analysis.  The link for this bullet points to a new and excellent book on the topic. It extends traditional analysis with powerful ideas and techniques focused on the language of the business. The description of the book says: Domain analysis is the process of understanding a body of knowledge, the subject matter of a domain. Minimally you want to document everything you are agreeing to implement in whatever format works for that domain. Ideally, you want to capture the concepts, vocabulary, rules and constraints clearly enough so you can define a set of abstractions and their relationships. The goal is to document the *language* that can be used to completely and unambiguously describe, and ultimately execute, the subject matter in the domain. You follow a set of practices to enable you to write everything you know about the requirements as you learn them. Analysis of the domain is fundamental but for the requirements framework you still need to find a way to connect all the requirements for all the areas of the product together.
+- [Domain Analysis Documents](https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC) - This is essentially the fundamental work of doing business analysis. The link for this bullet points to a new and excellent book on the topic. It extends traditional analysis with powerful ideas and techniques focused on the language of the business. The description of the book says: Domain analysis is the process of understanding a body of knowledge, the subject matter of a domain. Minimally you want to document everything you are agreeing to implement in whatever format works for that domain. Ideally, you want to capture the concepts, vocabulary, rules and constraints clearly enough so you can define a set of abstractions and their relationships. The goal is to document the *language* that can be used to completely and unambiguously describe, and ultimately execute, the subject matter in the domain. You follow a set of practices to enable you to write everything you know about the requirements as you learn them. Analysis of the domain is fundamental for any product building process. For the requirements framework there is no magic way to balance writing too much or not enough. We don't want to require that big documents are written up front. You need to stay agile and evolve your analysis. For the requirements framework the key is to do enough to connect all the requirements for all the areas of the product together. (Tony: to me, this sounds like a very heavyweight document for agile) (Mike: I tried to say balance is needed and big docs are needed. )
 - [Behavior Driven Development (BDD)](https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/) - BDD is the best approach for capturing detailed requirements. I believe that using each BDD scenario as a user story is an excellent approach. Having multiple BDD scenarios as the Acceptance Criteria for a story is my second choice. BDD is essential but it's hard to see how all the individual scenarios fit into the overall requirements so something more is needed. 
 
 As noted above, these practices have limits that keep us from getting to the desired framework. My requirements framework meets all the 'ilities' by combining the Story Mapping, Domain Analysis Documents, and BDD centered around an updated approach to use-cases. 
@@ -118,7 +116,7 @@ The main structure of a use-case-based requirements document are:
 - Use cases are a linear sequence of steps (no branches). Decisions corresponding to branches are broken out as alternative flows. *Simple flows make everything simpler.*
 - Use cases 'call' other use cases. The called use case is formatted as its name as a hyperlink. *This is a big part of telling the connected story.*
 - Use cases that have complex data or rules are followed by a 'Data' sub-section. This data is referred to in use case steps as the name as a hyperlink. *This simplifies the steps and centralizes the definitions so that it can be reused in multiple places.*
-- A use case is followed by a 'Detailed Requirement Statements' sub-section that lists the requirements statement for each BDD scenario associated with the use case. *This is how we capture all the details but keep the requirements framework minimal.*
+- A use case is followed by a 'Detailed Requirement Statements' sub-section that lists the requirements statement for each BDD scenario associated with the use case.*This is how we capture all the details but keep the requirements document minimal.* I don't recommend doing a lot of work to organize the list of these requirements statements. I haven't even tried to break them out by alternative flows. Instead I have just one list per use case. This is an example of an effort vs. benefit vs. risk tradeoff. The BDD scenarios should be evolving even more than the use cases and trying to keep them highly organized has proven unsustatinable. Instead, the place to invest is the requirements statements in the BDD scenario. It's worth a lot of investment to make them readable and to fit into the context of the use case they are under. (Tony: what is the relationship between use case and BDD feature(s)? is there a preferred/suggested cardinality? how would the cardinality affect the genration of the requirements specification?) (Mike: Reworded)
 
 The following is a simplified example of some use cases for a product to design configuration files. The idea is that a configuration is made up of many parts, each with a unique structure that the user needs to populate. I present the example first and then review how its structure provides the ideal requirements framework. 
 
@@ -142,7 +140,7 @@ The following is a simplified example of some use cases for a product to design 
 >
 >##### Detailed Requirement Statements
 >
->This section will list the requirements statement / business rule for each BDD scenario associated with the use case. It is automatically generated from the text at the beginning of each BDD scenarios.
+>This section will list the requirements statement / business rule for each BDD scenario associated with the use case.(Tony: couldn't there multiple BDD scenarios for a single requirements statement?) (Mike: Yes but I didn't think that detail mattered. We made the reporting framework smart enough to ignore duplicate statements.) It is automatically generated from the text at the beginning of each BDD scenarios.
 >  - Configurations can be opened and closed from the Designer (Example of a Detailed Requirement Statement that would describe a BDD scenario)
 >  - Accessing the Designer requires valid credentials.
 >  - ...
@@ -166,7 +164,7 @@ The following is a simplified example of some use cases for a product to design 
 >
 >###### Configuration (the name of a thing in the business domain)
 >
-> This is an example of what goes in a 'Data' sub-section. Splitting out the data from the steps isn't a standard practice when writing use cases. Such a section would contain things like the definition of the parts of a 'Configuration', navigation to and operations on those parts, e.g., 
+> This is an example of what goes in a 'Data' sub-section. Splitting out the data from the steps isn't a standard practice when writing use cases. Such a section would contain things like the definition of the parts of a 'Configuration', navigation to and operations on those parts, e.g., (Tony: would this be duplicated in the BDD scenarios?)(Mike: no not duplicated. There would be different scenarios for variations on the data. Separating the data is largely a way to simplify the flows and centralize the data and rules. The scenarios would need to cover the flows with data variation. I say that in the [use case as better backlog](#use-cases-as-a-better-backlog) section below)
 >- Config 'Name' - with sub-folder for each of the following that when clicked navigate to and expand to show details of that part of the Config:
 >    - Part-A
 >      - Sub-parts would be listed here but are omitted to keep the example simple. Rules about the contents of each part could also go in this section.
@@ -212,7 +210,7 @@ Factoring out the data and rules from the use case steps pays dividends here. Va
 
 Also important is that we aren’t working on all the use cases at the same time. We’re working on one goal at a time with minimal requirements on things to be built in the future. So the many parts of the requirements documentation could be just names of use cases that may get expanded in the future. This also makes review of the use cases easier. At any point in time we're only working on a small subset. The full set is there as the context but not changing much in a sprint(s).
 
-Finally, we want to write the absolute minimum that provides a framework of the requirements as a way to control the overhead from constant refactoring of the use cases. The details should instead migrated into the BDD scenarios that we link to the use cases. We might start with a lot of detail in the use case doc but look to move that detail out into BDD scenarios as much as possible as the implementation proceeds.
+Finally, we want to write the absolute minimum that provides a framework of the requirements as a way to control the overhead from constant refactoring of the use cases. The details should instead be migrated into the BDD scenarios that we link to the use cases. We might start with a lot of detail in the use case doc but look to move that detail out into BDD scenarios as much as possible as the implementation proceeds.
 
 ### Work In All Directions
 
@@ -261,7 +259,7 @@ A tool(s) is needed to manage the work on user stories, e.g., a work management 
 
 It is important to note that the work management system is not storing its artifacts in git. The work management is thrown away after a sprint it doesn't matter where it is stored. While it might be nice to have this stored in git, it is not important to the requirements framework that this is done. Some might argue for keeping the estimates, burn-downs, etc. This kind of estimation and tracking is not part of the agile way-of-working advocated for in this article. The assumptions are:
 - We are moving toward each BDD scenario is a story, 
-- Each BDD scenario is so small that we'd estimate it as a 1, 
+- Each BDD scenario is so small that we'd estimate it as a 1, (Tony: do you mention story points earlier? do you mention breaking scenarios down until they are 1 story point earlier?) (Mike: I don't because I was thinking I'd avoid it till this work management topic. Do you think it' needed elsewhere?)
 - Requirements are constantly changing, even inside a sprint, so significant and on-going work on estimation is waste[^no-estimates]
 - Deliver small units of running, tested code incrementally. 
  
@@ -276,7 +274,7 @@ Since everything is in well structured files, ideally markdown, simple programs 
 - A requirements to test traceability document where the detailed requirements are under the use cases and they link directly to the test reports. Traceability spreadsheets are frequently requested and can be similarly produced.
 - A requirements to design traceability document where each use case flow is mapped to a design document section. (This is simple if the design doc is organized by use cases so the table of contents of both documents match.)
 
-These are 'simple programs' because all the need to do is scan the markdown files for simple patterns and assemble the pieces into new documents. Frequently no program even needs to be written because there are numerous open source tools that produce other document formats or organizations from markdown documents, e.g., Pandoc to produce PDF, HTML, Word, and many other formats.
+These are 'simple programs' because all they need to do is scan the markdown files for simple patterns and assemble the pieces into new documents. Frequently no program even needs to be written because there are numerous open source tools that produce other document formats or organizations from markdown documents, e.g., Pandoc to produce PDF, HTML, Word, and many other formats.
 
 ### Shift Requirement Details to the Automated Tests
 
@@ -320,7 +318,7 @@ The following is a larger but still simplified example of some use cases for a p
 >2. User [Opens or Creates a Configuration](#open-or-create-configuration).
 >3. User [Views or Edits Configuration](#view-and-edit-configuration).
 >4. User closes the Configuration.
->1. User logs-out of the Designer
+>5. User logs-out of the Designer (Tony: is using 1 instead of 5 intentional? Mike: No but markdown doesn't care and when displayed it will show 5. Better to have it as 5 so I made the change)
 >
 >##### Alternatives
 >
@@ -333,7 +331,7 @@ The following is a larger but still simplified example of some use cases for a p
 >
 >1. User enters invalid credentials 
 >2. System notifies them of the error and re-prompts up to the allowed >number of times before lock-out.
->1. Continue at step 1
+>3. Continue at step 1
 >
 >##### Detailed Requirement Statements
 >
