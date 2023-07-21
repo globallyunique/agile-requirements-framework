@@ -20,7 +20,7 @@ My definition of *Comprehensive Requirements* is a document(s) that cover the fu
 
   [^system-must]: It cannot be a long list of 'the system must...' statements. 
 
-> Note: This article does not get into details on roles and team structures. The assumption is that there are Subject Matter Experts (SMEs) for the domain as a permanent part of the team and that someone is acting in a Business Analyst role to write the requirements. No approach to product building is going to work if you don't have this in place. 
+> Note: This article does not get into details on roles and team structures. The assumption is that there are Subject Matter Experts (SMEs) for the domain as a permanent part of the team and that someone is a Business Analyst role to write the requirements. No approach to product building is going to work if you don't have this in place. 
 
 ## Why Do We Need Comprehensive Requirements
 
