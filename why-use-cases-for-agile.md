@@ -43,8 +43,9 @@ What I see at many companies is a process that mashes together the user stories 
 - They are supposed to be small and separately deliverable. They represent small increments of valued functionality that can be developed in a period of a day to a week based value, risk, unknowns, etc. Their delivery order doesn't need to reflect the user requirements. As such they are more planning instruments then requirements.  
 - They should not be maintained. They should be thrown away after implementation. (Anyone remember tearing up the story cards-on-the-wall at the end of a sprint.) As such they can't be the basis of comprehensive requirements without a lot of re-work. 
 - Epics (groups of related user stories) don't show how user stories are sequenced and interconnected in a connected flow that serves as good requirements. 
-  
- #TODO: Write and add a link to a separate article on why user stories aren't requirements.
+ 
+Avoiding user stories as the requirements should be an easy topic. Since so many companies that are trying to work agile and need requirements documents, it seems a more detailed discussion is needed, see [Stories Are Not Requirements](./stories-are-not-requirements.md).
+
 
 ## Waterfall style Requirements Documents
 
@@ -80,12 +81,14 @@ What are the 'ilities' needed for a great requirements framework:
 
 To meet all the above we need a framework rather than just a requirements document. The following are practices I've tried and that I consider essential to get to such a framework:
 - User stories linked to web pages / documents that contain the details about the requirements, e.g., a story in Jira linked to a page in Confluence. Carefully written pages could yield a good view of the requirements. This is attractive because a story should be a placeholder for a conversation so it's good to minimize the details in a story by moving them to another document. This approach doesn't yield good requirements if the documents are largely organized by the user stories. Such an organization is just a more documented version of the problem that user stories are not requirements. I've routinely seen such requirements documentation be difficult to follow and poorly synchronized with the state of the product.
+
 - [Story Mapping](https://jpattonassociates.com/story-mapping/) - This is very attractive because it organizes the user stories into end-to-end journeys. I highly recommend learning about story mapping and applying those ideas in combination with the requirements framework proposed in this article. The creator of story mapping describes it as: "A story map helps teams decompose feature ideas into smaller buildable parts, and best choose the subset of parts that will result in a successful product release." You learn about it by following this bullet's link to Story Mapping. I've seen only limited use of story mapping in the wild. It requires a specialized tool to support it. While all the core ideas work for me, I have one big issue with it. It suffers from the fundamental problem of being based on user stories, so the journeys are a chopped up into a work management view of the requirements.
+  
 - [Domain Analysis Documents](https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC) - This is essentially the fundamental work of doing business analysis. The link for this bullet points to a new and excellent book on the topic. It extends traditional analysis with powerful ideas and techniques focused on the language of the business. The description of the book says: Domain analysis is the process of understanding a body of knowledge, the subject matter of a domain. Minimally you want to document everything you are agreeing to implement in whatever format works for that domain. Ideally, you want to capture the concepts, vocabulary, rules and constraints clearly enough so you can define a set of abstractions and their relationships. The goal is to document the *language* that can be used to completely and unambiguously describe, and ultimately execute, the subject matter in the domain. You follow a set of practices to enable you to write everything you know about the requirements as you learn them. Analysis of the domain is fundamental for any product building process. For the requirements framework there is no magic way to balance writing too much or not enough. We don't want to require that big documents are written up front. You need to stay agile and evolve your analysis. For the requirements framework the key is to do enough to connect all the requirements for all the areas of the product together. 
 
-- [Behavior Driven Development (BDD)](https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/) - BDD is the best approach for capturing detailed requirements. I believe that using each BDD scenario as a user story is an excellent approach. Having multiple BDD scenarios as the Acceptance Criteria for a story is my second choice. BDD is essential but it's hard to see how all the individual scenarios fit into the overall requirements so something more is needed. 
+- [Behavior Driven Development (BDD)](https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/) - BDD is a way to capture business rules as a series of examples in a format that is both human readable and executable. BDD is the best approach for capturing detailed requirements. I believe that using each BDD scenario as a user story is an excellent approach. Having multiple BDD scenarios as the Acceptance Criteria for a story is my second choice. BDD is essential but it's hard to see how all the individual scenarios fit into the overall requirements so something more is needed. 
 
-As noted above, these practices have limits that keep us from getting to the desired framework. My requirements framework meets all the 'ilities' by combining the Story Mapping, Domain Analysis Documents, and BDD centered around an updated approach to use-cases. 
+As noted above, these practices have limits that keep us from getting to the desired framework. My requirements framework meets all the 'ilities' by combining the Story Mapping, Domain Analysis Documents, and BDD centered around an updated approach to use-cases. I assume you are doing something like the above practices. If not then you need some combination of understanding them and actively starting to do them as part of moving to this more comprehensive framework. For example, if you use the framework you don't need to do story mapping because you'll get the equivalent from the framework vs. you must be doing BDD to use the framework.
 
 The following picture provides an overview of the framework. Each part of it is discussed in the rest of the article. 
 
@@ -184,13 +187,19 @@ The following is a simplified example of some use cases for a product to design 
 >
 ---
 
+Ideally, you'll have a top-level picture of the use cases. Such a picture gives context of how the main use cases fit together. The picture need not, probably should not, show alternative flows or a lot of other details. It should not be a UML style use case diagram. It should be a flow with arrows connecting use cases. 
+
+![Use Case Overview](./images/use-case-picture.png)
+
+A picture is not testable so it doesn't need to be *correct*. Its job is simply to give the context and act as a graphical table-of-contents. Keeping it high-level and with minimal detail eliminates the need to constantly re-draw it as the use cases are refactored. You should not be doing a separate process-flow style picture for every use case. It is not worth the significant extra work of keeping a lot of pictures up to date and having them be correct enough to be valuable vs. just working with the text versions of the use cases.
+
 ## Benefits of The Framework
 
 ### Use Cases as a Better Backlog
 
 The *flat* product backlog does not capture the customer’s journey. This problem and using story mapping as the solution has been written about extensively[^story-mapping-products]. 
 
-![Flat Backlog vs. Story Map](./images/flat-backlog-vs-story-map.jpg)
+![Flat Backlog vs. Story Map](./images/flat-backlog-vs-story-map.png)
 
 The flat backlog provides no context or big-picture for a product. Arranging user stories in the order they’ll be delivered doesn’t help a product manager explain to others what the product does or determine if they’ve identified the relevant user stories. 
 
@@ -300,6 +309,16 @@ The idea of making the detailed requirements be the BDD Scenarios has been discu
 - *Traceability*: BDD Acceptance Tests are organized by use case so traceability is automatic. Design documents can be naturally organized by how each use case is supported so traceability is automatic. The traceability documents can be easily generated, see Automation. 
 
 - *Price*: No tools beyond what the team is already using or is available as open source is needed. Everything stored as text makes for great portability to different approaches or tools if and as needed in the future.
+
+# Challenges to Adoption
+
+Be prepared for the following challenges when switching to this approach to your requirements framework. Beyond just taking time and work the following are some mitigations.
+
+- We must keep our requirements in the work management tool, e.g., Jira - Moving from requirements in your work management tool, e.g., Jira, to real requirements User Stories 
+- We wrote a SAFe Lean Business Case, ShapeUp Pitch or some other high level document and that is our requirements
+- We can't have everyone working in git - Moving from Everything in git
+- We already have everything in the combination of our work management tool and our wiki or document management site, e.g., Jira and Confluence 
+- We already spent all this money on tools to support our process
 
 # Appendix
 
