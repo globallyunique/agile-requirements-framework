@@ -29,7 +29,7 @@ When we plan work as stories we step away from requirements and enter the worl
 
 If you are doing agile with user stories in anything close to the right way then it isn't possible to understand the solution by reading the completed stories in the work management system, e.g., Jira, Polarian or a similar story tracker. Stories only make sense as requirements when assembled into the proper sequence of events, playing out over time in the correct order. Like one of those flip book animations that you made at school. 
 
-![Flip Book](./images/flip-book.gif)
+<img src="./images/flip-book.gif" alt="Flip Book" width="50%">
 
 Stories, once delivered, have no further value as documentation of the system’s behavior. Useful requirements documentation, on the other hand, describes how the system behaves now -- not the incrementally created, flip book of history of how it evolved to behave like it does.  
 
