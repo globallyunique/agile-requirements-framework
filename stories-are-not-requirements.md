@@ -10,11 +10,11 @@ Agile is making two bets at the beginning of a project[^two-bets] :
 
 This reality shapes the way user stories should be used. Fundamentally user stories are not about what you write down. Their origin is as a placeholder for a conversation with the users, written down on an index card. The goal of a user story is to enable us to have the conversations to understand what is really needed and implement it. By using stories in this way we're setting ourselves up to have the needed scope flex in what we build. We're prioritizing common understanding between the user and the product team over a perfect requirements specification written as a story.[^common-understanding]
 
-    [^elephants-are-not-giraffes]: See [User stories are not requirements](https://blog.crisp.se/2016/01/07/perlundholm/user-stories-are-not-requirements)
+  [^elephants-are-not-giraffes]: See [User stories are not requirements](https://blog.crisp.se/2016/01/07/perlundholm/user-stories-are-not-requirements)
 
-    [^common-understanding]: This paragraph is a quote from [User Stories are ill-suited for expressing requirements](https://mdalmijn.com/p/user-stories-are-ill-suited-for-expressing-requirements). This article presents details about how user stories are abused and how splitting the real user stories into implementable chunks pulls us away from the real requirements. 
+  [^common-understanding]: This paragraph is a quote from [User Stories are ill-suited for expressing requirements](https://mdalmijn.com/p/user-stories-are-ill-suited-for-expressing-requirements). This article presents details about how user stories are abused and how splitting the real user stories into implementable chunks pulls us away from the real requirements. 
 
-    [^two-bets]: This statement and the following bullets are quotes from [User Stories Ain’t Requirements](https://www.construx.com/blog/user-stories-aint-requirements/)
+  [^two-bets]: This statement and the following bullets are quotes from [User Stories Ain’t Requirements](https://www.construx.com/blog/user-stories-aint-requirements/)
 
 So how should we use stories? User stories are best used as planning instruments. We prioritize by user stories, we decide in which sprint we will try to implement them, and we may estimate them[^estimation-is-waste]. All typical for a planning instrument.
 - They represent small increments of valued functionality that can be developed in a period of a day to a week. 
