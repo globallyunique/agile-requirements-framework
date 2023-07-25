@@ -98,3 +98,7 @@ In the second example there is both a requirements statement and a description. 
 ### Teams Need Freedom to Pick or Build Their Tools 
 
 Using an existing BDD tool is the easy path to using [my proposed requirements framework](./why-use-cases-for-agile.md). I see mandates to use the same process and tools as the norm in most enterprises and I think this is a mistake. I strongly believe that every project is different enough that the team should be allowed to select and create, as needed, the tools to support their agile way-of-working with the proposed requirements framework. Whether this simply means implementing some scripts to generate the combined use case and BDD scenario presentations or building a building a full DSL for expressing, executing, and generating the presentations of their scenarios. The full scope of doing this is beyond what can be covered in this article. To emphasize the point that the team needs to select and build their own tools, I end by saying that the power that comes from enabling the users to directly and optimally express their scenarios via a DSL is unlike anything I've seen using the existing Cucumber-family tools.
+
+## Requirements to Test Traceability
+
+ #TODO: Write about how the above creates the traceability and what other traceability artifacts are needed and can be generated...  
