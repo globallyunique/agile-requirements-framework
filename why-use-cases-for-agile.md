@@ -122,7 +122,7 @@ The main structure of a use-case-based requirements document are:
 - Use cases are a linear sequence of steps (no branches). Decisions corresponding to branches are broken out as alternative flows. *Simple flows make everything simpler.*
 - Use cases 'call' other use cases. The called use case is formatted as its name as a hyperlink. *This is a big part of telling the connected story.*
 - Use cases that have complex data or rules are followed by a 'Data' sub-section. This data is referred to in use case steps as the name as a hyperlink. *This simplifies the steps and centralizes the definitions so that it can be reused in multiple places.*
-- A use case is followed by a 'Detailed Requirement Statements' sub-section that lists the requirements statement for each BDD scenario associated with the use case.*This is how we capture all the details but keep the requirements document minimal.* I don't recommend doing a lot of work to organize the list of these requirements statements. I haven't even tried to break them out by alternative flows. Instead I have just one list per use case. This is an example of an effort vs. benefit vs. risk tradeoff. The BDD scenarios should be evolving even more than the use cases and trying to keep them highly organized has proven unsustatinable. Instead, the place to invest is the requirements statements in the BDD scenario. It's worth a lot of investment to make them readable and to fit into the context of the use case they are under.
+- A use case is followed by a 'Detailed Requirement Statements' sub-section that lists the requirements statement for each BDD scenario associated with the use case.*This is how we capture all the details but keep the requirements document minimal.* I don't recommend doing a lot of work to organize the list of these requirements statements. I frequently don't even tried to break them out by alternative flows. Instead I have just one list per use case. This is an example of an effort vs. benefit vs. risk trade-off. The BDD scenarios should be evolving even more than the use cases and trying to keep them highly organized has proven unsustainable. Instead, the place to invest is the requirements statements in the BDD scenario. It's worth a lot of investment to make them readable and to fit into the context of the use case they are under.
 
 The following is a simplified example of some use cases for a product to design configuration files. The idea is that a configuration is made up of many parts, each with a unique structure that the user needs to populate. I present the example first and then review how its structure provides the ideal requirements framework. 
 
@@ -183,6 +183,8 @@ The following is a simplified example of some use cases for a product to design 
 >##### Detailed Requirement Statements
 >
 >BDD scenario associated with the use case....
+>
+> See [Organizing and Managing BDD Scenarios As Your Detailed Requirements](./scenario-as-detailed-requirements.md)
 >
 >
 ---
