@@ -184,7 +184,7 @@ The following is a simplified example of some use cases for a product to design 
 >
 >BDD scenario associated with the use case....
 >
-> See [Organizing and Managing BDD Scenarios As Your Detailed Requirements](./scenario-as-detailed-requirements.md)
+> For details on how the detailed requirements are presented, see [Organizing and Managing BDD Scenarios As Your Detailed Requirements](./scenario-as-detailed-requirements.md)
 >
 >
 ---
