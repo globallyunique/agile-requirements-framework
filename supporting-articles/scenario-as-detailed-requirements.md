@@ -2,7 +2,7 @@
 
 # Organizing and Managing BDD Scenarios As Your Detailed Requirements 
 
-This article provides recommendations on organizing and managing your BDD scenarios so they can serve as the detailed requirements. It provides additional details to support the main article about [my proposed requirements framework](./why-use-cases-for-agile.md). The fundamental idea in the proposed framework is to capture the requirements details in your BDD scenarios. To do this each use case is followed by a 'Detailed Requirement Statements' sub-section that lists detailed requirements statement. These statements come from the BDD scenarios. *This is the secret to how we capture all the details but keep the requirements document minimal.* 
+This article provides recommendations on organizing and managing your BDD scenarios so they can serve as the detailed requirements. It provides additional details to support the main article about [my proposed requirements framework](../why-use-cases-for-agile.md). The fundamental idea in the proposed framework is to capture the requirements details in your BDD scenarios. To do this each use case is followed by a 'Detailed Requirement Statements' sub-section that lists detailed requirements statement. These statements come from the BDD scenarios. *This is the secret to how we capture all the details but keep the requirements document minimal.* 
 
 There are two main points:
 - Investing in the organization and writting of your BDD scenarios
@@ -21,7 +21,7 @@ The biggest thing needed to make the proposed use of BDD Scenarios as detailed r
 
 Beyond requirements presentation, you need to do the above as part of making your agile way-of-working succeed. If you don't, you'll start to slow down due to poor understanding of the requirements and struggle to determine why tests fail. 
 
-The next biggest thing you need to do is decide on how you'll capture the requirements statements in the scenarios. The Given-When-Then structure of BDD Scenarios is designed to express detailed examples. You must find a way to also write a requirements statement that is at a level above the details of the example. It's critical for [my proposed requirements framework](./why-use-cases-for-agile.md)that this statement of requirements be written in a structured way so that tools can process it, e.g., find and extract it for insertion into a comprehensive requirements presentation. Exactly how best to do this depends on the specific tool used for writing and executing the scenarios. Possible approaches include:
+The next biggest thing you need to do is decide on how you'll capture the requirements statements in the scenarios. The Given-When-Then structure of BDD Scenarios is designed to express detailed examples. You must find a way to also write a requirements statement that is at a level above the details of the example. It's critical for [my proposed requirements framework](../why-use-cases-for-agile.md)that this statement of requirements be written in a structured way so that tools can process it, e.g., find and extract it for insertion into a comprehensive requirements presentation. Exactly how best to do this depends on the specific tool used for writing and executing the scenarios. Possible approaches include:
 - Use the text that describes the Scenario or the combination of that and a comment directly above it, e.g.,[^Gherkin-Rules-Examples] 
 <img src="./images/scenario-with-comment.png" alt="Example With Comment" width="40%">
 
@@ -52,7 +52,7 @@ The tool used to define and execute your BDD Scenarios tends to dominate your ap
 
   [^Why-Polarion]: I'm only listing Polarion because it was used on my last project. I avoid these kinds of products so I don't have current knowledge of others. If they don't break the user-stories-are-not-requirements rule then they probably work similar to 
 
-The following sub-sections discuss each of these options in the context of [my proposed requirements framework](./why-use-cases-for-agile.md). 
+The following sub-sections discuss each of these options in the context of [my proposed requirements framework](../why-use-cases-for-agile.md). 
 
 ### Using the Cucumber Family 
 
@@ -83,7 +83,7 @@ Under each u
 
 ### Using A Commercial Cucumber Family Approach
 
-Because of my desire to have everything in git as text files and have complete control over the presentation of the requirements, I have actively avoided using commercial products supporting Cucumber or other BDD approaches. I expect they do something similar to what the framework does but in a more elaborate and proprietary way. If the tool selected by your team is open enough you can potentially get to results similar to [my proposed requirements framework](./why-use-cases-for-agile.md).
+Because of my desire to have everything in git as text files and have complete control over the presentation of the requirements, I have actively avoided using commercial products supporting Cucumber or other BDD approaches. I expect they do something similar to what the framework does but in a more elaborate and proprietary way. If the tool selected by your team is open enough you can potentially get to results similar to [my proposed requirements framework](../why-use-cases-for-agile.md).
 
 ### Using A Custom BDD Approach
 
@@ -97,7 +97,7 @@ In the second example there is both a requirements statement and a description. 
 
 ### Teams Need Freedom to Pick or Build Their Tools 
 
-Using an existing BDD tool is the easy path to using [my proposed requirements framework](./why-use-cases-for-agile.md). I see mandates to use the same process and tools as the norm in most enterprises and I think this is a mistake. I strongly believe that every project is different enough that the team should be allowed to select and create, as needed, the tools to support their agile way-of-working with the proposed requirements framework. Whether this simply means implementing some scripts to generate the combined use case and BDD scenario presentations or building a building a full DSL for expressing, executing, and generating the presentations of their scenarios. The full scope of doing this is beyond what can be covered in this article. To emphasize the point that the team needs to select and build their own tools, I end by saying that the power that comes from enabling the users to directly and optimally express their scenarios via a DSL is unlike anything I've seen using the existing Cucumber-family tools.
+Using an existing BDD tool is the easy path to using [my proposed requirements framework](../why-use-cases-for-agile.md). I see mandates to use the same process and tools as the norm in most enterprises and I think this is a mistake. I strongly believe that every project is different enough that the team should be allowed to select and create, as needed, the tools to support their agile way-of-working with the proposed requirements framework. Whether this simply means implementing some scripts to generate the combined use case and BDD scenario presentations or building a building a full DSL for expressing, executing, and generating the presentations of their scenarios. The full scope of doing this is beyond what can be covered in this article. To emphasize the point that the team needs to select and build their own tools, I end by saying that the power that comes from enabling the users to directly and optimally express their scenarios via a DSL is unlike anything I've seen using the existing Cucumber-family tools.
 
 ## Requirements to Test Traceability
 
