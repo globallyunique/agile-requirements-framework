@@ -1,6 +1,6 @@
 # An Agile Way of Writing Use Cases
 
-This article provides guidance on writing use cases in general and more specifically so they work as the framework to support the way-of-working in the main article about [my proposed requirements framework](./why-use-cases-for-agile.md).
+This article provides guidance on writing use cases in general and more specifically so they work as the framework to support the way-of-working in the main article about [my proposed requirements framework](../why-use-cases-for-agile.md).
 
 ## Use Case Organization and Format
 
