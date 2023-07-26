@@ -113,7 +113,7 @@ Since deep integration of use cases are the novel part of the framework we'll ex
 >     - Other Alternative Flows (each with their own steps)
 >
 
-See [Working With Use Cases](#an-agile-way-of-working-with-use-cases) for details.  
+See [Working With Use Cases](./supporting-articles/writing-agile-use-cases.md) for details.  
 
   [^use-cases-details]: See the definitive book for [Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258) by Alistair Cockburn and my [Writing Agile Use Cases](./supporting-articles/writing-agile-use-cases.md) article for detailed guidance of how I write them.
 
@@ -133,7 +133,7 @@ The following is a simplified example of some use cases for a product to design 
 >
 >##### Base Flow - Access Designer
 >
->1. User accesses Configuration Designer by browsing to [designer.com]>(http://designer.com) and enters valid credentials.
+>1. User accesses Configuration Designer by browsing to [designer.com]() and enters valid credentials.
 >2. User [Views or Edits Configuration](#view-and-edit-configuration).
 >3. User closes the Configuration.
 >1. User logs-out of the Designer
@@ -302,7 +302,7 @@ The idea of making the detailed requirements be the BDD Scenarios has been discu
 
 - *Longevity*: Each release adds or changes use cases just like the evolution process that happens during the release. At the end of every release you have the full connected story of the product.
 
-- *Automateability*: A text file with a simple and well defined structure is trivial to automatically transform. The primary example is automated inclusion of the requirements statements from the BDD scenario files, see, [Acceptance Test Traceability](./supporting-articles/scenario-as-detailed-requirements.md) for details. It's trivial to generate HTML or PDF versions from the markdown for non-technical readers.
+- *Automateability*: A text file with a simple and well defined structure is trivial to automatically transform. The primary example is automated inclusion of the requirements statements from the BDD scenario files, see, [Acceptance Test Traceability](./supporting-articles/scenario-as-detailed-requirements.md#requirements-to-test-traceability) for details. It's trivial to generate HTML or PDF versions from the markdown for non-technical readers.
 
 - *Work Manageability*: The user stories can be as simple as one for the base flow and one for each alternative.  The key point is that you can see the entire scope of work from the use cases that have been implemented rather than tracking disconnected user stories.
 
