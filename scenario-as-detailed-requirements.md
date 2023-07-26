@@ -101,4 +101,7 @@ Using an existing BDD tool is the easy path to using [my proposed requirements f
 
 ## Requirements to Test Traceability
 
- #TODO: Write about how the above creates the traceability and what other traceability artifacts are needed and can be generated...  
+ To see coverage of features, traceability from requirements to tests is desirable in every product. It's mandated in many regulated environments such as the Life Science domain. It's frequently a painful process where things like a traceability matrix is created that maps requirements numbers to test IDs. Don't fall into the trap of using the stories in the work management system to build the traceability because [user stories are not requirements](stories-are-not-requirements.md) so the traceability will be technically correct but a conceptual mess. Traceability comes for free in the proposed framework because the tests are part of the requirements. If needed to align with existing SDLC or SOP demands, a simple program, similar to the one that creates the combined presentation of the use cases and the scenarios, can publish the traceability as a matrix in a spreadsheet.
+ 
+  
+  
