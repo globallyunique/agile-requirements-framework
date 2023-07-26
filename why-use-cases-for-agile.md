@@ -115,7 +115,7 @@ Since deep integration of use cases are the novel part of the framework we'll ex
 
 See [Working With Use Cases](#an-agile-way-of-working-with-use-cases) for details.  
 
-  [^use-cases-details]: See the definitive book for [Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258) by Alistair Cockburn and my [Use Case Based Requirements on an Agile Project](http://todo-add-this-article...) article for detailed guidance of how I write them.
+  [^use-cases-details]: See the definitive book for [Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258) by Alistair Cockburn and my [Writing Agile Use Cases](./writing-agile-use-cases.md) article for detailed guidance of how I write them.
 
 The main structure of a use-case-based requirements document are:
 - A use case names a user goal. We decompose these goals into sub-use-cases. *Decomposition is essential to make things into manageable chunks for both easier reading and implementing.*
@@ -302,7 +302,7 @@ The idea of making the detailed requirements be the BDD Scenarios has been discu
 
 - *Longevity*: Each release adds or changes use cases just like the evolution process that happens during the release. At the end of every release you have the full connected story of the product.
 
-- *Automateability*: A text file with a simple and well defined structure is trivial to automatically transform. The primary example is automated inclusion of the requirements statements from the BDD scenario files. See, [Acceptance Test Traceability](TODO: put link to wherever this is written about). It's trivial to generate HTML or PDF versions from the markdown for non-technical readers.
+- *Automateability*: A text file with a simple and well defined structure is trivial to automatically transform. The primary example is automated inclusion of the requirements statements from the BDD scenario files, see, [Acceptance Test Traceability](./scenario-as-detailed-requirements.md) for details. It's trivial to generate HTML or PDF versions from the markdown for non-technical readers.
 
 - *Work Manageability*: The user stories can be as simple as one for the base flow and one for each alternative.  The key point is that you can see the entire scope of work from the use cases that have been implemented rather than tracking disconnected user stories.
 
@@ -314,101 +314,19 @@ The idea of making the detailed requirements be the BDD Scenarios has been discu
 
 # Challenges to Adoption
 
-Be prepared for the following challenges when switching to this approach to your requirements framework. Beyond just taking time and work the following are some mitigations.
+Beyond just taking time and work of switching to doing what is proposed in this article, be prepared for the following challenges and consider the suggested mitigations:
 
-- We must keep our requirements in the work management tool, e.g., Jira - Moving from requirements in your work management tool, e.g., Jira, to real requirements User Stories 
-- We wrote a SAFe Lean Business Case, ShapeUp Pitch or some other high level document and that is our requirements
-- We can't have everyone working in git - Moving from Everything in git
-- We already have everything in the combination of our work management tool and our wiki or document management site, e.g., Jira and Confluence 
-- We already spent all this money on tools to support our process
-
-# Appendix
-
- #TODO: The sub-sections following should be made into separate articles. They are included inline here for easy reference from the above article.
-
-## An Agile Way-of-Working with Use Cases
-
-The following is a larger but still simplified example of some use cases for a product to design configuration files. The idea is that a configuration is made up of many parts, each with a unique structure that the user needs to populate. I present the example first and then review how its structure provides the ideal requirements framework. 
-
-  #TODO: add details on how to write and evolve use cases...
-
----
-
->#### Access Configuration Designer
->
->##### Base Flow - Access Designer
->
->1. User accesses Configuration Designer by browsing to [designer.com]>(http://designer.com) and enters valid credentials.
->2. User [Opens or Creates a Configuration](#open-or-create-configuration).
->3. User [Views or Edits Configuration](#view-and-edit-configuration).
->4. User closes the Configuration.
->5. User logs-out of the Designer 
->
->##### Alternatives
->
->###### 1a - Setup Credentials
->
->1. User starts the Designer for the first time and is prompted to setup >their credentials.
->2. Continue at step 2
->
->###### 1b - Invalid Credentials
->
->1. User enters invalid credentials 
->2. System notifies them of the error and re-prompts up to the allowed >number of times before lock-out.
->3. Continue at step 1
->
->##### Detailed Requirement Statements
->
->This section lists the requirements statement / rule for each BDD scenario associated with the use case....
->
->
->#### View and Edit Configuration
->
->###### Base Flow - View and Edit Configuration
->
->1. User does any of the following by navigating to the appropriate part of >the configuration.
->   - [Views or Edits Part-A](#view-or-edit-part-x)
->   - [Views or Edits Part-B](#view-or-edit-part-x)
->   - [Views or Edits Part-C](#view-or-edit-part-x)
->   - [Imports a Configuration Part](#reuse-a-form-r12)
->   - [Views PDF view of Configuration](#view-or-edit-pds)
->   - [Views the Audit Trail](#view-audit-trail)
->   - [Views Online Help](#view-online-help)
->
->##### Data
->
->###### Configuration Tree
->
->The Tree provides a view of the parts of the Configuration, navigation to >those parts, and operations to create or delete parts where appropriate. >The following is the structure of and the operations available on the >items in the Protocol Tree:
->
->- Config 'Name' - with sub-folder for each of the following that when >clicked navigate to and expand to show details of that part of the Config:
->  - Part-A
->    - Subparts would be listed here but are omitted to keep the example >simple...
->  - Part-B
->    - Subparts...
->  - Part-C
->    - Subparts...
->  - PDF
->  - Audit Trail
->
->- Operations:
->  - Part-A
->    - List the operations available on this tree node and its subparts. >Details omitted to keep the example simple...
->  - Part-B
->    - ...
->
->##### Detailed Requirement Statements
->
->BDD scenario associated with the use case....
->
->#### View and Edit Part-A
->
->###### Base Flow - View and Edit Part-A
->
->1. User views or edits the Part-A fields
->
->##### Detailed Requirement Statements
->
->BDD scenario associated with the use case....
-
----
+- We must keep our requirements in the work management tool, e.g., Jira - 
+  - Start by establishing that [User Stories Are Not Requirements](stories-are-not-requirements.md) 
+  - Explore why it's too much overhead to keep stories in the work management system in a state where they can be used to manage the work and still produce reasonable requirements documentation. 
+  - Explore why keeping less in the work management system makes managing the work easier, e.g., work management is supposed to be just cards on a wall that shows the big picture rather than all the clutter of the details. 
+- We wrote a SAFe Lean Business Case, ShapeUp Pitch or some other high level document and that is our requirements - These documents are the way to start but are no where close to being enough to serve as real requirements. Even if there isn't a mandate for formal requirements documents, the proposed framework will lead to a better agile way-of-working.
+- We can't have everyone working in git - See the section on [using git](#store-everything-in-git) and the supporting details in: [Everything In Git](./everything-in-git.md).
+- We already have everything in the combination of our work management tool and our wiki or document management site, e.g., Jira and Confluence
+  - Consider using use-cases to document the requirements and serve as the framework, even if it's still done in a separate tool
+  - Write the document in markdown stored in git and put a link to it in the separate tool. Worst case periodically copy the contents from git to the separate tool, e.g., at the point of *official* updates.
+- We already spent all this money on tools to support our process:
+  - Show the issues caused by the tool(s) vs. the proposed framework. This is easier said then done, but hopefully this article provides the material to support you.
+  - Use the proposed framework to do a single release as an experiment and use that to show benefits and issues
+  - Propose using the tool(s) in a more limited way with the focus on just things they excel at, e.g., if they support exporting to text files that can be stored in git, then use them as editing tools with git as the official storage. 
+  

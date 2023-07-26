@@ -1,0 +1,6 @@
+The following are benefits of storing everything for the product in git beyond what is covered in the article on the [proposed framework](./why-use-cases-for-agile.md).
+
+- Using git allows use of all the build pipelines of the software infrastructure. This enables generating the requirements and traceability documents as part of each build and deployment. Anyone using the system can then see the published versions of everything. 
+- Git shows more detailed differences between the files than typical change tracking and maintains all this detail in a comprehensive audit history. Having such an audit history of the combination of all the software artifacts and the requirements artifacts isn't possible any other way. 
+- Tools like github and gitlab allow viewing and editing of the requirements and test artifacts via their web interface. So those uncomfortable with setting up a traditional git pull-commit-push process in their local environment can simply work on a web page.
+- Every day there are new tools making use of git easier, e.g., direct integration with git in most editing programs. This becomes even more important as we increase the user self-service capabilities, e.g., users creating and running tests with full access to the system, including launching builds that verify that their new tests didn't break anything.  
