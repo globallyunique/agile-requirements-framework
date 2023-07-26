@@ -2,7 +2,7 @@
 
 # Organizing and Managing BDD Scenarios As Your Detailed Requirements 
 
-This article provides recommendations on organizing and managing your BDD scenarios so they can serve as the detailed requirements. It provides additional details to support the main article about [my proposed requirements framework](../why-use-cases-for-agile.md). The fundamental idea in the proposed framework is to capture the requirements details in your BDD scenarios. To do this each use case is followed by a 'Detailed Requirement Statements' sub-section that lists detailed requirements statement. These statements come from the BDD scenarios. *This is the secret to how we capture all the details but keep the requirements document minimal.* 
+This article provides recommendations on organizing and managing your BDD scenarios so they can serve as the detailed requirements. It provides additional details to support the main article about [my proposed requirements framework](./../why-use-cases-for-agile.md). The fundamental idea in the proposed framework is to capture the requirements details in your BDD scenarios. To do this each use case is followed by a 'Detailed Requirement Statements' sub-section that lists detailed requirements statement. These statements come from the BDD scenarios. *This is the secret to how we capture all the details but keep the requirements document minimal.* 
 
 There are two main points:
 - Investing in the organization and writting of your BDD scenarios
