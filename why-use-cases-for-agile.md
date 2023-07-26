@@ -13,7 +13,7 @@ My definition of *Comprehensive Requirements* is a document(s) that cover the fu
 
   [^masters-of-agile]: I primarily consider the signers of the agile manifesto to be the master craftsmen of agile. Few of them are Scrum advocates and even fewer like SAFe. I share those views. The people I have taken most of my ideas from are: [Ron Jeffries](https://ronjeffries.com/) and [GeePaw Hill](https://www.geepawhill.org/).
 
-  [^abandon-agile]: It's summed up by Ron's article: [Developers Should Abandon Agile](https://ronjeffries.com/articles/018-01ff/abandon-1/).)
+  [^abandon-agile]: It's summed up by Ron's article: [Developers Should Abandon Agile](https://ronjeffries.com/articles/018-01ff/abandon-1/).
 
   [^rat-trap]: Don't fall into the RAT trap, see GeePaws article: [Rework Avoidance Theory](https://www.geepawhill.org/2020/07/17/the-rat-rework-avoidance-theory/)
 
@@ -218,7 +218,6 @@ When you have the some or all of the use cases before starting implementation of
 [^story-mapping-products]: see information from any of the story mapping products, e.g., [Easy Agile](https://www.easyagile.com/), or the work by the creator of [Story Mapping](https://jpattonassociates.com/story-mapping/) 
 
 ![Use Case Schematic](./images/use-case-schematic-small.png)
-
 
 Factoring out the data and rules from the use case steps pays dividends here. Varying the data is an ideal way to find BDD scenarios that then become the automated tests. If, as I recommend, you are considering every BDD scenario a 'story' then walking paths through the use case flows with different data is a great way to find user stories and generate BDD scenarios. A powerful benefit is that you'll be walking through use case flows and this is likely to be a longer path than a single story thus yielding better, or at least more comprehensive, tests. 
 

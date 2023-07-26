@@ -12,9 +12,8 @@ This article provides guidance on writing use cases in general and more specific
 - A use case does not include decisions or branches. Instead at any point where there is an alternative, an Alternative Flow is defined. The alternative is assigned an identifier that indicates where it can optionally be inserted into the Base Flow. For example, if the Base Flow had steps 1-3, then an alternative that can be done at step 2 would be assigned the id of “2a – Name of Alternative”. Subsequent alternatives that can be done at the same place would be assigned ids like 2b, 2c, etc. If an alternative can occur in multiple places it is assigned the id of “*” (using the asterisk as a wildcard). If an alternative is a complete replacement for the basic flow it is assigned an id like 1a and 1b to indicate that the alternative replaces step 1 of the basic flow.  
 - One use case can refer to another (a sub-use case). Such references are formatted with the name of the referenced use as a hyper-link, e.g., [Access Designer](#base-flow---access-designer).  The name of the use case is changed slightly to make the step more readable. For example, a step that referenced the Configure Contract Load use case would be written: ‘User Accesses Designer’.
 - If a step in a use case accesses complex data or rule, rather than putting the details of it into the step, the data is given a nickname. The nickname is formatted as a hyperlink, e.g., [Configuration Tree](#configuration-tree). The definition of the data or rule is placed in a separate ‘Data’ section below the use case.
-
-- Data that is shared across multiple use cases is defined in one place.  When an item of data is referenced by a use case the definition of the data in the ‘Data’ section will say ‘Defined in Common Data section’.  The data can be found in the ‘Common Data’ section at the beginning of the current document.  This is done for data that is used by multiple use cases in the current document.
-
+- Data that is shared across multiple use cases can be defined in one place, e.g., a 'Common Data' section.  When an item of data is referenced by a use case the definition of the data in the ‘Data’ section can say ‘Defined in Common Data section’.  The data can be found in the ‘Common Data’ section at the beginning of the current document.  This is done for data that is used by multiple use cases in the current document.
+- Keep the steps short and as simple as possible. They are intended for easy understanding with the details in either the 'Data Section' or the 'Detailed Requirements' defined by the BDD Scenarios.
 - Some use case steps that are external to the application (manual steps) may be included because they are an integral part of the sequence. These steps are tagged with [MS] to indicate they are Manual Steps, Not Tested during Technical Testing. These steps  will be tested in User Acceptance Testing where the emphasis is on business processes but not in Unit and System Testing where the emphasis is on technical system testing.
 
 The following figure shows an annotated example of a use case formatted as described above. 
@@ -94,6 +93,8 @@ The following is a larger but still simplified example of some use cases for a p
 >
 >BDD scenario associated with the use case....
 >
+> For details on how the detailed requirements are presented, see [Organizing and Managing BDD Scenarios As Your Detailed Requirements](./supporting-articles/scenario-as-detailed-requirements.md)
+>
 >#### View and Edit Part-A
 >
 >###### Base Flow - View and Edit Part-A
@@ -102,6 +103,6 @@ The following is a larger but still simplified example of some use cases for a p
 >
 >##### Detailed Requirement Statements
 >
->BDD scenario associated with the use case....
-
+>BDD scenario associated with the use case...
+>
 ---
