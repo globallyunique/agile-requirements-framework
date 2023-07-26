@@ -44,7 +44,7 @@ What I see at many companies is a process that mashes together the user stories 
 - They should not be maintained. They should be thrown away after implementation. (Anyone remember tearing up the story cards-on-the-wall at the end of a sprint.) As such they can't be the basis of comprehensive requirements without a lot of re-work. 
 - Epics (groups of related user stories) don't show how user stories are sequenced and interconnected in a connected flow that serves as good requirements. 
  
-Avoiding user stories as the requirements should be an easy topic. Since so many companies that are trying to work agile and need requirements documents, it seems a more detailed discussion is needed, see [Stories Are Not Requirements](./stories-are-not-requirements.md).
+Avoiding user stories as the requirements should be an easy topic. Since so many companies that are trying to work agile and need requirements documents, it seems a more detailed discussion is needed, see [Stories Are Not Requirements](./supporting-articles/stories-are-not-requirements.md).
 
 
 ## Waterfall style Requirements Documents
@@ -115,7 +115,7 @@ Since deep integration of use cases are the novel part of the framework we'll ex
 
 See [Working With Use Cases](#an-agile-way-of-working-with-use-cases) for details.  
 
-  [^use-cases-details]: See the definitive book for [Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258) by Alistair Cockburn and my [Writing Agile Use Cases](./writing-agile-use-cases.md) article for detailed guidance of how I write them.
+  [^use-cases-details]: See the definitive book for [Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258) by Alistair Cockburn and my [Writing Agile Use Cases](./supporting-articles/writing-agile-use-cases.md) article for detailed guidance of how I write them.
 
 The main structure of a use-case-based requirements document are:
 - A use case names a user goal. We decompose these goals into sub-use-cases. *Decomposition is essential to make things into manageable chunks for both easier reading and implementing.*
@@ -184,7 +184,7 @@ The following is a simplified example of some use cases for a product to design 
 >
 >BDD scenario associated with the use case....
 >
-> For details on how the detailed requirements are presented, see [Organizing and Managing BDD Scenarios As Your Detailed Requirements](./scenario-as-detailed-requirements.md)
+> For details on how the detailed requirements are presented, see [Organizing and Managing BDD Scenarios As Your Detailed Requirements](./supporting-articles/scenario-as-detailed-requirements.md)
 >
 >
 ---
@@ -302,7 +302,7 @@ The idea of making the detailed requirements be the BDD Scenarios has been discu
 
 - *Longevity*: Each release adds or changes use cases just like the evolution process that happens during the release. At the end of every release you have the full connected story of the product.
 
-- *Automateability*: A text file with a simple and well defined structure is trivial to automatically transform. The primary example is automated inclusion of the requirements statements from the BDD scenario files, see, [Acceptance Test Traceability](./scenario-as-detailed-requirements.md) for details. It's trivial to generate HTML or PDF versions from the markdown for non-technical readers.
+- *Automateability*: A text file with a simple and well defined structure is trivial to automatically transform. The primary example is automated inclusion of the requirements statements from the BDD scenario files, see, [Acceptance Test Traceability](./supporting-articles/scenario-as-detailed-requirements.md) for details. It's trivial to generate HTML or PDF versions from the markdown for non-technical readers.
 
 - *Work Manageability*: The user stories can be as simple as one for the base flow and one for each alternative.  The key point is that you can see the entire scope of work from the use cases that have been implemented rather than tracking disconnected user stories.
 
@@ -317,11 +317,11 @@ The idea of making the detailed requirements be the BDD Scenarios has been discu
 Beyond just taking time and work of switching to doing what is proposed in this article, be prepared for the following challenges and consider the suggested mitigations:
 
 - We must keep our requirements in the work management tool, e.g., Jira - 
-  - Start by establishing that [User Stories Are Not Requirements](stories-are-not-requirements.md) 
+  - Start by establishing that [User Stories Are Not Requirements](./supporting-articles/stories-are-not-requirements.md) 
   - Explore why it's too much overhead to keep stories in the work management system in a state where they can be used to manage the work and still produce reasonable requirements documentation. 
   - Explore why keeping less in the work management system makes managing the work easier, e.g., work management is supposed to be just cards on a wall that shows the big picture rather than all the clutter of the details. 
 - We wrote a SAFe Lean Business Case, ShapeUp Pitch or some other high level document and that is our requirements - These documents are the way to start but are no where close to being enough to serve as real requirements. Even if there isn't a mandate for formal requirements documents, the proposed framework will lead to a better agile way-of-working.
-- We can't have everyone working in git - See the section on [using git](#store-everything-in-git) and the supporting details in: [Everything In Git](./everything-in-git.md).
+- We can't have everyone working in git - See the section on [using git](#store-everything-in-git) and the supporting details in: [Everything In Git](./supporting-articles/everything-in-git.md).
 - We already have everything in the combination of our work management tool and our wiki or document management site, e.g., Jira and Confluence
   - Consider using use-cases to document the requirements and serve as the framework, even if it's still done in a separate tool
   - Write the document in markdown stored in git and put a link to it in the separate tool. Worst case periodically copy the contents from git to the separate tool, e.g., at the point of *official* updates.
