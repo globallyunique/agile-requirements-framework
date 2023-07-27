@@ -18,7 +18,7 @@ This article provides guidance on writing use cases in general and more specific
 
 The following figure shows an annotated example of a use case formatted as described above. 
  
-![Use Case Formatting](./images/use-case-example.png)
+![Use Case Formatting](../images/use-case-example.png)
 
 ## Example Use Case
 

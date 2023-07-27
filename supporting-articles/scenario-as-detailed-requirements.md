@@ -23,13 +23,13 @@ Beyond requirements presentation, you need to do the above as part of making you
 
 The next biggest thing you need to do is decide on how you'll capture the requirements statements in the scenarios. The Given-When-Then structure of BDD Scenarios is designed to express detailed examples. You must find a way to also write a requirements statement that is at a level above the details of the example. It's critical for [my proposed requirements framework](../why-use-cases-for-agile.md)that this statement of requirements be written in a structured way so that tools can process it, e.g., find and extract it for insertion into a comprehensive requirements presentation. Exactly how best to do this depends on the specific tool used for writing and executing the scenarios. Possible approaches include:
 - Use the text that describes the Scenario or the combination of that and a comment directly above it, e.g.,[^Gherkin-Rules-Examples] 
-<img src="./images/scenario-with-comment.png" alt="Example With Comment" width="40%">
+<img src="../images/scenario-with-comment.png" alt="Example With Comment" width="40%">
 
 - If you are using a tool that has the more recent Gherkin syntax extension, use the text of the Rule, potentially in combination with the scenario description.
-<img src="./images/scenario-with-rule.png" alt="Example With Rule" width="40%">
+<img src="../images/scenario-with-rule.png" alt="Example With Rule" width="40%">
   
 - Use the Feature description and the comments allowed after it. This has the most flexibility but I don't think it scales to real use because it requires too many separate feature files. 
-<img src="./images/scenario-with-feature.png" alt="Example With Feature" width="40%">
+<img src="../images/scenario-with-feature.png" alt="Example With Feature" width="40%">
  
 - Use some special BDD syntax extension of the tool you are using. The ultimate form of this is defining your own syntax for the BDD Scenarios. See the [Using A Custom BDD Approach](#using-a-custom-bdd-approach)
 
@@ -58,7 +58,7 @@ The following sub-sections discuss each of these options in the context of [my p
 
 The following shows a use case from a real product[^INTIENT-Clinical]. Don't focus on the details, instead just note how it follows the proposed standard use case structure of a base flow with alternatives as well as having steps that can include links to other use cases and data.
 
-<img src="./images/example-login-use-case-annotated.png" alt="Example Use Case" width="40%">
+<img src="../images/example-login-use-case-annotated.png" alt="Example Use Case" width="40%">
 
 [^INTIENT-Clinical]: The product is [INTIENT Clinical](https://www.accenture.com/us-en/services/life-sciences/intient-clinical-platform) 
 
@@ -67,7 +67,7 @@ The following shows and example of the BDD scenarios that act as detailed requir
 - This is an automatically generated document. Details of how it was generated are covered later.
 - There is a header for the base flow and each alternative flow. Each header is followed by the scenarios for that flow. This shows how the use case flows provide the requirements framework and capture the higher level requirements.
 
-<img src="./images/login-use-case-scenarios.png" alt="Example Use Case" width="30%">
+<img src="../images/login-use-case-scenarios.png" alt="Example Use Case" width="30%">
 
 This is an example of using just the scenario description and it's Given-When-Then text as the detailed requirements. It works and is relatively easy to setup and manage but it tends to result in long lists of detailed requirements because there can be a lot of text in the Given-When-Thens. This problem is why it's desirable to put an overall requirements statement above the Given-When-Then and only show that overall statement in the requirements presentation.
 
@@ -89,11 +89,11 @@ Because of my desire to have everything in git as text files and have complete c
 
 I struggle with the restrictions of Gherkin syntax and standard BDD reports. Gherkin is a Domain Specific Language (DSL) for expressing and executing BDD Acceptance test scenarios. On my most recent project we created a custom DSL for our BDD scenarios. In the first example below the key point for the requirements framework is that the DSL has a *requirements statement* separate from the definition of the scenario.   
 
-<img src="./images/dsl-gwt-example.png" alt="gwt" width="80%">
+<img src="../images/dsl-gwt-example.png" alt="gwt" width="80%">
 
 In the second example there is both a requirements statement and a description. The statements and descriptions from these scenarios are what is included under the use cases. This enables a much better presentation of the comprehensive requirements. 
 
-<img src="./images/dsl-timeline-example.png" alt="timeline" width="80%">
+<img src="../images/dsl-timeline-example.png" alt="timeline" width="80%">
 
 ### Teams Need Freedom to Pick or Build Their Tools 
 
