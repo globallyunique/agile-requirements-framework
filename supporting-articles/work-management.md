@@ -7,7 +7,7 @@ Examples of work management systems I've used recently:
 - Polarion
 - Basecamp
 
-There are many more. I like that people are using simple task tracking tools like: TODO: look-up
+There are many more. I like that people are using simple task tracking tools instead of full Application Lifecycle Management (ALM) tools. Examples of such simpler tools are: [Trello](https://trello.com/), [Smartsheet](https://www.smartsheet.com/), [Monday](https://monday.com/). I haven't used them but anything that is a light weight work and issue tracking tool seems like it will work in combination with my proposed framework.
 
 We need such a system to plan and track the work, especially with distributed teams. The work management starts by putting the basics of the stories and other tech chores in and then tracking issues against them until they are completed. 
 
