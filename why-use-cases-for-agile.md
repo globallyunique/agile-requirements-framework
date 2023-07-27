@@ -25,7 +25,7 @@ My definition of *Comprehensive Requirements* is a document(s) that cover the fu
 
 ## Why Do We Need Comprehensive Requirements
 
-Formally, many domains mandate a requirements documents, e.g., I primarily work in the regulated / validated Life Science domain where, among other mandates, there must be a requirements document. Informally, we need requirements because humans forget things and these forgetful humans routinely leave and join our product team. Without something like a requirements document to provide the overarching goals and enough of the details, we lose track of what we've done and why.[^help-doc]  In this article I'll go beyond just meeting the mandates and make the case that a comprehensive requirements document makes every step of an agile way-of-working better. 
+Formally, many domains mandate a requirements documents, e.g., I primarily work in the regulated / validated Life Science domain where, among other mandates, there must be a requirements document. Informally, we need requirements because humans forget things and these forgetful humans routinely leave and join our product team. Without something like a requirements document to provide the overarching goals and enough of the details, we lose track of what we've done and why and we struggle to see how new work should fit in.[^help-doc]  In this article I'll go beyond just meeting the mandates and make the case that a comprehensive requirements document makes every step of an agile way-of-working better. 
 
 
   [^help-doc]: It's possible for the user guide to provide the info on what a product does, I've never seen one written as the system was built. Further, the organization provided for things like traceability don't map well to a user guide. I'm interested to hear about the user guide as the substitute for requirements.
@@ -270,12 +270,14 @@ A tool(s) is needed to manage the work on user stories, e.g., a work management 
 
 ![Work Management](./images/overview-with-work-mgmt-highlighted-small.png)
 
-It is important to note that the work management system is not storing its artifacts in git. The work management is thrown away after a sprint it doesn't matter where it is stored. While it might be nice to have this stored in git, it is not important to the requirements framework that this is done. Some might argue for keeping the estimates, burn-downs, etc. This kind of estimation and tracking is not part of the agile way-of-working advocated for in this article. The assumptions are:
+It is important to note that the work management system is not storing its artifacts in git. The work management is thrown away after a sprint it doesn't matter where it is stored. While it might be nice to have this stored in git, it is not important to the requirements framework that this is done. Some might argue for keeping the estimates, burn-downs, etc. Use of those kinds of estimation and tracking artifacts is not part of the agile way-of-working advocated for in this article. The assumptions are:
 - We are moving toward each BDD scenario is a story, 
 - Each BDD scenario is so small that we'd estimate it as a 1, 
 - Requirements are constantly changing, even inside a sprint, so significant and on-going work on estimation is waste[^no-estimates]
 - Deliver small units of running, tested code incrementally. 
  
+It's good to put details in work management system while the work is happening, e.g., copy in parts of the use case flow related to a story to start the work, add comments about how it needs to change, add detailed notes about requirements, etc. Ultimately move this into the use cases or the BDD scenarios as their permanent and organized form. See the [Work Management](./supporting-articles/work-management.md) article for additional thoughts on use of the work management system. 
+
   [^git-issues]: Depending on the work management tool selected, it maybe necessary to supplement it by using a separate issue tracking system like the one available in github or gitlab. This is a team specific decision. It doesn't change the fact that whatever is put in the work management system isn't going to be good as the comprehensive requirements.
 
   [^no-estimates]: There is a lot available from google about #NoEstimates, e.g., [A nice overview of the #NoEstimates ideas](https://builtin.com/software-engineering-perspectives/noestimates-software-effort-estimations),[The first chapter of the book by one of the creators of the #NoEstimates movement](https://noestimatesbook.com/wp-content/uploads/2014/11/NoEstimates-book-Chapter-1-We-suck-at-estimation.pdf), [Ron Jeffries on open questions about #NoEstimates](https://ronjeffries.com/xprog/articles/the-noestimates-movement/)
