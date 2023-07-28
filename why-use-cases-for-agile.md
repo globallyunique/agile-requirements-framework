@@ -40,7 +40,7 @@ Let's examine the issues with each of these requirements approaches.
 
 What I see at many companies is a process that mashes together the user stories from the tracking tool into a 'requirements document'. I'd go so far as to say that this is the current standard practice for most companies that need requirements documents and are trying to maintain an agile way-of-working. While it's the easy approach, it doesn't work because *user stories are NOT requirements*! Stories don't work as the requirements because:
 - They are the understanding at a point in time. They are expected to be incomplete and to evolve so the real needs can be discovered. With user stories, we are supposed to step away from requirements and enter the world of experiments that aim to prove a hypothesis. 
-- They are supposed to be small and separately deliverable. They represent small increments of valued functionality that can be developed in a period of a day to a week based value, risk, unknowns, etc. Their delivery order doesn't need to reflect the user requirements. As such they are more planning instruments then requirements.  
+- They are supposed to be small and separately deliverable. They represent small increments of valued functionality that can be developed in a period of a day to a week based value, risk, unknowns, etc. Their delivery order doesn't need to reflect the user requirements. As such they are more planning instruments than requirements.  
 - They should not be maintained. They should be thrown away after implementation. (Anyone remember tearing up the story cards-on-the-wall at the end of a sprint.) As such they can't be the basis of comprehensive requirements without a lot of re-work. 
 - Epics (groups of related user stories) don't show how user stories are sequenced and interconnected in a connected flow that serves as good requirements. 
  
@@ -60,7 +60,7 @@ Agile came into existence because we learned that requirements cannot accurately
 
 If we're not going to take the easy but wrong approach of user stories as the requirements or cripple the agile way-of-working with a waterfall style, we need to find something between these extremes. We need to capture the requirements in a way that fits with an agile way-of-working but doesn't create massive overhead. 
 
-What are the 'ilities' needed for a great requirements framework:
+The purpose and value of capturing requirements changes as we work on a product. As we are getting started in each unit of work, be it as small as a sprint or as large as multiple releases, writing things down is a powerful thinking tool in the iteratively learning process. We can't get all the details right before we implement so the requirements framework needs to strongly support working iteratively and incrementally. After we're done it needs to naturally serve as the documentation of what we've built. With that in mind we can list the 'ilities' for a great requirements framework:
 
 - *Evolvability*: You can start with just parts of the overall requirements and easily split, combine, and otherwise refactor them. I sometimes refer to this as 'Survivability'. The requirements framework needs to make it easy to evolve almost everything because the agile approach means constant learning and hence requirements changes. If it doesn't, you won't survive the project.
 
@@ -295,6 +295,8 @@ These are 'simple programs' because all they need to do is scan the markdown fil
 
 The idea of making the detailed requirements be the BDD Scenarios has been discussed throughout this article. This gets you to having executable requirements. Keep the use cases to a minimum and let them be the framework to organize the BDD tests. What hasn't been called out is that to accomplish this the team must make on-going investments in the BDD scenarios including the documentation that is part of them so they become good detailed requirements statements. This means the whole team needs to be refactoring and updating scenarios as the requirements evolve and adding good descriptions that become the requirements statements under the use cases to them.
 
+# Closing Thoughts
+
 ## Why is this a Great Requirements Framework
 
 - *Readability & Understandability*: It reads like a structured story that connects all the requirements together. While reading you can skip details, like the data section, until you care about them. It's an organized way to show all the things in the user journeys from Story Mapping. 
@@ -313,7 +315,11 @@ The idea of making the detailed requirements be the BDD Scenarios has been discu
 
 - *Price*: No tools beyond what the team is already using or is available as open source is needed. Everything stored as text makes for great portability to different approaches or tools if and as needed in the future.
 
-# Challenges to Adoption
+## Relationship to Agile Frameworks
+
+Comparisons can be made to the official agile frameworks, e.g., Scrum, SAFe, etc. Since Scrum is mostly just process this framework can be used with it except for some conflicts around allowing more incremental learning and evolution and making the stories so small they are the BDD scenarios. I'm not a fan or an expert on SAFe. This framework is a team level process that should fit however what I see is the combination of ALM tools and SAFe where the details of the ways-of-working are very constrained. In that kind of environment it won't fit. For teams using a very lite agile way-of-working this framework potentially requires adding work to maintain and organize around the the use cases.
+
+## Challenges to Adoption
 
 Beyond just taking time and work of switching to doing what is proposed in this article, be prepared for the following challenges and consider the suggested mitigations:
 
