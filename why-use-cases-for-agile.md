@@ -1,6 +1,6 @@
 [TOC]
 
-# Real-Agile with Comprehensive Requirements Framework
+# Real-Agile with a Comprehensive Requirements Framework
 
 Products[^product-project] need comprehensive requirements specifications. Not an up-front waterfall spec. Rather a *continuously evolving* framework of requirements specifications that organize the path to building the product. 
 User stories as used in current agile processes cannot accomplish this because they need to drive short term work management rather than be a fully connected requirements story; I will detail my reasoning by describing a way-of-working to build comprehensive requirements that is compatible with an agile way-of-working in this article. 
@@ -240,7 +240,7 @@ While your goal should be to have decent use cases before starting implementatio
 
 ### Store Everything in Git
 
-Having the analysts and users working collaboratively in the same place as the devs and testers with a rapid feedback cycle is a *massive benefit*. Using different tools that aren't directly linked to the product substantially slow such a cycle. The simplest and I believe only way this is possible is to have everyone storing everything in the git repository. 
+Git unites developers, designers, managers, and QA engineers in industry, academic, and personal settings because of its broad utility. As a precise and flexible system to track and control the various versions of your code and documents, it is incredibly useful for collaborative projects being developed over time (so, most projects).Having the analysts and users working collaboratively in the same place as the devs and testers with a rapid feedback cycle is a *massive benefit*. Using different tools that aren't directly linked to the product substantially slow such a cycle. The simplest and I believe only way this is possible is to have everyone storing everything in the git repository. 
 
 ![All In Git](./images/overview-with-all-in-git-highlighted-small.png)
 
