@@ -135,8 +135,6 @@ Since deep integration of use cases are the novel part of the framework we'll ex
 >     - Other Alternative Flows (each with their own steps)
 >
 
-See [Working With Use Cases](./supporting-articles/writing-agile-use-cases.md) for detailed guidance of how I write them.  
-
   [^use-cases-details]: See the definitive book for [Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258) by Alistair Cockburn.
 
 The main structure of a use-case-based requirements document are:
@@ -210,6 +208,8 @@ The following is a simplified example of some use cases for a product to design 
 >
 >
 ---
+
+See [Working With Use Cases](./supporting-articles/writing-agile-use-cases.md) for additional guidance on how I write use cases.  
 
 Ideally, you'll have a top-level picture of the use cases. Such a picture gives context of how the main use cases fit together. The picture need not, probably should not, show alternative flows or a lot of other details. It should not be a UML style use case diagram. It should be a flow with arrows connecting use cases. 
 
