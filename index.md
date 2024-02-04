@@ -1,14 +1,91 @@
 
-{:toc}
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#real-agile-with-a-comprehensive-requirements-framework" class="md-toc-link"><p>Real-Agile with a Comprehensive Requirements Framework</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#why-do-we-need-comprehensive-requirements" class="md-toc-link">
+            <p>Why Do We Need Comprehensive Requirements</p>
 
----
-toc:
-  depth_from: 1
-  depth_to: 6
-  ordered: false
----
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#user-stories-as-requirements" class="md-toc-link">
+            <p>User Stories as Requirements</p>
 
-[TOC]
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#waterfall-style-requirements-documents" class="md-toc-link">
+            <p>Waterfall Style Requirements Documents</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#approaches-between-the-extremes" class="md-toc-link">
+            <p>Approaches Between the Extremes</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#use-cases" class="md-toc-link">
+            <p>Use Cases</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#benefits-of-the-framework" class="md-toc-link"><p>Benefits of The Framework</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#use-cases-as-a-better-backlog" class="md-toc-link">
+            <p>Use Cases as a Better Backlog</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#work-in-all-directions" class="md-toc-link">
+            <p>Work In All Directions</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#store-everything-in-git" class="md-toc-link">
+            <p>Store Everything in Git</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#work-management" class="md-toc-link">
+            <p>Work Management</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#automate-all-artifact-creation" class="md-toc-link">
+            <p>Automate All Artifact Creation</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#shift-requirement-details-to-the-automated-tests" class="md-toc-link">
+            <p>Shift Requirement Details to the Automated Tests</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#closing-thoughts" class="md-toc-link"><p>Closing Thoughts</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#why-is-this-a-great-requirements-framework" class="md-toc-link">
+            <p>Why is this a Great Requirements Framework</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#relationship-to-agile-frameworks" class="md-toc-link">
+            <p>Relationship to Agile Frameworks</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#challenges-to-adoption" class="md-toc-link">
+            <p>Challenges to Adoption</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+
 
 # Real-Agile with a Comprehensive Requirements Framework
 
