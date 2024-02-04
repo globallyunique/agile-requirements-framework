@@ -358,5 +358,8 @@ Beyond just taking time and work of switching to doing what is proposed in this 
   - Show the issues caused by the tool(s) vs. the proposed framework. This is easier said then done, but hopefully this article provides the material to support you.
   - Use the proposed framework to do a single release as an experiment and use that to show benefits and issues
   - Propose using the tool(s) in a more limited way with the focus on just things they excel at, e.g., if they support exporting to text files that can be stored in git, then use them as editing tools with git as the official storage. 
-----
+  
+---
+
+---
   
