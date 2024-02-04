@@ -1,96 +1,32 @@
 
-<div class="md-toc">
-<details style="padding:0;;padding-left:0px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#real-agile-with-a-comprehensive-requirements-framework" class="md-toc-link"><p>Real-Agile with a Comprehensive Requirements Framework</p>
-</a>
-          </summary>
-        <div>
-          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#why-do-we-need-comprehensive-requirements" class="md-toc-link">
-            <p>Why Do We Need Comprehensive Requirements</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#user-stories-as-requirements" class="md-toc-link">
-            <p>User Stories as Requirements</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#waterfall-style-requirements-documents" class="md-toc-link">
-            <p>Waterfall Style Requirements Documents</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#approaches-between-the-extremes" class="md-toc-link">
-            <p>Approaches Between the Extremes</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#use-cases" class="md-toc-link">
-            <p>Use Cases</p>
-
-          </a></div><details style="padding:0;;padding-left:24px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#benefits-of-the-framework" class="md-toc-link"><p>Benefits of The Framework</p>
-</a>
-          </summary>
-        <div>
-          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#use-cases-as-a-better-backlog" class="md-toc-link">
-            <p>Use Cases as a Better Backlog</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#work-in-all-directions" class="md-toc-link">
-            <p>Work In All Directions</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#store-everything-in-git" class="md-toc-link">
-            <p>Store Everything in Git</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#work-management" class="md-toc-link">
-            <p>Work Management</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#automate-all-artifact-creation" class="md-toc-link">
-            <p>Automate All Artifact Creation</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#shift-requirement-details-to-the-automated-tests" class="md-toc-link">
-            <p>Shift Requirement Details to the Automated Tests</p>
-
-          </a></div>
-        </div>
-      </details>
-    
-        </div>
-      </details>
-    <details style="padding:0;;padding-left:0px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#closing-thoughts" class="md-toc-link"><p>Closing Thoughts</p>
-</a>
-          </summary>
-        <div>
-          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#why-is-this-a-great-requirements-framework" class="md-toc-link">
-            <p>Why is this a Great Requirements Framework</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#relationship-to-agile-frameworks" class="md-toc-link">
-            <p>Relationship to Agile Frameworks</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#challenges-to-adoption" class="md-toc-link">
-            <p>Challenges to Adoption</p>
-
-          </a></div>
-        </div>
-      </details>
-    
-</div>
+- [Real-Agile with a Comprehensive Requirements Framework](#real-agile-with-a-comprehensive-requirements-framework)
+  - [Why Do We Need Comprehensive Requirements](#why-do-we-need-comprehensive-requirements)
+  - [User Stories as Requirements](#user-stories-as-requirements)
+  - [Waterfall Style Requirements Documents](#waterfall-style-requirements-documents)
+  - [Approaches Between the Extremes](#approaches-between-the-extremes)
+  - [Use Cases](#use-cases)
+  - [Benefits of The Framework](#benefits-of-the-framework)
+    - [Use Cases as a Better Backlog](#use-cases-as-a-better-backlog)
+    - [Work In All Directions](#work-in-all-directions)
+    - [Store Everything in Git](#store-everything-in-git)
+    - [Work Management](#work-management)
+    - [Automate All Artifact Creation](#automate-all-artifact-creation)
+    - [Shift Requirement Details to the Automated Tests](#shift-requirement-details-to-the-automated-tests)
+- [Closing Thoughts](#closing-thoughts)
+  - [Why is this a Great Requirements Framework](#why-is-this-a-great-requirements-framework)
+  - [Relationship to Agile Frameworks](#relationship-to-agile-frameworks)
+  - [Challenges to Adoption](#challenges-to-adoption)
 
 
 # Real-Agile with a Comprehensive Requirements Framework
 
 Products[^product-project] need comprehensive requirements specifications. Not an up-front waterfall spec. Rather a *continuously evolving* framework of requirements specifications that organize the path to building the product. 
 User stories as used in current agile processes cannot accomplish this because they need to drive short term work management rather than be a fully connected requirements story; I will detail my reasoning by describing a way-of-working to build comprehensive requirements that is compatible with an agile way-of-working in this article. 
+
+The following picture provides an overview of the framework. Each part of it is discussed. 
+
+![Overview](./images/overview.png)
+
 
 First let me define what I mean by the words in the title. My definition of *Real-Agile* is based on the ideas from those I consider the master craftspeople of agile ways-of-working[^masters-of-agile] :
 - Incrementally learn what the user needs via small user stories defined via [Behavior Driven Development (BDD)](https://cucumber.io/blog/bdd/better-requirements-by-harnessing-the-power-of-exa/) scenarios.[^abandon-agile] 
@@ -178,7 +114,7 @@ To meet all the above we need a framework rather than just a requirements docume
 
 As noted above, these practices have limits that keep us from getting to the desired framework. My requirements framework meets all the 'ilities' by combining the Story Mapping, Domain Analysis Documents, and BDD centered around an updated approach to use-cases. I assume you are doing something like the above practices. If not then you need some combination of understanding them and actively starting to do them as part of moving to this more comprehensive framework. For example, if you use the framework you don't need to do story mapping because you'll get the equivalent from the framework vs. you must be doing BDD to use the framework.
 
-The following picture provides an overview of the framework. Each part of it is discussed in the rest of the article. 
+The following sections cover the details of each part the framework. 
 
 ![Overview](./images/overview.png)
 
