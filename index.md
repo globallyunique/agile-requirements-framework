@@ -66,7 +66,7 @@ What I see at many companies is a process that mashes together the user stories 
 - They should not be maintained. They should be thrown away after implementation. (Anyone remember tearing up the story cards-on-the-wall at the end of a sprint.) As such they can't be the basis of comprehensive requirements without a lot of re-work. 
 - Epics (groups of related user stories) don't show how user stories are sequenced and interconnected in a connected flow that serves as good requirements. 
  
-Avoiding user stories as the requirements should be an easy topic. Since so many companies that are trying to work agile and need requirements documents, it seems a more detailed discussion is needed, see [Stories Are Not Requirements](./supporting-articles/stories-are-not-requirements.md).
+Avoiding user stories as the requirements should be an easy topic. Since so many companies that are trying to work agile and need requirements documents, it seems a more detailed discussion is needed, see why [Use Cases are Essential](https://queue.acm.org/detail.cfm?id=3631182) for material from the use case originators and masters and my detailed ideas on why [Stories Are Not Requirements](./supporting-articles/stories-are-not-requirements.md).
 
 
 ## Waterfall Style Requirements Documents
