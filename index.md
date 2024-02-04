@@ -137,7 +137,7 @@ Since deep integration of use cases are the novel part of the framework we'll ex
 
 See [Working With Use Cases](./supporting-articles/writing-agile-use-cases.md) for details.  
 
-  [^use-cases-details]: See the definitive book for [Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258) by Alistair Cockburn and my [Writing Agile Use Cases](/supporting-articles/writing-agile-use-cases.md) article for detailed guidance of how I write them.
+  [^use-cases-details]: See the definitive book for [Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258) by Alistair Cockburn and my [Writing Agile Use Cases]({% link supporting-articles/writing-agile-use-cases.md %}) article for detailed guidance of how I write them.
 
 The main structure of a use-case-based requirements document are:
 - A use case names a user goal. We decompose these goals into sub-use-cases. *Decomposition is essential to make things into manageable chunks for both easier reading and implementing.*
