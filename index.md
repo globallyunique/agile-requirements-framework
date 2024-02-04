@@ -21,9 +21,7 @@
 # Real-Agile with a Comprehensive Requirements Framework
 
 Products[^product-project] need comprehensive requirements specifications. Not an up-front waterfall spec. Rather a *continuously evolving* framework of requirements specifications that organize the path to building the product. 
-User stories as used in current agile processes cannot accomplish this because they need to drive short term work management rather than be a fully connected requirements story; I will detail my reasoning by describing a way-of-working to build comprehensive requirements that is compatible with an agile way-of-working in this article. 
-
-The following picture provides an overview of the framework. Each part of it is discussed. 
+User stories as used in current agile processes cannot accomplish this because they need to drive short term work management rather than be a fully connected requirements story; I will detail my reasoning by describing a way-of-working to build comprehensive requirements that is compatible with an agile way-of-working in this article. The following is an overview of the way-of-working framework, each part is explored in detail in this article.  
 
 ![Overview](./images/overview.png)
 
@@ -114,7 +112,7 @@ To meet all the above we need a framework rather than just a requirements docume
 
 As noted above, these practices have limits that keep us from getting to the desired framework. My requirements framework meets all the 'ilities' by combining the Story Mapping, Domain Analysis Documents, and BDD centered around an updated approach to use-cases. I assume you are doing something like the above practices. If not then you need some combination of understanding them and actively starting to do them as part of moving to this more comprehensive framework. For example, if you use the framework you don't need to do story mapping because you'll get the equivalent from the framework vs. you must be doing BDD to use the framework.
 
-The following sections cover the details of each part the framework. 
+The following sections drill into the details of each part of the framework. 
 
 ![Overview](./images/overview.png)
 
