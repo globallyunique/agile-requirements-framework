@@ -66,7 +66,7 @@ What I see at many companies is a process that mashes together the user stories 
 - They should not be maintained. They should be thrown away after implementation. (Anyone remember tearing up the story cards-on-the-wall at the end of a sprint.) As such they can't be the basis of comprehensive requirements without a lot of re-work. 
 - Epics (groups of related user stories) don't show how user stories are sequenced and interconnected in a connected flow that serves as good requirements. 
  
-Avoiding user stories as the requirements should be an easy topic. Since so many companies that are trying to work agile and need requirements documents, it seems a more detailed discussion is needed, see why [Use Cases are Essential](https://queue.acm.org/detail.cfm?id=3631182) for material from the use case originators and masters and my detailed ideas on why [Stories Are Not Requirements](./supporting-articles/stories-are-not-requirements.md).
+Avoiding user stories as the requirements should be an easy topic. Since so many companies that are trying to work agile and need requirements documents, it seems a more detailed discussion is needed, see my detailed ideas on why [Stories Are Not Requirements](./supporting-articles/stories-are-not-requirements.md).
 
 
 ## Waterfall Style Requirements Documents
@@ -119,7 +119,7 @@ The following sections drill into the details of each part of the framework.
 
 ## Use Cases
 
-Since deep integration of use cases are the novel part of the framework we'll explore them first. The following picture highlights the use cases in the framework. Use cases may seem like an outdated, big-requirements-up-front approach that can't align with real-agile. This isn't so in general and is especially wrong when you're working agile in a validated or regulated situation. 
+Since deep integration of use cases are the novel part of the framework we'll explore them first. See why [Use Cases are Essential](https://queue.acm.org/detail.cfm?id=3631182) for material from the ultimate use case experts. The following picture highlights the use cases in the framework. Use cases may seem like an outdated, big-requirements-up-front approach that can't align with real-agile. This isn't so in general and is especially wrong when you're working agile in a validated or regulated situation. 
 
 ![use cases](./images/overview-with-use-cases-highlighted-small.png)
 
@@ -135,9 +135,9 @@ Since deep integration of use cases are the novel part of the framework we'll ex
 >     - Other Alternative Flows (each with their own steps)
 >
 
-See [Working With Use Cases](./supporting-articles/writing-agile-use-cases.md) for details.  
+See [Working With Use Cases](./supporting-articles/writing-agile-use-cases.md) for detailed guidance of how I write them.  
 
-  [^use-cases-details]: See the definitive book for [Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258) by Alistair Cockburn and my [Writing Agile Use Cases]({% link supporting-articles/writing-agile-use-cases.md %}) article for detailed guidance of how I write them.
+  [^use-cases-details]: See the definitive book for [Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258) by Alistair Cockburn.
 
 The main structure of a use-case-based requirements document are:
 - A use case names a user goal. We decompose these goals into sub-use-cases. *Decomposition is essential to make things into manageable chunks for both easier reading and implementing.*
