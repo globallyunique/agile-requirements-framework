@@ -1,4 +1,13 @@
+
 {:toc}
+
+---
+toc:
+  depth_from: 1
+  depth_to: 6
+  ordered: false
+---
+
 [TOC]
 
 # Real-Agile with a Comprehensive Requirements Framework
@@ -49,7 +58,7 @@ What I see at many companies is a process that mashes together the user stories 
 Avoiding user stories as the requirements should be an easy topic. Since so many companies that are trying to work agile and need requirements documents, it seems a more detailed discussion is needed, see [Stories Are Not Requirements](./supporting-articles/stories-are-not-requirements.md).
 
 
-## Waterfall style Requirements Documents
+## Waterfall Style Requirements Documents
 
 At the other end of the spectrum is creation of traditional up-front requirements documents, a.k.a. waterfall. These take the form of [Business Requirements Documents (BRD), Functional Requirements Documents (FRD), Software Requirements Specification (SRS)](https://babeginners.com/difference-between-brd-frd-and-srs/). This kind of document doesn't fit an agile way-of-working. They are used because of a combination of:
 - Fixed-price, fixed deliverable, fixed duration contracts,
