@@ -339,7 +339,7 @@ The idea of making the detailed requirements be the BDD Scenarios has been discu
 
 ## Relationship to Agile Frameworks
 
-Comparisons can be made to the official agile frameworks, e.g., Scrum, SAFe, etc. Since Scrum is mostly just process this framework can be used with it except for some conflicts around allowing more incremental learning and evolution and making the stories so small they are the BDD scenarios. I'm not a fan or an expert on SAFe. This framework is a team level process that should fit however what I see is the combination of ALM tools and SAFe where the details of the ways-of-working are very constrained. In that kind of environment it won't fit. For teams using a very lite agile way-of-working this framework potentially requires adding work to maintain and organize around the the use cases.
+Comparisons can be made to the official agile frameworks, e.g., Scrum, SAFe, etc. Since Scrum is mostly just process this framework can be used with it except for some conflicts around allowing more incremental learning and evolution and making the stories so small they are the BDD scenarios. I'm not a fan or an expert on SAFe. This framework is a team level process that should fit any of these frameworks, however what I mostly see is the combination of ALM tools and SAFe where the details of the ways-of-working are very constrained. In that kind of environment it won't fit. For teams using a very lite agile way-of-working this framework potentially requires adding work to maintain and organize around the the use cases.
 
 ## Challenges to Adoption
 
@@ -358,4 +358,5 @@ Beyond just taking time and work of switching to doing what is proposed in this 
   - Show the issues caused by the tool(s) vs. the proposed framework. This is easier said then done, but hopefully this article provides the material to support you.
   - Use the proposed framework to do a single release as an experiment and use that to show benefits and issues
   - Propose using the tool(s) in a more limited way with the focus on just things they excel at, e.g., if they support exporting to text files that can be stored in git, then use them as editing tools with git as the official storage. 
+----
   
