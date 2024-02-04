@@ -20,8 +20,8 @@
 
 # Real-Agile with a Comprehensive Requirements Framework
 
-Products[^product-project] need comprehensive requirements specifications. Not an up-front waterfall spec. Rather a *continuously evolving* framework of requirements specifications that organize the path to building the product. 
-User stories as used in current agile processes cannot accomplish this because they need to drive short term work management rather than be a fully connected requirements story; I will detail my reasoning by describing a way-of-working to build comprehensive requirements that is compatible with an agile way-of-working in this article. The following is an overview of the way-of-working framework, each part is explored in detail in this article.  
+Products[^product-project] need comprehensive requirements specifications. Not an up-front waterfall spec, rather a *continuously evolving* framework of requirements specifications that organize the path to building the product. 
+User stories as used in current agile processes cannot accomplish this because they need to drive short term work management rather than be a fully connected requirements story; In this article I will detail my reasoning by describing a way-of-working to build comprehensive requirements that is compatible with an agile way-of-working. The following is an overview of the way-of-working, each part is explored in detail.  
 
 ![Overview](./images/overview.png)
 
