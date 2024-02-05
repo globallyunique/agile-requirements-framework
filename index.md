@@ -85,7 +85,7 @@ Agile came into existence because we learned that requirements cannot accurately
 
 If we're not going to take the easy but wrong approach of user stories as the requirements or cripple the agile way-of-working with a waterfall style, we need to find something between these extremes. We need to capture the requirements in a way that fits with an agile way-of-working but doesn't create massive overhead. 
 
-The purpose and value of capturing requirements changes as we work on a product. As we are getting started in each unit of work, be it as small as a sprint or as large as multiple releases, writing things down is a powerful thinking tool in the iteratively learning process. We can't get all the details right before we implement so the requirements framework needs to strongly support working iteratively and incrementally. After we're done it needs to naturally serve as the documentation of what we've built. With that in mind we can list the 'ilities' for a great requirements framework:
+The purpose and value of capturing requirements changes as we work on a product. As we are getting started in each unit of work, be it as small as a sprint or as large as multiple releases, writing things down is a powerful thinking tool in the iterative learning process. We can't get all the details right before we implement so the requirements framework needs to strongly support working iteratively and incrementally. After we're done it needs to naturally serve as the documentation of what we've built. With that in mind we can list the 'ilities' for a great requirements framework:
 
 - *Evolvability*: You can start with just parts of the overall requirements and easily split, combine, and otherwise refactor them. I sometimes refer to this as 'Survivability'. The requirements framework needs to make it easy to evolve almost everything because the agile approach means constant learning and hence requirements changes. If it doesn't, you won't survive the project.
 
@@ -122,7 +122,7 @@ The following sections drill into the details of each part of the framework.
 
 ## Use Cases
 
-Since deep integration of use cases are the novel part of the framework we'll explore them first. See why [Use Cases are Essential](https://queue.acm.org/detail.cfm?id=3631182) for material from the ultimate use case experts. The following picture highlights the use cases in the framework. Use cases may seem like an outdated, big-requirements-up-front approach that can't align with real-agile. This isn't so in general and is especially wrong when you're working agile in a validated or regulated situation. 
+Since deep integration of use cases is the novel part of the framework we'll explore them first. See why [Use Cases are Essential](https://queue.acm.org/detail.cfm?id=3631182) for material from the ultimate use case experts. The following picture highlights the use cases in the framework. Use cases may seem like an outdated, big-requirements-up-front approach that can't align with real-agile. This isn't so in general and is especially wrong when you're working agile in a validated or regulated situation. 
 
 ![use cases](./images/overview-with-use-cases-highlighted-small.png)
 
@@ -230,13 +230,13 @@ The *flat* product backlog does not capture the customer’s journey. This probl
 
 The flat backlog provides no context or big-picture for a product. Arranging user stories in the order they’ll be delivered doesn’t help a product manager explain to others what the product does or determine if they’ve identified the relevant user stories. 
 
- The work on the use cases should start as a top-level list of user goals[^business-capabilities] similar to a regular flat backlog of epics and user stories. The result can be a backlog of use cases. They are incrementally expanded to be a connected set of more detailed use cases. This provides an even better organization of the product backlog that a story map, while setting us up to have comprehensive requirements.
+ The work on the use cases should start as a top-level list of user goals[^business-capabilities] similar to a regular flat backlog of epics and user stories. The result can be a backlog of use cases. They are incrementally expanded to be a connected set of more detailed use cases. This provides an even better organization of the product backlog than a story map, while setting us up to have comprehensive requirements.
 
   [^business-capabilities]: While there are techniques for capturing higher level business capabilities for an organization, that isn't necessary to deliver a product. It's a good higher level context but is outside the scope of this framework. 
 
 Ordering the stories based on things like priority happens after the initial set of use cases is identified. That ordering is the beginning of work-management, e.g., put the user stories in priority order into a [work-management](#work-management) tool like Jira or use a story mapping tool instead.
 
-When you have the some or all of the use cases before starting implementation of a feature it's easy to create user stories from them.  The first cut at user stories can be as simple as one story for the base flow and one for each alternative. The following picture shows the idea of such paths through the flows. My experience is that typically a flow get broken into smaller user stories. There are not hard-and-fast rules. A story can be a path through a flow or multiple flows. How you create user stories largely depends on the effort to implement and how splitting or grouping helps with work management.
+When you have the some or all of the use cases before starting implementation of a feature it's easy to create user stories from them.  The first cut at user stories can be as simple as one story for the base flow and one for each alternative. The following picture shows the idea of such paths through the flows. My experience is that typically a flow gets broken into smaller user stories. There are not hard-and-fast rules. A story can be a path through a flow or multiple flows. How you create user stories largely depends on the effort to implement and how splitting or grouping helps with work management.
 
 [^user-story-map-picture-reference]:  https://www.linkedin.com/pulse/flat-backlog-vs-user-story-map-namit-kumar-csm-csp/
 
@@ -252,7 +252,7 @@ Finally, we want to write the absolute minimum that provides a framework of the 
 
 ### Work In All Directions
 
-While your goal should be to have decent use cases before starting implementation, this will frequently not be appropriate or possible. We may start by just writing a list of use cases and then evolve from all directions to update and refactor the use cases as we learn. Working-in-all-directions happens because every part of the framework is iterative and incremental. Up to a point, the more we have the opportunity to discuss and think deeply about what to build the better the foundation of understanding we start with. There is no magic answer to finding the balance between the waterfall big-requirements-up-front trap and the code-and-fail-fast that can lead to lots of wasted implementation work. This framework strives to help find that balance while setting up for rapid cycles of implementation and learning. It's also typical that features have wildly difference cycles depending on the amount of unknowns. Where the unknowns are limited, more upfront thinking can speed delivery. The following picture highlights all the other parts of the framework feeding into the use cases.
+While your goal might be to have decent use cases before starting implementation, this will frequently not be appropriate or possible. We may start by just writing a list of use cases and then evolve from all directions to update and refactor the use cases as we learn. Working-in-all-directions happens because every part of the framework is iterative and incremental. Up to a point, the more we have the opportunity to discuss and think deeply about what to build the better the foundation of understanding we start with. There is no magic answer to finding the balance between the waterfall big-requirements-up-front trap and the code-and-fail-fast that can lead to lots of wasted implementation work. This framework strives to help find that balance while setting up for rapid cycles of implementation and learning. It's also typical that features have wildly difference cycles depending on the amount of unknowns. Where the unknowns are limited, more upfront thinking can speed delivery. The following picture highlights all the other parts of the framework feeding into the use cases.
 
 ![All Directions Highlighted](./images/overview-with-all-directions-highlighted-small.png)
 
@@ -268,9 +268,9 @@ Git unites developers, designers, managers, and QA engineers in industry, academ
 
 ![All In Git](./images/overview-with-all-in-git-highlighted-small.png)
 
-The changes needed to have everyone working in git is worth it. The devs and testers are already putting everything in git. The devs are putting their code there[^design-docs], the detailed requirements, as BDD scenarios, are also either be BBD scenario text files or actual code[^mps-tests]. Everyone collaborating in git becomes immediately possible when the requirements documents are text files written in markdown[^markdown] and managed in git.   
+The changes needed to have everyone working in git is worth it. The devs and testers are already putting everything in git. The devs are putting their code there[^design-docs], the detailed requirements, as BDD scenarios, are also either BBD scenario text files or actual code[^mps-tests]. Everyone collaborating in git becomes immediately possible when the requirements documents are text files written in markdown[^markdown] and managed in git.   
 
-I can hear the response. Git is scary. Markdown is only for techies. My experience is that I can teach anyone how to use git and edit markdown quickly. The users don’t need to be git or markdown experts, just doing the basics gets us all actively collaborating in a much better way than separate tools. Anyone you trust to be writing requirements needs to have the skills to work in markdown. In the Life Science domain I primarily work in most of the users are really smart, e.g., scientists. If they see how working closely in tight feedback cycles gets them rapid results, they will learn something new. It’s a big but important change. I expect the situation is similar in most other domains.   
+I can hear the response. Git is scary. Markdown is only for techies. My experience is that I can teach anyone how to use git and edit markdown quickly. The users don’t need to be git or markdown experts, just doing the basics gets us all actively collaborating in a much better way than separate tools. Anyone you trust to be writing requirements needs to have the skills to work in markdown. In the Life Science domain I primarily work in, most of the users are really smart, e.g., scientists. If they see how working closely in tight feedback cycles gets them rapid results, they will learn something new like git. It’s a big but important change. I expect the situation is similar in most other domains.   
 
   [^design-docs]: The design documents are also be markdown documents stored in git. 
 
@@ -295,7 +295,7 @@ A tool(s) is needed to manage the work on user stories, e.g., a work management 
 
 ![Work Management](./images/overview-with-work-mgmt-highlighted-small.png)
 
-It is important to note that the work management system is not storing its artifacts in git. The work management is thrown away after a sprint it doesn't matter where it is stored. While it might be nice to have this stored in git, it is not important to the requirements framework that this is done. Some might argue for keeping the estimates, burn-downs, etc. Use of those kinds of estimation and tracking artifacts is not part of the agile way-of-working advocated for in this article. The assumptions are:
+It is important to note that the work management system is not storing its artifacts in git. The work management is thrown away after a sprint, so it doesn't matter where it is stored. While it might be nice to have this stored in git, it is not important to the requirements framework that this is done. Some might argue for keeping the estimates, burn-downs, etc. Use of those kinds of estimation and tracking artifacts is not part of the agile way-of-working advocated for in this article. The assumptions are:
 - We are moving toward each BDD scenario is a story, 
 - Each BDD scenario is so small that we'd estimate it as a 1, 
 - Requirements are constantly changing, even inside a sprint, so significant and on-going work on estimation is waste[^no-estimates]
@@ -324,7 +324,7 @@ The idea of making the detailed requirements be the BDD Scenarios has been discu
 
 ## Why is this a Great Requirements Framework
 
-- *Readability & Understandability*: It reads like a structured story that connects all the requirements together. While reading you can skip details, like the data section, until you care about them. It's an organized way to show all the things in the user journeys from Story Mapping. 
+- *Readability & Understandability*: The combination of use cases and BDD scenarios provide a structured story that connects all the requirements together. While reading you can skip details, like the data section, until you care about them. It's an organized way to show all the things in the user journeys from Story Mapping. 
 
 - *Evolvability*: You can start with just parts of the overall requirements and easily split, combine, and otherwise refactor flows or separate files. This is made especially easy because it's just a text file where cut-and-paste, search-and-replace, and other transformations are trivial.
 
@@ -342,11 +342,11 @@ The idea of making the detailed requirements be the BDD Scenarios has been discu
 
 ## Relationship to Agile Frameworks
 
-Comparisons can be made to the official agile frameworks, e.g., Scrum, SAFe, etc. Since Scrum is mostly just process this framework can be used with it except for some conflicts around allowing more incremental learning and evolution and making the stories so small they are the BDD scenarios. I'm not a fan or an expert on SAFe. This framework is a team level process that should fit any of these frameworks, however what I mostly see is the combination of ALM tools and SAFe where the details of the ways-of-working are very constrained. In that kind of environment it won't fit. For teams using a very lite agile way-of-working this framework potentially requires adding work to maintain and organize around the the use cases.
+Comparisons can be made to the official agile frameworks, e.g., Scrum, SAFe, etc. Since Scrum is mostly just process, this framework can be used with it except for some conflicts around allowing more incremental learning and evolution and making the stories so small they are the BDD scenarios. I'm not a fan or an expert on SAFe. This framework is a team level process that should fit any of these frameworks, however what I mostly see is the combination of ALM tools and SAFe where the details of the ways-of-working are very constrained. In that kind of environment it won't fit. For teams using a very lite agile way-of-working this framework potentially requires adding work to maintain and organize around the the use cases.
 
 ## Challenges to Adoption
 
-Beyond just taking time and work of switching to doing what is proposed in this article, be prepared for the following challenges and consider the suggested mitigations:
+Beyond just the time and work of switching to doing what is proposed in this article, be prepared for the following challenges and consider the suggested mitigations:
 
 - We must keep our requirements in the work management tool, e.g., Jira - 
   - Start by establishing that [User Stories Are Not Requirements](./supporting-articles/stories-are-not-requirements.md) 
