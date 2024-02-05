@@ -48,7 +48,7 @@ My definition of *Comprehensive Requirements* is a document(s) that cover the fu
 
 ## Why Do We Need Comprehensive Requirements
 
-Formally, many domains mandate a requirements documents, e.g., I primarily work in the regulated / validated Life Science domain where, among other mandates, there must be a requirements document. Informally, we need requirements because humans forget things and these forgetful humans routinely leave and join our product team. Without something like a requirements document to provide the overarching goals and enough of the details, we lose track of what we've done and why and we struggle to see how new work should fit in.[^help-doc]  In this article I'll go beyond just meeting the mandates and make the case that a comprehensive requirements document makes every step of an agile way-of-working better. 
+Formally, many domains mandate a requirements documents, e.g., I primarily work in the regulated / validated Life Science domain where, among other mandates, there must be a requirements document. Informally, we need requirements because humans forget things and these forgetful humans routinely leave and join our product team. Without something like a requirements document to provide the overarching goals and enough of the details, we lose track of what we've done, and we struggle to see how new work should fit in.[^help-doc]  In this article I'll go beyond just meeting the mandates and make the case that a comprehensive requirements document makes every step of an agile way-of-working better. 
 
 
   [^help-doc]: It's possible for the user guide to provide the info on what a product does, I've never seen one written as the system was built. Further, the organization provided for things like traceability don't map well to a user guide. I'm interested to hear about the user guide as the substitute for requirements.
@@ -67,7 +67,9 @@ What I see at many companies is a process that mashes together the user stories 
 - They should not be maintained. They should be thrown away after implementation. (Anyone remember tearing up the story cards-on-the-wall at the end of a sprint.) As such they can't be the basis of comprehensive requirements without a lot of re-work. 
 - Epics (groups of related user stories) don't show how user stories are sequenced and interconnected in a connected flow that serves as good requirements. 
  
-Avoiding user stories as the requirements should be an easy topic. Since so many companies that are trying to work agile and need requirements documents, it seems a more detailed discussion is needed, see my detailed ideas on why [Stories Are Not Requirements](./supporting-articles/stories-are-not-requirements.md).
+For more details see [Stories Are Not Requirements](./supporting-articles/stories-are-not-requirements.md).
+
+Not having user stories as the requirements should be an easy topic. Since so many companies that are trying to work agile, need requirements documents, but are making a mess of it, a more detailed discussion is needed.
 
 
 ## Waterfall Style Requirements Documents
