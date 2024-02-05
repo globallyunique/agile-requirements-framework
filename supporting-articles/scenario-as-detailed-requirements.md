@@ -1,4 +1,12 @@
-[TOC]
+- [Organizing and Managing BDD Scenarios As Your Detailed Requirements](#organizing-and-managing-bdd-scenarios-as-your-detailed-requirements)
+  - [Investing in Your Scenarios](#investing-in-your-scenarios)
+  - [Technical Approaches](#technical-approaches)
+    - [Using the Cucumber Family](#using-the-cucumber-family)
+    - [Using A Commercial Cucumber Family Approach](#using-a-commercial-cucumber-family-approach)
+    - [Using A Custom BDD Approach](#using-a-custom-bdd-approach)
+    - [Teams Need Freedom to Pick or Build Their Tools](#teams-need-freedom-to-pick-or-build-their-tools)
+  - [Requirements to Test Traceability](#requirements-to-test-traceability)
+
 
 # Organizing and Managing BDD Scenarios As Your Detailed Requirements 
 
@@ -21,7 +29,7 @@ The biggest thing needed to make the proposed use of BDD Scenarios as detailed r
 
 Beyond requirements presentation, you need to do the above as part of making your agile way-of-working succeed. If you don't, you'll start to slow down due to poor understanding of the requirements and struggle to determine why tests fail. 
 
-The next biggest thing you need to do is decide on how you'll capture the requirements statements in the scenarios. The Given-When-Then structure of BDD Scenarios is designed to express detailed examples. You must find a way to also write a requirements statement that is at a level above the details of the example. It's critical for [my proposed requirements framework](../why-use-cases-for-agile.md)that this statement of requirements be written in a structured way so that tools can process it, e.g., find and extract it for insertion into a comprehensive requirements presentation. Exactly how best to do this depends on the specific tool used for writing and executing the scenarios. Possible approaches include:
+The next biggest thing you need to do is decide on how you'll capture the requirements statements in the scenarios. The Given-When-Then structure of BDD Scenarios is designed to express detailed examples. You must find a way to also write a requirements statement that is at a level above the details of the example. It's critical for [my proposed requirements framework](https://globallyunique.github.io/agile-requirements-framework/)that this statement of requirements be written in a structured way so that tools can process it, e.g., find and extract it for insertion into a comprehensive requirements presentation. Exactly how best to do this depends on the specific tool used for writing and executing the scenarios. Possible approaches include:
 - Use the text that describes the Scenario or the combination of that and a comment directly above it, e.g.,[^Gherkin-Rules-Examples] 
 <img src="../images/scenario-with-comment.png" alt="Example With Comment" width="40%">
 

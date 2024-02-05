@@ -75,7 +75,7 @@ Not having user stories as the requirements should be an easy topic. Since so ma
 
 ## Waterfall Style Requirements Documents
 
-At the other end of the spectrum is creation of traditional up-front requirements documents, a.k.a. waterfall. These take the form of [Business Requirements Documents (BRD), Functional Requirements Documents (FRD), Software Requirements Specification (SRS)](https://babeginners.com/difference-between-brd-frd-and-srs/). This kind of document doesn't fit an agile way-of-working. They are used because of a combination of:
+At the other end of the spectrum is creation of traditional up-front requirements documents, a.k.a. waterfall. These take the form of Business Requirements Documents (BRD), Functional Requirements Documents (FRD), or Software Requirements Specification (SRS). This kind of document doesn't fit an agile way-of-working. They are used because of a combination of:
 - Fixed-price, fixed deliverable, fixed duration contracts,
 - Fear of compliance with regulations,
 - Standard operating procedures combined with management preferences that mandate requirements up-front.
