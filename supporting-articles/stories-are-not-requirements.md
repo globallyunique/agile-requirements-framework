@@ -25,7 +25,7 @@ So how should we use stories? User stories are best used as planning instruments
 
 When we plan work as stories we step away from requirements and enter the world of experiments. An experiment is work that aims at proving a hypothesis. Once proven we move on to the next hypothesis and experiments.[^hypothesis]
 
-    [^hypothesis]: This paragraph is a great way to think about user stories and is taken from: [User Stories are not requirements](https://www.5dvision.com/post/user-stories-are-not-requirements/). The rest of that article makes the case for using user stories to avoid the need for requirements. That line of thinking isn't applicable to the requirements framework ideas proposed in [my proposed requirements framework](../why-use-cases-for-agile.md).
+   [^hypothesis]: This paragraph is a great way to think about user stories and is taken from: [User Stories are not requirements](https://www.5dvision.com/post/user-stories-are-not-requirements/). The rest of that article makes the case for using user stories to avoid the need for requirements. That line of thinking isn't applicable to the requirements framework ideas proposed in [my proposed requirements framework](../why-use-cases-for-agile.md).
 
 If you are doing agile with user stories in anything close to the right way then it isn't possible to understand the solution by reading the completed stories in the work management system, e.g., Jira, Polarian or a similar story tracker. Stories only make sense as requirements when assembled into the proper sequence of events, playing out over time in the correct order. Like one of those flip book animations that you made at school. 
 
