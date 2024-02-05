@@ -21,7 +21,7 @@
 
 # Real-Agile with a Comprehensive Requirements Framework
 
-This article was written by Mike Vogel (https://twitter.com/globallyunique1, globallyunique@gmail.com). It borrows extensively from those who've established how we can work agile. It is my attempt to help teams I work with to see how I think we should work. 
+This article was written by Mike Vogel [twitter](https://twitter.com/globallyunique1), [email](globallyunique@gmail.com). It borrows extensively from those who've established how we can work agile. It is my attempt to help teams I work with to see how I think we should work. 
 
 Products[^product-project] need comprehensive requirements specifications. Not an up-front waterfall spec, rather a *continuously evolving* framework of requirements specifications that organize the path to building the product. 
 User stories as used in current agile processes cannot accomplish this because they need to drive short term work management rather than be a fully connected requirements story; In this article I will detail my reasoning by describing a way-of-working to build comprehensive requirements that is compatible with an agile way-of-working. The following is an overview of the way-of-working, each part is explored in detail.  
