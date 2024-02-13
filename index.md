@@ -9,7 +9,7 @@
     - [Use Cases as a Better Backlog](#use-cases-as-a-better-backlog)
     - [Work In All Directions](#work-in-all-directions)
     - [Store Everything in Git](#store-everything-in-git)
-    - [Work Management](#work-management)
+    - [work-management](#work-management)
     - [Automate All Artifact Creation](#automate-all-artifact-creation)
     - [Shift Requirement Details to the Automated Tests](#shift-requirement-details-to-the-automated-tests)
 - [Closing Thoughts](#closing-thoughts)
@@ -18,12 +18,12 @@
   - [Challenges to Adoption](#challenges-to-adoption)
 - [Footnotes](#footnotes)
 
-By MIKE VOGEL [twitter](https://twitter.com/globallyunique1), [globallyunique@gmail.com](mailto:globallyunique@gmail.com). This article borrows extensively from those who've established how we can work agile. It is my attempt to help teams I work with to see how I think we should work. 
+By MIKE VOGEL [globallyunique@gmail.com](mailto:globallyunique@gmail.com). This article borrows extensively from those who've established how we can work agile. It is my attempt to introduce teams to how I think we should work.[^team-structure] 
 
 # Real-Agile with a Comprehensive Requirements Framework
 
 Products[^product-project] need comprehensive requirements specifications. Not an up-front waterfall spec, rather a *continuously evolving* framework of requirements specifications that organize the path to building the product. 
-User stories as used in current agile processes cannot accomplish this because they need to drive short term work management rather than be a fully connected requirements story; In this article I will detail my reasoning by describing a way-of-working to build comprehensive requirements that is compatible with an agile way-of-working. The following is an overview of the way-of-working, each part is explored in detail.  
+User stories as used in current agile processes cannot accomplish this because they need to drive short term work-management rather than be a fully connected requirements story; In this article I detail my reasoning by describing a way-of-working based compatible with agile and based on incrementally built but comprehensive requirements. The following is an overview of the way-of-working, each part is explored in detail.  
 
 ![Overview](./images/overview.png)
 
@@ -45,7 +45,7 @@ My definition of *Comprehensive Requirements* is a document(s) that cover the fu
 
   [^system-must]: It cannot be a long list of 'the system must...' statements. 
 
-> Note: This article does not get into details on roles and team structures. The assumption is that there are Subject Matter Experts (SMEs) for the domain as a permanent part of the team and that someone is acting in a Business Analyst role to write the requirements. No approach to product building is going to work if you don't have this in place. 
+  [^team-structure]: This article does not get into details on roles and team structures. The assumption is that there are Subject Matter Experts (SMEs) for the domain as a permanent part of the team and that someone is acting in a Business Analyst role to write the requirements. No approach to product building is going to work if you don't have this in place. 
 
 ## Why Do We Need Comprehensive Requirements
 
@@ -108,7 +108,7 @@ The purpose and value of capturing requirements changes as we work on a product.
 To meet all the above we need a framework rather than just a requirements document. The following are practices I've tried and that I consider essential to get to such a framework:
 - User stories linked to web pages / documents that contain the details about the requirements, e.g., a story in Jira linked to a page in Confluence. Carefully written pages could yield a good view of the requirements. This is attractive because a story should be a placeholder for a conversation so it's good to minimize the details in a story by moving them to another document. This approach doesn't yield good requirements if the documents are largely organized by the user stories. Such an organization is just a more documented version of the problem that user stories are not requirements. I've routinely seen such requirements documentation be difficult to follow and poorly synchronized with the state of the product.
 
-- [Story Mapping](https://jpattonassociates.com/story-mapping/) - This is very attractive because it organizes the user stories into end-to-end journeys. I highly recommend learning about story mapping and applying those ideas in combination with the requirements framework proposed in this article. The creator of story mapping describes it as: "A story map helps teams decompose feature ideas into smaller buildable parts, and best choose the subset of parts that will result in a successful product release." You learn about it by following this bullet's link to Story Mapping. I've seen only limited use of story mapping in the wild. It requires a specialized tool to support it. While all the core ideas work for me, I have one big issue with it. It suffers from the fundamental problem of being based on user stories, so the journeys are a chopped up into a work management view of the requirements.
+- [Story Mapping](https://jpattonassociates.com/story-mapping/) - This is very attractive because it organizes the user stories into end-to-end journeys. I highly recommend learning about story mapping and applying those ideas in combination with the requirements framework proposed in this article. The creator of story mapping describes it as: "A story map helps teams decompose feature ideas into smaller buildable parts, and best choose the subset of parts that will result in a successful product release." You learn about it by following this bullet's link to Story Mapping. I've seen only limited use of story mapping in the wild. It requires a specialized tool to support it. While all the core ideas work for me, I have one big issue with it. It suffers from the fundamental problem of being based on user stories, so the journeys are a chopped up into a work-management view of the requirements.
   
 - [Domain Analysis Documents](https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC) - This is essentially the fundamental work of doing business analysis. The link for this bullet points to a new and excellent book on the topic. It extends traditional analysis with powerful ideas and techniques focused on the language of the business. The description of the book says: Domain analysis is the process of understanding a body of knowledge, the subject matter of a domain. Minimally you want to document everything you are agreeing to implement in whatever format works for that domain. Ideally, you want to capture the concepts, vocabulary, rules and constraints clearly enough so you can define a set of abstractions and their relationships. The goal is to document the *language* that can be used to completely and unambiguously describe, and ultimately execute, the subject matter in the domain. You follow a set of practices to enable you to write everything you know about the requirements as you learn them. Analysis of the domain is fundamental for any product building process. For the requirements framework there is no magic way to balance writing too much or not enough. We don't want to require that big documents are written up front. You need to stay agile and evolve your analysis. For the requirements framework the key is to do enough to connect all the requirements for all the areas of the product together. 
 
@@ -237,11 +237,11 @@ The flat backlog provides no context or big-picture for a product. Arranging use
 
 Ordering the stories based on things like priority happens after the initial set of use cases is identified. That ordering is the beginning of work-management, e.g., put the user stories in priority order into a [work-management](#work-management) tool like Jira or use a story mapping tool instead.
 
-When you have the some or all of the use cases before starting implementation of a feature it's easy to create user stories from them.  The first cut at user stories can be as simple as one story for the base flow and one for each alternative. The following picture shows the idea of such paths through the flows. My experience is that typically a flow gets broken into smaller user stories. There are not hard-and-fast rules. A story can be a path through a flow or multiple flows. How you create user stories largely depends on the effort to implement and how splitting or grouping helps with work management.
+When you have the some or all of the use cases before starting implementation of a feature it's easy to create user stories from them.  The first cut at user stories can be as simple as one story for the base flow and one for each alternative. The following picture shows the idea of such paths through the flows. My experience is that typically a flow gets broken into smaller user stories. There are not hard-and-fast rules. A story can be a path through a flow or multiple flows. How you create user stories largely depends on the effort to implement and how splitting or grouping helps with work-management.
 
 [^user-story-map-picture-reference]:  https://www.linkedin.com/pulse/flat-backlog-vs-user-story-map-namit-kumar-csm-csp/
 
-[^story-mapping-products]: see information from any of the story mapping products, e.g., [Easy Agile](https://www.easyagile.com/), or the work by the creator of [Story Mapping](https://jpattonassociates.com/story-mapping/) 
+[^story-mapping-products]: See information from any of the story mapping products, e.g., [Easy Agile](https://www.easyagile.com/), or the work by the creator of [Story Mapping](https://jpattonassociates.com/story-mapping/) 
 
 ![Use Case Schematic](./images/use-case-schematic-small.png)
 
@@ -261,7 +261,7 @@ While your goal might be to have decent use cases before starting implementation
   - Write analysis documents about the domain in whatever way works and transform them into the use case structure over time, e.g., capture notes about a feature across a series of discussions before trying to organize them into use cases. For guidance see [How to Understand Almost Anything: A Practitioner's Guide to Domain Analysis](https://www.amazon.com/How-Understand-Almost-Anything-Practitioners/dp/B0C2RBL5KC) by Markus Voelter.
   - Since we don't know the requirements we build some working, tested features from whatever early user stories we have. As we learn what the real requirements are we reverse engineer the use cases from the implementation or user stories.
   - Constantly refactor the use cases as your understanding of the requirements evolves or as needed to make reading the requirements easier. 
-  - Review the use cases and the user stories in the work management system together and make appropriate corrections in both. Do this frequently even if you thought you had the use cases at the start of work on a feature. 
+  - Review the use cases and the user stories in the work-management system together and make appropriate corrections in both. Do this frequently even if you thought you had the use cases at the start of work on a feature. 
 
 ### Store Everything in Git
 
@@ -290,21 +290,21 @@ There is a multitude of separate specialized tools to capture the requirements a
 
   [^markdown]: See the many resources on the web on markdown, e.g., [The benefits and challenges of using markdown software](https://www.linkedin.com/advice/0/what-benefits-challenges-using-markdown-software ), [Why you should and should not use markdown](https://stymied.medium.com/why-you-should-and-should-not-use-markdown-1b9d70987792)
 
-### Work Management
+### work-management
 
-A tool(s) is needed to manage the work on user stories, e.g., a work management system like Jira[^git-issues]. As mentioned above, the user stories in the work management system should not be kept after the user stories are done, hence the garbage can in the overview picture. 
+A tool(s) is needed to manage the work on user stories, e.g., a work-management system like Jira[^git-issues]. As mentioned above, the user stories in the work-management system should not be kept after the user stories are done, hence the garbage can in the overview picture. 
 
-![Work Management](./images/overview-with-work-mgmt-highlighted-small.png)
+![work-management](./images/overview-with-work-mgmt-highlighted-small.png)
 
-It is important to note that the work management system is not storing its artifacts in git. The work management is thrown away after a sprint, so it doesn't matter where it is stored. While it might be nice to have this stored in git, it is not important to the requirements framework that this is done. Some might argue for keeping the estimates, burn-downs, etc. Use of those kinds of estimation and tracking artifacts is not part of the agile way-of-working advocated for in this article. The assumptions are:
+It is important to note that the work-management system is not storing its artifacts in git. The work-management is thrown away after a sprint, so it doesn't matter where it is stored. While it might be nice to have this stored in git, it is not important to the requirements framework that this is done. Some might argue for keeping the estimates, burn-downs, etc. Use of those kinds of estimation and tracking artifacts is not part of the agile way-of-working advocated for in this article. The assumptions are:
 - We are moving toward each BDD scenario is a story, 
 - Each BDD scenario is so small that we'd estimate it as a 1, 
 - Requirements are constantly changing, even inside a sprint, so significant and on-going work on estimation is waste[^no-estimates]
 - Deliver small units of running, tested code incrementally. 
  
-It's good to put details in work management system while the work is happening, e.g., copy in parts of the use case flow related to a story to start the work, add comments about how it needs to change, add detailed notes about requirements, etc. Ultimately move this into the use cases or the BDD scenarios as their permanent and organized form. See the [Work Management](./supporting-articles/work-management.md) article for additional thoughts on use of the work management system. 
+It's good to put details in work-management system while the work is happening, e.g., copy in parts of the use case flow related to a story to start the work, add comments about how it needs to change, add detailed notes about requirements, etc. Ultimately move this into the use cases or the BDD scenarios as their permanent and organized form. See the [work-management](./supporting-articles/work-management.md) article for additional thoughts on use of the work-management system. 
 
-  [^git-issues]: Depending on the work management tool selected, it maybe necessary to supplement it by using a separate issue tracking system like the one available in github or gitlab. This is a team specific decision. It doesn't change the fact that whatever is put in the work management system isn't going to be good as the comprehensive requirements.
+  [^git-issues]: Depending on the work-management tool selected, it maybe necessary to supplement it by using a separate issue tracking system like the one available in github or gitlab. This is a team specific decision. It doesn't change the fact that whatever is put in the work-management system isn't going to be good as the comprehensive requirements.
 
   [^no-estimates]: There is a lot available from google about #NoEstimates, e.g., [A nice overview of the #NoEstimates ideas](https://builtin.com/software-engineering-perspectives/noestimates-software-effort-estimations),[The first chapter of the book by one of the creators of the #NoEstimates movement](https://noestimatesbook.com/wp-content/uploads/2014/11/NoEstimates-book-Chapter-1-We-suck-at-estimation.pdf), [Ron Jeffries on open questions about #NoEstimates](https://ronjeffries.com/xprog/articles/the-noestimates-movement/)
 
@@ -349,13 +349,13 @@ Comparisons can be made to the official agile frameworks, e.g., Scrum, SAFe, etc
 
 Beyond just the time and work of switching to doing what is proposed in this article, be prepared for the following challenges and consider the suggested mitigations:
 
-- We must keep our requirements in the work management tool, e.g., Jira - 
+- We must keep our requirements in the work-management tool, e.g., Jira - 
   - Start by establishing that [User Stories Are Not Requirements](./supporting-articles/stories-are-not-requirements.md) 
-  - Explore why it's too much overhead to keep stories in the work management system in a state where they can be used to manage the work and still produce reasonable requirements documentation. 
-  - Explore why keeping less in the work management system makes managing the work easier, e.g., work management is supposed to be just cards on a wall that shows the big picture rather than all the clutter of the details. 
+  - Explore why it's too much overhead to keep stories in the work-management system in a state where they can be used to manage the work and still produce reasonable requirements documentation. 
+  - Explore why keeping less in the work-management system makes managing the work easier, e.g., work-management is supposed to be just cards on a wall that shows the big picture rather than all the clutter of the details. 
 - We wrote a SAFe Lean Business Case, ShapeUp Pitch or some other high level document and that is our requirements - These documents are the way to start but are no where close to being enough to serve as real requirements. Even if there isn't a mandate for formal requirements documents, the proposed framework will lead to a better agile way-of-working.
 - We can't have everyone working in git - See the section on [using git](#store-everything-in-git) and the supporting details in: [Everything In Git](./supporting-articles/everything-in-git.md).
-- We already have everything in the combination of our work management tool and our wiki or document management site, e.g., Jira and Confluence
+- We already have everything in the combination of our work-management tool and our wiki or document management site, e.g., Jira and Confluence
   - Consider using use-cases to document the requirements and serve as the framework, even if it's still done in a separate tool
   - Write the document in markdown stored in git and put a link to it in the separate tool. Worst case periodically copy the contents from git to the separate tool, e.g., at the point of *official* updates.
 - We already spent all this money on tools to support our process:
