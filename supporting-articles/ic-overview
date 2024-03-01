@@ -1,0 +1,267 @@
+Title: INTIENT Clinical Documentation Overview 
+---
+[[_TOC_]]
+
+# Process Overview
+
+The following provides an overview of how the key artifacts of our agile process are created. The official location of all the artifacts is the project's git repository. The repository contains both these process artifacts and the implementation of the features and tests. All of this is versioned together so that at any point in time the set of artifacts is consistent with the implementations.
+
+## Stories and the Story Map
+In an agile process the starting point is a list of stories, known as the Backlog. Stories are a placeholder for a conversation about a desired feature so they are simply short descriptions of the goal of the feature. Rather than simply organizing the Backlog as a prioritized list, it is organized into a Story Map that shows the users journey though sequences of stories and organizes the stories into slices. For details on story maps see: [Easy Agile](https://www.easyagile.com/blog/the-ultimate-guide-to-user-story-maps/) the tool used to enhance Jira to support story mapping and [Jeff Patton](https://www.jpattonassociates.com/user-story-mapping/) the creator of story mapping.
+
+The target scope of each sprint is a slice / row of the stories in the story map. The stories completed in each sprint is recorded in the doc/process_evidence folder. The record consists of a statement of completion that includes a screen shot of the user story map as it existed in the Easy-Agile tool in Jira, e.g., 
+
+> **Sprint Completion Evidence - Sprint 12**
+>
+> By pushing this file to the repository I certify acceptance of the features covered by the current requirements as captured in the feature files. The scope of the new features in sprint 12 are shown in the following.
+>
+> ![Story Map](./process_evidence/clinical-study-data-solution-story-map_sprint12.png "Story Map")
+
+Since the above evidence is added to the git repository it is permanently marked with the date, time, and person who added it to the repository, e.g.,
+ >![Process Evidence Commit Example](./images/process-evidence-commit.png) 
+
+
+## Feature Files as Acceptance Tests
+
+A Feature File contains the Acceptance Criteria for a story. The criteria is written in the format used by the [Behave](https://behave.readthedocs.io/en/latest/) framework.  The team collaborates on defining the Acceptance Criteria following the [BDD approach](https://cucumber.io/docs/bdd/). 
+
+The following is an example of a Feature File.
+
+> ![Example Feature File](./images/example-feature-file.png)
+
+The file is organized by Scenarios that are examples of how the system should behave. In most cases the Acceptance Criteria for a Story is a single Scenario.
+
+The stories only provide a starting point for specifying a feature. Stories are not a stable definition of a feature across the project, e.g., a story in sprint N may deliver a feature that is dropped, split, or renamed in sprint N+1. The team doesn't go back and change a story after it's done and accepted. The Feature Files are the accurate definition of the features because they evolve in every sprint and provide the complete definition of the system at each point in time.
+
+Virtually all of the Scenarios are run as automated tests. For a small number the effort to implement automation is not justified and these are used as scripts to run manually. 
+
+### Scenario Tagging
+Since the scenarios in the Feature Files are in continuous evolution during the project a set of conventions is used to make clear the state of each scenario. 
+All scenarios should have at least one tag at all times. Multiple tags are allowed as long as they do not contradict each other in meaning.
+
+The following is the standard tag "flow" of a scenario. Only one of these tags should be on a scenario at any time:
+- draft - denotes scenarios that should not be taken up for development yet based on incompleteness or ongoing discussions
+- prepared - denotes scenarios that are ready for development based on priorities
+- hold - prepared but shouldn't/can't be worked on.  Often used to de-prioritize stories after grooming.
+
+	***NO MODIFICATION OF THE SCENARIO FROM THIS POINT ONWARD WITHOUT CONSULTATION!!!***
+- wip (with an additional tag using the person's/people's initials if desired) - denotes scenarios being implemented by the developers
+- wip-manual - denotes scenarios being implemented by the developers that are intended to be tested through means other than behave
+- completed - denotes scenarios that a developer has finished implementing
+- completed-manual - same as completed, but is tested through means other than behave
+- accepted - denotes scenarios that have been checked by the business and are signed off
+- accepted-manual - denotes scenarios that have been checked by the business and are signed off but are tested through means other than behave
+- non-functional 
+- ui
+- rejected - denotes that acceptance test did not pass, should be followed by a comment explanation
+
+The following tags are to be used in conjunction with wip, complete, or accepted tags. There should be a comment associated with a tag in cases where there is a linkage between the tagged story and another one.
+- deprecated - denotes scenarios that are proposed for removal based on redundancy, irrelevance, or being superseded by a new test
+
+## Unit Tests
+In addition to the Story level Scenario tests there are unit tests for all significant parts of the implementation. To implement a Scenario in a Feature File the team breaks the features into smaller components and unit tests them. The team primarily follows [Test Driven Development (TDD)](https://en.wikipedia.org/wiki/Test-driven_development) to create the unit tests and implementation of the features.
+
+## Incremental Test Evidence
+The automated execution of the Scenarios is part of the Continuous Deployment process. GitLab is the product used for the git repository. The INTIENT Platform has put in place the infrastructure to run GitLab deployment pipelines. The Clinical product deployment pipeline  runs at least once a day. It takes the current version of the code and the automated tests from the git repo and runs the automated tests as a step in the pipeline. First all the unit tests and then the feature file acceptance tests are run. The results of the pipeline running including the report of the execution of the tests is captured and permanently maintained in the git repository. The following is an example of the history of the execution of the pipeline. 
+
+> ![Pipeline](./images/deploy-pipeline.png)
+
+> ![Pipeline](./images/tests-pipeline.png)
+
+The following is an example of the automated test report produced by running the pipeline. The report is attached as a permantent part of the history of the pipeline execution. The report is produced using the [Allure](https://docs.qameta.io/allure/) package. The following are some generic examples of Allure reports.
+
+> ![Allure Report](./images/allure-2.png)
+
+> ![Allure Report](./images/allure-1.png)
+
+
+## Requirements Documents
+
+While the Feature Files provide the full detailed definition of all the features and the Story Map shows the sequence of the Stories, they don't provide the story of the complete end-to-end flow of all system requirements. The end-to-end flows are captured as use cases in a requirement document. The requirements are split into files for each product module and maintained in the docs/use-cases folder of the git repository. Each use case is linked to the Feature Files that deliver the requirements. The Feature Files are organized to align with the use cases, e.g., the scenarios are grouped by the base and alternative use case flows. The name of each scenario is a statement of a specific requirement for that flow.  Thus the scenario names serve as the next level of detail beyond the use cases.   
+
+### Requirements Definition
+
+The requirements are defined as the combination of use cases and executable requirements (executable requirements are also known as executable specifications or automated acceptance criteria).
+
+- The use cases organize the features of the solution into a connected set of flows.
+- The details of the use cases are defined in the executable requirements as Features and Scenarios.
+- A Feature is high-level description of a software feature and it is used to group related Scenarios.
+- A Scenario is a a concrete example that illustrates a business rule or related rules.
+  - A Scenario consists of a list of steps defined in a Given-When-Then format derived from the Behavior Driven Development (BDD) agile technique.
+  - Given-When-Then format is a template intended to guide the writing of acceptance criteria for a user story written in a familiar cause-and-effect manner. The Given-When-Then format is structured English following a language specification called [Gerkin](https://cucumber.io/docs/gherkin/reference).
+  - The benefits of writing acceptance criteria using this cause-and-effect template is that they are both definitions of the requirements and executable as automated tests that prove the system meets the requirement.
+  
+- The definition of requirements and their acceptance scenerios then results in the following organization of the requirements:
+
+    - Use Cases
+        - Features
+            - Scenarios (Examples)
+                - Given-When-Then Steps
+
+The example below shows differences in expressing the user story and acceptance criteria using cause-and-effect format vs. traditionally written criteria.
+
+![Requirements Definition using Given-When-Then format](./images/requirement-definition.png)
+
+There are versions of this use case document at different levels of details:
+
+- The Core Requirements version includes just the use cases. This version is ideal for understanding the scope and flow of the requirements.
+- The Business Rule version includes the use cases followed by the descriptions of the Scenarios covering the use case. This version is ideal for understanding the scope of the business rules that must be met for the system to be acceptable.
+- The Acceptance Criteria version includes the use cases followed by the full Executable Requirements in the Given-When-Then format of the Scenarios covering the use case. This version is large and detailed. It is ideal for exploring the details of the acceptance criteria and each criteria is tested. This version shows the requirements to test traceability. 
+
+
+#### Use Case Organization and Format
+The use cases are structured and formatted as follows.  
+
+- Each use case has a unique name.  Each step in a use case is assigned a number. This serves to both identify and 
+sequence the steps. All steps are written in the form: Actor does Action, e.g., 'User selects "Run Configuration"'.
+- Each use case starts with a Basic Flow that is the most common or simplest sequence of steps. It is usually the 
+case where nothing goes wrong.
+- A use case does not include decisions or branches. Instead at any point where there is an alternative, an Alternative 
+Flow is defined. The alternative is assigned an identifier that indicates where it can optionally be inserted into the 
+Base Flow. For example, if the Base Flow had steps 1-3, then an alternative that can be done at step 2 would be 
+assigned the id of "2a � Name of Alternative". Subsequent alternatives that can be done at the same place would be 
+assigned ids like 2b, 2c, etc. If an alternative can occur in multiple places it is assigned the id of "*" (using 
+the asterisk as a wildcard). If an alternative is a complete replacement for the basic flow it is assigned an id like 
+1a and 1b to indicate that the alternative replaces step 1 of the basic flow.  
+- One use case can refer to another (a sub-use case). Such references are formatted with the name of the referenced 
+use case underlined, as if it were a hyper-link (e.g., [Do Something]()).  The name of the use case is changed 
+slightly to make the step more readable. For example, a step that referenced the [Run Configuration]() use case would 
+be written: User [Runs Configuration]().
+- If a step in a use case accesses complex data, the data is given a nickname. The nickname is formatted to look 
+like a link, e.g., [SDTM Configuration](). The definition of the data is placed in a separate 'Data' section below 
+the use case. Data that is shared across multiple use cases is defined in one common Data section.
+
+Usage Note: The references to sub-use cases and the shorthand names of the data may look like hyperlinks but clicking 
+on them doesn't jump to their section. The easiest way to navigate to them is via the table of contents or the document map.
+
+The following figure shows an annotated example of a use case formatted as described above.  The document map showing the organization of the use case is also displayed as suggested in the above usage note. 
+
+![Use Case Formatting](./images/use-case-formatting.png)
+
+
+## Design Documents
+
+The design is captured in a separate file per module.
+
+- [Clinical Core](./architecture/designs/intient-clinical-design.md)
+- [Control Tower](./architecture/designs/control-tower-design.md)
+- [Study Data Engine](./architecture/designs/study-data-engine-design.md)
+- [Managed Analytics Environment](./architecture/designs/mae-design.md) 
+
+Detailed subsystem design documents are created and updated as an ongoing activity by the development team. They are 
+organized according to the following guidance:
+
+- Each subsystem should maintain a folder of design docs in markdown format in git docs/architecture/designs-*subsystem*,
+where *subsystem* is the name of the subsystem, for example, UI design docs are in docs/architecture/designs-ui.
+- Subsystem designs should be broken into smaller markdown docs, one for each design topic. Use lower case
+and dashes to name the files. See docs/architecture/designs-ui for examples.
+- Images referenced in the subsystem design docs should be placed in docs/architecture/images and referenced in 
+markdown using relative paths. Image file naming convention: *subsystem*-*filename*.png, for example,
+ui-domino-integration.png.
+- Editable images should be placed in docs/architecture/editable-images
+- The module design docs are the overarching docs for Clinical overall design. Subsystem design docs must be referenced
+in one of the module design docs. When a subsystem design doc is created, author must update relevant module design doc 
+to reference the new doc, with the following reference naming convention. Note the two dashes, not one.
+    - [Subsystem -- Technical Design Topic](../subsystem-design-folder/topic-name.md)  
+where
+        - Subsystem is the component name
+        - Technical Design Topic is the title you'd like to use to reference the design doc
+        - subsystem-design-folder is the subfolder where the design doc is stored
+        - topic-name.md is the file name of the design doc
+- Avoid referencing other design docs. This will cause broken hyperlinks in generated HTML. 
+
+When the docgen tool generates HTML version of the module design docs, it will embed the design docs referenced in
+the module design doc as a section under Appendix - Component Designs.  
+
+For example, UI team created a design doc for module configurability:
+
+- Design doc module-configurability.md is created in folder docs/architecture/designs-ui
+- In module design doc docs/architecture/designs/intient-clinical-design.md, the following sentence is added under 
+section Control of Module Visibility: Refer to [UI -- Module Configurability](../designs-ui/module-configurability.md) 
+for more design details.
+
+Use the following guidance for design doc markdown authoring:
+
+- Start section headers at level 4, ####, and no deeper than level 6. Using the UI example above, content in
+module-configurability.md will be embedded as a subsection under Appendix - Component Designs / UI / Module 
+Configurability in intient-clinical-design.md. The subsection will also be included in the Table of Content.
+- Do not include a top level section header for the document. The name in the reference link, for example, 
+"Module Configurability", will be the section name in the Appendix.
+- An empty line must be inserted before any section headers
+- An empty line must be inserted before any lists or code blocks
+
+
+## Wireframes
+
+The detailed design of the UI is captured in the wireframes document(s). The wireframes are linked to the requirements with annotations such as the name of the dataset displayed or the name of the use case it supports. The wireframes are stored in the docs/ui-mockups folder in the git repository. They are versioned in sync with the code and the other git artifacts. The following shows and example of a wireframe of a page with an annotation tying it to the display of the Study-List data.
+
+> ![Wireframe Example](./images/wireframe-example.png)
+
+## Validation Documents
+
+TOOD: Decide whether these are stored in git and whether they need to be part of the story presented in this document. 
+    
+# Traceability
+
+## Requirements to Tests
+
+The traceability from requirements to tests is accomplished as follows:
+- The requirements can be generated in multiple formats. The format for detailed requirements definition is the one showing each use case followed by the list of scenarios organized by the base flow and alternatives.  The following is an example of this format.
+
+> ![Use Cases with Scnearios](./images/use-case-with-scenario.png)
+
+- The format for traceability to tests is an extension of the above format where the complete scenario is shown. Each scenario is an example of the required behavior specified as executable acceptance criteria. The following is an example of this format.
+
+> ![Use Cases with Full Scenarios](./images/use-case-with-full-scenario.png)
+
+There is an extra level of detail for the UI testing. Traceability is as described above, where the scenarios provide the traceability to the tests. The traceability for the UI is more complex because of the need to avoid too much end-to-end scenarios testing through the UI. Testing every multi-step sequence in the scenarios through the UI can be slow, complex, and fragile. The approach taken is a combination of:
+- Testing some scenarios directly through the UI (a substantial number of such tests are implemented)
+- Testing everything else by checking that the API calls made by the UI work as defined by the scenario (this is referred to as testing-behind-the-ui)
+- For every part of the UI unit tests are done of each element of the page in a way that complements the UI scenarios level tests.
+
+The UI testing is accomplished by: 
+- Scenario testing of the UI features done via [Cypress](https://www.cypress.io). Cypress is a specialized UI testing tool that executes the scenarios in the same way as the Behave tool but with additional UI specific features. Cypress does extra things like capturing each page alongside the scenario step, allowing interactive stepping through the steps to see the captured pages, and showing lower-level details of the UI steps inbetween the scenario steps.
+- UI Unit test automation is done with [Jest](https://jestjs.io) a lower level tool than Cypress. It separately captures a report of the results of each unit test.
+    
+At least one scenario level test for a use case or feature involving each page is done via Cypress. Unit tests using Jest are implemented to verify all the detailed behaviors on each page. The following figure shows the combination of scenario and unit level tests. 
+
+> ![UI Unit vs. Scenario testing](./images/ui-unit-scenario-testing.png)
+
+
+## Requirements to Design
+
+The traceability from requirements to design is accomplished by organizing the design document(s) to match the use cases in the requirements document. The table of contents of the design document matches that of the use case section of the requirements document down to the level of the base and alternative flows. Any requirement can be traced by the name of the use case flow to the description of how the requirement is accomplished in the design document. The following figure shows an example of the name-based traceability in these documents.
+
+| Requirements | Design | 
+| ---:         | :---    |
+| ![UI Unit vs. Scenario testing](./images/requirements-toc.png)       | ![UI Unit vs. Scenario testing](./images/design-toc.png)   | 
+
+
+## Automated Creation of Document Versions 
+
+A documentation tool is created to automatically generate use case docs with accepted feature scenarios for the release,
+and render use case and design markdown docs to HTML for distribution. The tool will
+
+- Parse use cases docs for referenced feature files and auto pull accepted scenarios into the use case docs. Creating two versions of use case docs:
+    - Simple version with list of scenario names
+    - Full version with scenario details
+- Use pandoc to render markdown docs to distributable html docs for both use cases and designs. 
+
+Generated markdown docs are pushed in git and can be found at:
+
+-	Use case docs: docs/use cases/generated
+-	Design docs: docs/architecture/designs-generated
+
+Generated HTML docs are pushed in git and can be found at:
+
+-	Use case docs: docs/use cases
+-	Design docs: docs/architecture
+
+For markdown doc authors, here are a couple of formatting guidelines:
+
+-	An empty line must be inserted before any section headers
+-	An empty line must be inserted before any lists or code blocks
+-	For references to images or other docs, use relative paths
+
+To run the doc gen tool, you need to install pandoc on your laptop and update the exe path in docs/utils/docgen/docgen.py
+
