@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>INTIENT Clinical Suite Use Cases</title>
+  <title>  Clinical Suite Use Cases</title>
   <style>
     html {
       line-height: 1.5;
@@ -166,7 +166,7 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">INTIENT Clinical Suite Use Cases</h1>
+<h1 class="title">  Clinical Suite Use Cases</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -177,7 +177,7 @@
 <li><a href="#product-overview"><span class="toc-section-number">5</span> Product Overview</a></li>
 <li><a href="#use-cases"><span class="toc-section-number">6</span> Use Cases</a>
 <ul>
-<li><a href="#access-intient-clinical"><span class="toc-section-number">6.1</span> Access INTIENT Clinical</a>
+<li><a href="#access- -clinical"><span class="toc-section-number">6.1</span> Access   Clinical</a>
 <ul>
 <li><a href="#base-flow---login-and-access-successfully"><span class="toc-section-number">6.1.1</span> Base Flow - Login and Access Successfully</a></li>
 <li><a href="#alternatives"><span class="toc-section-number">6.1.2</span> Alternatives</a>
@@ -420,35 +420,35 @@
 <p>The relevant handling guidelines are bolded.</p>
 <p><strong>Classification: CONFIDENTIAL</strong></p>
 <ul>
-<li><strong>Do not forward or copy data in part or full without explicit permission of the INTIENT Clinical Product Owner</strong></li>
-<li><strong>Data access is limited to INTIENT Clinical Project Team</strong></li>
+<li><strong>Do not forward or copy data in part or full without explicit permission of the   Clinical Product Owner</strong></li>
+<li><strong>Data access is limited to   Clinical Project Team</strong></li>
 <li>Use Strong authentication / EFS Encryption / Lock in a Drawer</li>
 <li>Log access in a register</li>
 <li>Retention period is ——– ( default as per Policy 123)</li>
 </ul>
 <h1 data-number="2" id="purpose-and-scope"><span class="header-section-number">2</span> Purpose and Scope</h1>
-<p>The purpose of the Use Case Document is to describe the INTIENT Clinical product, main use cases and references to individual module use cases. This document is organized by clinical use cases (e.g. Prepare Study Submission Package), with corresponding product modules (e.g. Study Data Engine) that support those use cases.<br />
+<p>The purpose of the Use Case Document is to describe the   Clinical product, main use cases and references to individual module use cases. This document is organized by clinical use cases (e.g. Prepare Study Submission Package), with corresponding product modules (e.g. Study Data Engine) that support those use cases.<br />
 The features detail definition of basic flows, alternative flows (where applicable) and traceability to feature files where the detail requirements and test scenarios are described.</p>
 <h1 data-number="3" id="module-description"><span class="header-section-number">3</span> Module Description</h1>
 <p>Clinical Core supports both Clinical Solutions with common features and functions.  Use cases supported by this module:  Login, Ingest Data, Register Study, Transform Data.</p>
 <h1 data-number="4" id="references"><span class="header-section-number">4</span> References</h1>
 <ol type="1">
 <li><a href="definitions-and-acronyms.html">Definitions and Acronyms</a></li>
-<li>INTIENT Clinical Validation Master Plan V2.0</li>
+<li>  Clinical Validation Master Plan V2.0</li>
 </ol>
 <h1 data-number="5" id="product-overview"><span class="header-section-number">5</span> Product Overview</h1>
-<p>INTIENT Clinical provides solutions to run better trials by enabling efficient aggregation of data, performing analysis and driving study and operational insights.</p>
+<p>  Clinical provides solutions to run better trials by enabling efficient aggregation of data, performing analysis and driving study and operational insights.</p>
 <ul>
 <li><strong>Study Data Solution:</strong> Solution includes study evidence repository; automated data management processes, SDTM conformance, and ADaM/TFL production, and managed analytics environment.</li>
 <li><strong>Clinical Insights Solution:</strong> Solution includes visualization of real time data.</li>
 <li><strong>Operational Insights Solution:</strong> Solution includes an operational evidence repository, a clinical control tower and integrated issue management.</li>
 </ul>
 <h1 data-number="6" id="use-cases"><span class="header-section-number">6</span> Use Cases</h1>
-<h2 data-number="6.1" id="access-intient-clinical"><span class="header-section-number">6.1</span> Access INTIENT Clinical</h2>
-<p>Features are available in INTIENT Clinical based on configurable modules in the environment. For example, if the environment has been configured to include the Control Tower module, then the Monitor Study feature will be available.</p>
+<h2 data-number="6.1" id="access- -clinical"><span class="header-section-number">6.1</span> Access   Clinical</h2>
+<p>Features are available in   Clinical based on configurable modules in the environment. For example, if the environment has been configured to include the Control Tower module, then the Monitor Study feature will be available.</p>
 <h3 data-number="6.1.1" id="base-flow---login-and-access-successfully"><span class="header-section-number">6.1.1</span> Base Flow - Login and Access Successfully</h3>
 <ol type="1">
-<li>User accesses INTIENT Clinical URL</li>
+<li>User accesses   Clinical URL</li>
 <li>System recognizes user using single sign on (SSO) infrastructure and authenticates user</li>
 <li>The following use cases are accessed based on the assigned user role:
 <ul>
@@ -880,7 +880,7 @@ The features detail definition of basic flows, alternative flows (where applicab
 <pre><code>Scenario: Move initial operational CSV files from ingestion to data bucket for an existing vendor
   # Move one or more CSV files from ingestion to data bucket folder corresponding to the source/vendor
   # Special characters along with cases are retained in file names
-  Given the following operational csv files are uploaded to the ingestion bucket intient-clinical-ingestion in the folder /clinical-operations/vendor1/Source/Data
+  Given the following operational csv files are uploaded to the ingestion bucket  -clinical-ingestion in the folder /clinical-operations/vendor1/Source/Data
   | filename                        |
   | client!clinical&amp;study#milestone |
   | client$clinical%study^subject   |
@@ -894,7 +894,7 @@ The features detail definition of basic flows, alternative flows (where applicab
   | client(study)documents          |
   | client{protocol}deviation       |
   When the files are copied
-  Then the following files are present in the data bucket intient-clinical-data folder /clinical-operations/vendor1/Source/Data
+  Then the following files are present in the data bucket  -clinical-data folder /clinical-operations/vendor1/Source/Data
   | filename                        |
   | client!clinical&amp;study#milestone |
   | client$clinical%study^subject   |
@@ -2444,7 +2444,7 @@ The features detail definition of basic flows, alternative flows (where applicab
   When the scheduled time is due
   Then the requested XPT files are exported to the target location</code></pre>
 <pre><code>Scenario: Display schedule extraction button on study page
-  Given an authorized user has logged into Intient clinical
+  Given an authorized user has logged into   clinical
   And has navigated to a given study not marked for archiving
   Then &quot;schedule extraction&quot; button is displayed</code></pre>
 <pre><code>Scenario: Return previous saved configuration details for a given study
@@ -2752,7 +2752,7 @@ The features detail definition of basic flows, alternative flows (where applicab
 <li>Archive Only flag</li>
 <li>Blinded flag</li>
 <li>Real Time Data flag</li>
-<li>User Intient Firestore flag</li>
+<li>User   Firestore flag</li>
 </ul>
 <h2 data-number="6.12" id="batch-study-registration"><span class="header-section-number">6.12</span> Batch Study Registration</h2>
 <p>The Register Study use case is available with the Clinical Core Module. Users have the ability to register a study via an integration with their organization’s systems (Automatic) or manually using the web interface. An organization’s environment is configured to have either automatic Study Registration or Manual Study registration. The Register Study Navigation will be removed if Batch Registration is deployed.</p>
@@ -3002,16 +3002,16 @@ The features detail definition of basic flows, alternative flows (where applicab
 <h4 data-number="6.13.2.1" id="navigate-to-clinical-studies-clinical-insights"><span class="header-section-number">6.13.2.1</span> Navigate to Clinical Studies-Clinical Insights</h4>
 <h5 data-number="6.13.2.1.1" id="base-flow-scenarios-for-visualize-real-time-study-data"><span class="header-section-number">6.13.2.1.1</span> Base Flow Scenarios for: Visualize Real Time Study Data</h5>
 <pre><code>Scenario: Access denied for user to navigate to clinops studies
-  Given the application &quot;Intient Clinical&quot;
+  Given the application &quot;  Clinical&quot;
   And User does not have the role Operational Data Analyst
   Then &quot;Clinops Studies&quot; link not available in the left menu bar</code></pre>
 <pre><code>Scenario: Monitor New Study - Navigate to Monitor Study
-  Given the application &quot;Intient Clinical&quot;
+  Given the application &quot;  Clinical&quot;
   And User logs in with the role Operational Data Analyst
   When user clicks on Monitor New Study button
   And user redirected to studies list on Monitor New Study page</code></pre>
 <pre><code>Scenario: User able to navigate to clinops studies
-  Given the application &quot;Intient Clinical&quot;
+  Given the application &quot;  Clinical&quot;
   And User logs in with the role Operational Data Analyst
   Then &quot;Clinops Studies&quot; link available in the left menu bar</code></pre>
 <pre><code>Scenario: Allow registration of a clinical study from study registration with FHIR data available checked
@@ -3680,7 +3680,7 @@ The features detail definition of basic flows, alternative flows (where applicab
 <h2 data-number="6.22" id="non-functional-requirements"><span class="header-section-number">6.22</span> Non-Functional Requirements</h2>
 <p>Non-functional requirements (NFR) are described in the non-functional feature file. NFRs include:</p>
 <ul>
-<li>User interface (UI) design that support the various use cases included in the INTIENT Clinical suite.</li>
+<li>User interface (UI) design that support the various use cases included in the   Clinical suite.</li>
 <li>Other characteristics for the UI such as use of style sheets.</li>
 <li>Audit trail scenarios that are the bases for transactional records management.</li>
 <li>GCS buckets and folder structures, as well as BigQuery Dataset naming conventions.</li>
@@ -3689,9 +3689,9 @@ The features detail definition of basic flows, alternative flows (where applicab
 <h3 data-number="6.22.1" id="feature-details-20"><span class="header-section-number">6.22.1</span> Feature Details</h3>
 <h4 data-number="6.22.1.1" id="non-functional-requirements-1"><span class="header-section-number">6.22.1.1</span> Non-Functional Requirements</h4>
 <h5 data-number="6.22.1.1.1" id="base-flow-scenarios-for-user-interface-requirements"><span class="header-section-number">6.22.1.1.1</span> Base Flow Scenarios for: User Interface Requirements</h5>
-<pre><code>Scenario: UI adheres to the INTIENT style guide
+<pre><code>Scenario: UI adheres to the   style guide
   When a UI page is displayed
-  Then the UI page adheres to the INTIENT style guide &quot;INTIENT_Iris-Design-System-Guidelines_v1.4.pdf&quot;</code></pre>
+  Then the UI page adheres to the   style guide &quot; _Iris-Design-System-Guidelines_v1.4.pdf&quot;</code></pre>
 <pre><code>Scenario: UI adheres to wireframe document
   When a UI page is displayed
   Then the UI page adheres to the wireframes document &quot;wireframesUpdate-V21.pdf&quot;</code></pre>
@@ -3750,7 +3750,7 @@ The features detail definition of basic flows, alternative flows (where applicab
 <h5 data-number="6.22.1.1.4" id="base-flow-scenarios-for-gcp-naming-conventions-gcs-buckets-and-bq-datasets"><span class="header-section-number">6.22.1.1.4</span> Base Flow Scenarios for: GCP Naming Conventions (GCS Buckets and BQ Datasets)</h5>
 <pre><code>Scenario Outline: All GCS folders are created according to a chosen naming convention
   When a GCS folder is created for an &lt;entity&gt;
-  Then it conforms to the folder structure laid out in docs/architecture/designs/intient-clinical-design.html Load Data section
+  Then it conforms to the folder structure laid out in docs/architecture/designs/ -clinical-design.html Load Data section
   Examples:
   | entity                |
   | study                 |
@@ -3761,7 +3761,7 @@ The features detail definition of basic flows, alternative flows (where applicab
   When a &lt;projectType&gt; BQ Dataset is created at the &lt;level&gt; level
   Then the Dataset name is entirely in capital letters
   And the name of the Dataset includes a prefix of the form &lt;instance&gt;_&lt;projectType&gt;_
-  And the remainder of the Dataset name follows the conventions appropriate to the dataset being created as outlined in docs/architecture/designs/intient-clinical-design.html BigQuery section
+  And the remainder of the Dataset name follows the conventions appropriate to the dataset being created as outlined in docs/architecture/designs/ -clinical-design.html BigQuery section
   And special characters are replaced by underscores combined in such a way as to have no more than one consecutive underscore
   And there are no leading or trailing underscores
   Examples:
@@ -3775,7 +3775,7 @@ The features detail definition of basic flows, alternative flows (where applicab
   Given a comprehensive list of API endpoints
   When each endpoint is called by an account with a token that corresponds to a user that is not assigned a role
   Then the request is denied and an error is returned</code></pre>
-<h5 data-number="6.22.1.1.6" id="base-flow-scenarios-for-performance-of-intient-clinical"><span class="header-section-number">6.22.1.1.6</span> Base Flow Scenarios for: Performance of INTIENT Clinical</h5>
+<h5 data-number="6.22.1.1.6" id="base-flow-scenarios-for-performance-of- -clinical"><span class="header-section-number">6.22.1.1.6</span> Base Flow Scenarios for: Performance of   Clinical</h5>
 <h1 data-number="7" id="revision-history"><span class="header-section-number">7</span> Revision History</h1>
 <table id="tcss">
 <colgroup>
