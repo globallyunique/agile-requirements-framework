@@ -1,4 +1,4 @@
-Title: INTIENT Clinical Documentation Overview 
+Title: XXX Clinical Documentation Overview 
 ---
 [[_TOC_]]
 
@@ -62,7 +62,7 @@ The following tags are to be used in conjunction with wip, complete, or accepted
 In addition to the Story level Scenario tests there are unit tests for all significant parts of the implementation. To implement a Scenario in a Feature File the team breaks the features into smaller components and unit tests them. The team primarily follows [Test Driven Development (TDD)](https://en.wikipedia.org/wiki/Test-driven_development) to create the unit tests and implementation of the features.
 
 ## Incremental Test Evidence
-The automated execution of the Scenarios is part of the Continuous Deployment process. GitLab is the product used for the git repository. The INTIENT Platform has put in place the infrastructure to run GitLab deployment pipelines. The Clinical product deployment pipeline  runs at least once a day. It takes the current version of the code and the automated tests from the git repo and runs the automated tests as a step in the pipeline. First all the unit tests and then the feature file acceptance tests are run. The results of the pipeline running including the report of the execution of the tests is captured and permanently maintained in the git repository. The following is an example of the history of the execution of the pipeline. 
+The automated execution of the Scenarios is part of the Continuous Deployment process. GitLab is the product used for the git repository. The   Platform has put in place the infrastructure to run GitLab deployment pipelines. The Clinical product deployment pipeline  runs at least once a day. It takes the current version of the code and the automated tests from the git repo and runs the automated tests as a step in the pipeline. First all the unit tests and then the feature file acceptance tests are run. The results of the pipeline running including the report of the execution of the tests is captured and permanently maintained in the git repository. The following is an example of the history of the execution of the pipeline. 
 
 > ![Pipeline](./images/deploy-pipeline.png)
 
@@ -143,7 +143,7 @@ The following figure shows an annotated example of a use case formatted as descr
 
 The design is captured in a separate file per module.
 
-- [Clinical Core](./architecture/designs/intient-clinical-design.md)
+- [Clinical Core](./architecture/designs/clinical-design.md)
 - [Control Tower](./architecture/designs/control-tower-design.md)
 - [Study Data Engine](./architecture/designs/study-data-engine-design.md)
 - [Managed Analytics Environment](./architecture/designs/mae-design.md) 
@@ -176,7 +176,7 @@ the module design doc as a section under Appendix - Component Designs.
 For example, UI team created a design doc for module configurability:
 
 - Design doc module-configurability.md is created in folder docs/architecture/designs-ui
-- In module design doc docs/architecture/designs/intient-clinical-design.md, the following sentence is added under 
+- In module design doc docs/architecture/designs/ -clinical-design.md, the following sentence is added under 
 section Control of Module Visibility: Refer to [UI -- Module Configurability](../designs-ui/module-configurability.md) 
 for more design details.
 
@@ -184,7 +184,7 @@ Use the following guidance for design doc markdown authoring:
 
 - Start section headers at level 4, ####, and no deeper than level 6. Using the UI example above, content in
 module-configurability.md will be embedded as a subsection under Appendix - Component Designs / UI / Module 
-Configurability in intient-clinical-design.md. The subsection will also be included in the Table of Content.
+Configurability in  -clinical-design.md. The subsection will also be included in the Table of Content.
 - Do not include a top level section header for the document. The name in the reference link, for example, 
 "Module Configurability", will be the section name in the Appendix.
 - An empty line must be inserted before any section headers
