@@ -1,5 +1,6 @@
 - [Organizing and Managing BDD Scenarios As Your Detailed Requirements](#organizing-and-managing-bdd-scenarios-as-your-detailed-requirements)
   - [Investing in Your Scenarios](#investing-in-your-scenarios)
+    - [Keeping Scenarios Alive](#keeping-scenarios-alive)
   - [Technical Approaches](#technical-approaches)
     - [Using the Cucumber Family](#using-the-cucumber-family)
     - [Using A Commercial Cucumber Family Approach](#using-a-commercial-cucumber-family-approach)
@@ -20,7 +21,7 @@ There are two main points:
 
 ## Investing in Your Scenarios
 
-The biggest thing needed to make the proposed use of BDD Scenarios as detailed requirements work, is continuous investment in the scenarios.  You must:
+The biggest thing needed to make the proposed use of BDD Scenarios as detailed requirements work, is continuous investment in those scenarios.  You must:
 - Write and re-write them with a focus on understandability.
 - Refactor to eliminate duplication, overlap, and redundancy, e.g., scenarios that cover simple early features that are now covered by more complex examples could be deleted
 - Keep the text up to date with the current implementation
@@ -29,33 +30,50 @@ The biggest thing needed to make the proposed use of BDD Scenarios as detailed r
 
 Beyond requirements presentation, you need to do the above as part of making your agile way-of-working succeed. If you don't, you'll start to slow down due to poor understanding of the requirements and struggle to determine why tests fail. 
 
-The next biggest thing you need to do is decide on how you'll capture the requirements statements in the scenarios. The Given-When-Then structure of BDD Scenarios is designed to express detailed examples. You must find a way to also write a requirements statement that is at a level above the details of the example. It's critical for [my proposed requirements framework](https://globallyunique.github.io/agile-requirements-framework/)that this statement of requirements be written in a structured way so that tools can process it, e.g., find and extract it for insertion into a comprehensive requirements presentation. Exactly how best to do this depends on the specific tool used for writing and executing the scenarios. Possible approaches include:
-- Use the text that describes the Scenario or the combination of that and a comment directly above it, e.g.,[^Gherkin-Rules-Examples] 
+The next biggest thing you need to do is decide how you'll capture the requirements statements in the scenarios. The Given-When-Then structure of BDD Scenarios is designed to express detailed examples. You must find a way to also write a requirements statement that is at a level above the details of the example. It's critical for [my proposed requirements framework](https://globallyunique.github.io/agile-requirements-framework/) that this statement of requirements be written in a structured way so that tools can process it, e.g., find and extract it for insertion into a comprehensive requirements presentation. Exactly how best to do this depends on the specific tool used for writing and executing the scenarios. Possible approaches include:
+- Use the text that describes the Scenario or the combination of that and a comment directly above it, e.g., the '# Illustrates:...' comment and the 'Scenario:...' in the following: [^Gherkin-Rules-Examples] 
+  
 <img src="../images/scenario-with-comment.png" alt="Example With Comment" width="40%">
 
-- If you are using a tool that has the more recent Gherkin syntax extension, use the text of the Rule, potentially in combination with the scenario description.
-<img src="../images/scenario-with-rule.png" alt="Example With Rule" width="40%">
-  
-- Use the Feature description and the comments allowed after it. This has the most flexibility but I don't think it scales to real use because it requires too many separate feature files. 
-<img src="../images/scenario-with-feature.png" alt="Example With Feature" width="40%">
- 
-- Use some special BDD syntax extension of the tool you are using. The ultimate form of this is defining your own syntax for the BDD Scenarios. See the [Using A Custom BDD Approach](#using-a-custom-bdd-approach)
+----
 
-Writing, editing, refactoring scenarios is the job of the entire team in an on-going cycle: 
+- If you are using a tool that has the more recent Gherkin syntax extension, use the text of the Rule, potentially in combination with the scenario description, e.g., the 'Rule:...' and 'Scenario:...' in the following:
+  
+<img src="../images/scenario-with-rule.png" alt="Example With Rule" width="40%">
+
+----
+
+  
+- Use the Feature description and the comments allowed after it. This has the most flexibility but I don't think it scales to real use because it requires too many separate feature files, e.g., the 'Feature:...' and 'Rules implemented...' comment in the following:
+  
+<img src="../images/scenario-with-feature.png" alt="Example With Feature" width="40%">
+  
+
+----
+
+    
+- Use some special BDD syntax extension of the tool you are using. The ultimate form of this is defining your own syntax for the BDD Scenarios. See the [Using A Custom BDD Approach](#using-a-custom-bdd-approach) for details on this approach.
+
+----
+
+### Keeping Scenarios Alive
+
+Writing, editing, refactoring these scenarios is the job of the entire team in an on-going cycle: 
 - Customers/Users/Product-Managers working with Analysts create the initial examples ideally in collaboration with the representative people from the rest of the product team
 - Developers and QA team members expand and refine the examples
 
 You need to pick an approach to capturing the requirements details in the scenarios that the team buys into so this cycle is successful.  
 
 [^Gherkin-Rules-Examples]: The examples are taken from the [^Gherkin-Rules]:(https://cucumber.io/blog/bdd/gherkin-rules/) blog.
+  
 
 ## Technical Approaches
 
-The tool used to define and execute your BDD Scenarios tends to dominate your approach to capture of the requirements details. The major options are:
+The tool used to define and execute your BDD Scenarios tends to dominate which of the above approaches to capturing the requirements details you choose. The major options are:
 
 - **Cucumber Family** - A an open source tool based primarily on the [Gherkin language](https://cucumber.io/docs/gherkin/reference/), e.g., [Cucumber](https://cucumber.io/), [Behave](https://behave.readthedocs.io/en/latest/), [SpecFlow](https://specflow.org/)
 - **Commercial Cucumber Family** - A commercial tool that includes support for [Gherkin language](https://cucumber.io/docs/gherkin/reference/), e.g., [Katalon](https://katalon.com/), [SmartBear](https://smartbear.com/)
-- **Custom BDD Approach** - A tool that works in the spirit of Gherkin BDD but uses a different way to express, manage, and execute the scenarios. This can be something that is tailored to working well with a specific a programming language,  e.g., R-[Spec](https://rspec.info/), [Concordian](https://concordion.org/index.html), [Describe](https://testthat.r-lib.org/reference/describe.html), or it can be a custom framework the team builds for the product. This last option is very powerful and will be discussed later.
+- **Custom BDD Approach** - A tool that works in the spirit of Gherkin BDD but uses a different way to express, manage, and execute the scenarios. This can be something that is tailored to working well with a specific a programming language,  e.g., [R-Spec](https://rspec.info/), [Concordian](https://concordion.org/index.html), [Describe](https://testthat.r-lib.org/reference/describe.html), or it can be a custom framework the team builds for the product. This last option is very powerful and will be discussed later.
 - **ALM Product** - An Application Lifecycle Management (ALM) product that captures both the requirements and the BDD Scenarios, e.g., [Polarion](https://polarion.plm.automation.siemens.com/)[^Why-Polarion]
 
   [^Why-Polarion]: I'm only listing Polarion because it was used on my last project. I avoid these kinds of products so I don't have current knowledge of others. If they don't break the user-stories-are-not-requirements rule then they probably work similar to 
@@ -66,16 +84,18 @@ The following sub-sections discuss each of these options in the context of [my p
 
 The following shows a use case from a real product[^INTIENT-Clinical]. Don't focus on the details, instead just note how it follows the proposed standard use case structure of a base flow with alternatives as well as having steps that can include links to other use cases and data.
 
-<img src="../images/example-login-use-case-annotated.png" alt="Example Use Case" width="40%">
+<img src="../images/example-login-use-case-annotated.png" alt="Example Use Case" width="60%">
+
+---
 
 [^INTIENT-Clinical]: The product is [INTIENT Clinical](https://www.accenture.com/us-en/services/life-sciences/intient-clinical-platform) 
 
-The following shows and example of the BDD scenarios that act as detailed requirements statements. Don't focus on the details, instead note that:
+The following shows and example of the BDD scenarios that act as detailed requirements statements for the above use case. Don't focus on the details, instead note that:
 - The last alternative from the above picture is duplicated to show that these scenarios would be placed directly in the document following the use case. 
 - This is an automatically generated document. Details of how it was generated are covered later.
 - There is a header for the base flow and each alternative flow. Each header is followed by the scenarios for that flow. This shows how the use case flows provide the requirements framework and capture the higher level requirements.
 
-<img src="../images/login-use-case-scenarios.png" alt="Example Use Case" width="30%">
+<img src="../images/login-use-case-scenarios.png" alt="Example Use Case" width="50%">
 
 This is an example of using just the scenario description and it's Given-When-Then text as the detailed requirements. It works and is relatively easy to setup and manage but it tends to result in long lists of detailed requirements because there can be a lot of text in the Given-When-Thens. This problem is why it's desirable to put an overall requirements statement above the Given-When-Then and only show that overall statement in the requirements presentation.
 
@@ -87,7 +107,6 @@ The presentation is straightforward because the use cases are in a markdown text
 
 
 I don't recommend doing a lot of work to organize the list of these requirements statements. I haven't even tried to break them out by alternative flows. Instead I have just one list per use case. This is an example of an effort vs. benefit vs. risk trade-off. The BDD scenarios should be evolving even more than the use cases and trying to keep them highly organized has proven unsustainable. Instead, the place to invest is the requirements statements in the BDD scenario. It's worth a lot of investment to make them readable and to fit into the context of the use case they are under.
-Under each u
 
 ### Using A Commercial Cucumber Family Approach
 
@@ -105,7 +124,7 @@ In the second example there is both a requirements statement and a description. 
 
 ### Teams Need Freedom to Pick or Build Their Tools 
 
-Using an existing BDD tool is the easy path to using [my proposed requirements framework](../why-use-cases-for-agile.md). I see mandates to use the same process and tools as the norm in most enterprises and I think this is a mistake. I strongly believe that every project is different enough that the team should be allowed to select and create, as needed, the tools to support their agile way-of-working with the proposed requirements framework. Whether this simply means implementing some scripts to generate the combined use case and BDD scenario presentations or building a building a full DSL for expressing, executing, and generating the presentations of their scenarios. The full scope of doing this is beyond what can be covered in this article. To emphasize the point that the team needs to select and build their own tools, I end by saying that the power that comes from enabling the users to directly and optimally express their scenarios via a DSL is unlike anything I've seen using the existing Cucumber-family tools.
+I see mandates for every team to use the same process and tools in most enterprises. I think this is a mistake. I believe that every project is different enough that the team should be allowed to select and create, as needed, the tools to support their agile way-of-working. Assuming the are using the [use case based requirements framework](../why-use-cases-for-agile.md) proposed in this article and an existing BDD tool, this should simply mean implementing some scripts to generate the combined use case and BDD scenario presentations. Alternatively they could build a full DSL for expressing, executing, and generating the presentations of their scenarios. To emphasize the point that the team needs to select and build their own tools, I end by saying that the power that comes from building a DSL that enable users to directly and optimally express their scenarios is unlike anything I've seen using the existing Cucumber-family tools.
 
 ## Requirements to Test Traceability
 
